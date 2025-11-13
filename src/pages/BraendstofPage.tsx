@@ -24,7 +24,7 @@ export default function BraendstofPage() {
   const [error, setError] = useState('');
 
   const availableTypes = useMemo(
-    () => faktorer.filter((f) => BRAENDSTOF_TYPES.includes(f.type)),
+    () => faktorer.filter((f) => BRAENDSTOF_TYPES.includes(f.name)),
     [faktorer]
   );
 
@@ -78,14 +78,14 @@ export default function BraendstofPage() {
             >
               <option value="">Vælg type</option>
               {availableTypes.map((item) => (
-                <option key={item.type} value={item.type}>
-                  {item.type}
+                <option key={item.key} value={item.name}>
+                  {item.name}
                 </option>
               ))}
             </select>
           </label>
           <label>
-            Mængde ({faktor?.enhed ?? 'enhed'})
+            Mængde ({faktor?.unit ?? 'enhed'})
             <input
               type="number"
               min="0"
@@ -111,7 +111,7 @@ export default function BraendstofPage() {
             />
           </label>
           <label>
-            CO₂-faktor (kg CO₂e/{faktor?.enhed ?? '-'})
+            CO₂-faktor (kg CO₂e/{faktor?.unit ?? '-'})
             <input type="text" value={faktor?.co2FaktorKgPerEnhed ?? ''} readOnly />
           </label>
           <label>

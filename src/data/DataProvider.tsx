@@ -50,8 +50,9 @@ type DataContextValue = DataState & {
   addAffald: (input: AddAffald) => void;
   updateBygning: (info: BygningInfo) => void;
   getFaktor: (type: string) => {
-    enhed: string;
+    unit: string;
     co2FaktorKgPerEnhed: number;
+    source: string;
   } | null;
 };
 
@@ -82,6 +83,7 @@ function loadState(): DataState {
     return {
       ...cloneInitial(),
       ...parsed,
+      faktorer: initialData.faktorer,
     };
   } catch (error) {
     console.warn('Kunne ikke indlæse data fra localStorage', error);
@@ -98,11 +100,12 @@ export function DataProvider({ children }: { children: ReactNode }) {
   }, [state]);
 
   const getFaktor = (type: string) => {
-    const faktor = state.faktorer.find((f) => f.type === type);
+    const faktor = state.faktorer.find((f) => f.name === type);
     if (!faktor) return null;
     return {
-      enhed: faktor.enhed,
-      co2FaktorKgPerEnhed: faktor.co2FaktorKgPerEnhed,
+      unit: faktor.unit,
+      co2FaktorKgPerEnhed: faktor.factorKgCo2PerUnit,
+      source: faktor.source,
     };
   };
 
@@ -113,7 +116,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       id: generateId('el'),
       dato: input.dato,
       type: input.type,
-      enhed: faktor.enhed,
+      enhed: faktor.unit,
       maengde: input.maengde,
       kilde: input.kilde,
       kommentar: input.kommentar,
@@ -130,7 +133,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       id: generateId('vand'),
       dato: input.dato,
       type: input.type,
-      enhed: faktor.enhed,
+      enhed: faktor.unit,
       maengde: input.maengde,
       kilde: input.kilde,
       kommentar: input.kommentar,
@@ -147,7 +150,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       id: generateId('braendstof'),
       dato: input.dato,
       type: input.type,
-      enhed: faktor.enhed,
+      enhed: faktor.unit,
       maengde: input.maengde,
       kilde: input.kilde,
       kommentar: input.kommentar,
@@ -165,7 +168,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       dato: input.dato,
       materiale: input.materiale,
       produktNote: input.produktNote,
-      enhed: faktor.enhed,
+      enhed: faktor.unit,
       maengde: input.maengde,
       leverandoer: input.leverandoer,
       transportmetodeAbc: input.transportmetodeAbc,
@@ -183,7 +186,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
       id: generateId('affald'),
       dato: input.dato,
       fraktion: input.fraktion,
-      enhed: faktor.enhed,
+      enhed: faktor.unit,
       maengde: input.maengde,
       modtager: input.modtager,
       genanvendelseProcent: input.genanvendelseProcent,
