@@ -28,7 +28,7 @@ export default function AffaldPage() {
   const [error, setError] = useState('');
 
   const availableTypes = useMemo(
-    () => faktorer.filter((f) => AFFALD_TYPES.includes(f.type)),
+    () => faktorer.filter((f) => AFFALD_TYPES.includes(f.name)),
     [faktorer]
   );
 
@@ -91,14 +91,14 @@ export default function AffaldPage() {
             >
               <option value="">Vælg fraktion</option>
               {availableTypes.map((item) => (
-                <option key={item.type} value={item.type}>
-                  {item.type}
+                <option key={item.key} value={item.name}>
+                  {item.name}
                 </option>
               ))}
             </select>
           </label>
           <label>
-            Mængde ({faktor?.enhed ?? 'enhed'})
+            Mængde ({faktor?.unit ?? 'enhed'})
             <input
               type="number"
               min="0"
@@ -142,7 +142,7 @@ export default function AffaldPage() {
             Er spild?
           </label>
           <label>
-            CO₂-faktor (kg CO₂e/{faktor?.enhed ?? '-'})
+            CO₂-faktor (kg CO₂e/{faktor?.unit ?? '-'})
             <input type="text" value={faktor?.co2FaktorKgPerEnhed ?? ''} readOnly />
           </label>
           <label>

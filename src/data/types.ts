@@ -1,9 +1,4 @@
-export type Faktor = {
-  type: string;
-  enhed: string;
-  co2FaktorKgPerEnhed: number;
-  kilde: string;
-};
+import type { Factor } from './factors';
 
 export type ElPost = {
   id: string;
@@ -75,7 +70,7 @@ export type BygningInfo = {
 };
 
 export type DataState = {
-  faktorer: Faktor[];
+  faktorer: Factor[];
   el: ElPost[];
   vand: VandPost[];
   braendstof: BraendstofPost[];
