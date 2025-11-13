@@ -16,7 +16,11 @@ type AffaldFormState = {
 
 export default function AffaldPage() {
   const { factors, affald, addAffald, getFactorByKey, deleteRecord } = useData();
-  const availableFactors = useMemo(() => getFactorsForCategory(factors, 'affald'), [factors]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const availableFactors = useMemo(
+    () => getFactorsForCategory(factors, 'affald', searchTerm),
+    [factors, searchTerm]
+  );
   const [form, setForm] = useState<AffaldFormState>({
     dato: today,
     factorKey: '',
@@ -29,7 +33,14 @@ export default function AffaldPage() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    if (!form.factorKey && availableFactors.length > 0) {
+    if (availableFactors.length === 0) {
+      if (form.factorKey) {
+        setForm((prev) => ({ ...prev, factorKey: '' }));
+      }
+      return;
+    }
+
+    if (!availableFactors.some((item) => item.key === form.factorKey)) {
       setForm((prev) => ({ ...prev, factorKey: availableFactors[0].key }));
     }
   }, [availableFactors, form.factorKey]);
@@ -92,6 +103,15 @@ export default function AffaldPage() {
               value={form.dato}
               onChange={(event) => setForm((prev) => ({ ...prev, dato: event.target.value }))}
               required
+            />
+          </label>
+          <label className="full">
+            Søg fraktion
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={(event) => setSearchTerm(event.target.value)}
+              placeholder="Søg efter affaldstype"
             />
           </label>
           <label>

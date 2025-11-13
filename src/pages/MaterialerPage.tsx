@@ -16,7 +16,11 @@ type MaterialeFormState = {
 
 export default function MaterialerPage() {
   const { factors, materialer, addMateriale, getFactorByKey, deleteRecord } = useData();
-  const availableFactors = useMemo(() => getFactorsForCategory(factors, 'materialer'), [factors]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const availableFactors = useMemo(
+    () => getFactorsForCategory(factors, 'materialer', searchTerm),
+    [factors, searchTerm]
+  );
   const [form, setForm] = useState<MaterialeFormState>({
     dato: today,
     factorKey: '',
@@ -29,7 +33,14 @@ export default function MaterialerPage() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    if (!form.factorKey && availableFactors.length > 0) {
+    if (availableFactors.length === 0) {
+      if (form.factorKey) {
+        setForm((prev) => ({ ...prev, factorKey: '' }));
+      }
+      return;
+    }
+
+    if (!availableFactors.some((item) => item.key === form.factorKey)) {
       setForm((prev) => ({ ...prev, factorKey: availableFactors[0].key }));
     }
   }, [availableFactors, form.factorKey]);
@@ -87,6 +98,15 @@ export default function MaterialerPage() {
               value={form.dato}
               onChange={(event) => setForm((prev) => ({ ...prev, dato: event.target.value }))}
               required
+            />
+          </label>
+          <label className="full">
+            Søg materiale
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={(event) => setSearchTerm(event.target.value)}
+              placeholder="Søg efter materiale"
             />
           </label>
           <label>

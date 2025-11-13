@@ -9,14 +9,37 @@ const KEYWORD_FILTERS: Record<Category, RegExp[]> = {
   affald: [/affald/i, /spild/i, /waste/i],
 };
 
-const EXCLUDE_FOR_MATERIALER = [/affald/i, /diesel/i, /benzin/i, /brændstof/i, /vand/i, /el/i];
+const AFFALD_KEYWORDS = [/affald/i, /waste/i, /spild/i, /genanvend/i];
 
-export function getFactorsForCategory(factors: Factor[], category: Category): Factor[] {
+function moduleContains(moduleValue: string | undefined, token: string) {
+  if (!moduleValue) return false;
+  const normalized = moduleValue.replace(/[–—]/g, '-').toUpperCase();
+  return normalized.includes(token.toUpperCase());
+}
+
+function matchesSearch(factor: Factor, searchTerm: string) {
+  if (!searchTerm) return true;
+  const lower = searchTerm.toLowerCase();
+  return factor.name.toLowerCase().includes(lower) || factor.key.toLowerCase().includes(lower);
+}
+
+export function getFactorsForCategory(
+  factors: Factor[],
+  category: Category,
+  searchTerm = ''
+): Factor[] {
   if (category === 'materialer') {
     return factors
-      .filter((factor) =>
-        (!factor.module || /A1/i.test(factor.module) || /A2/i.test(factor.module) || /A3/i.test(factor.module)) &&
-        !EXCLUDE_FOR_MATERIALER.some((regex) => regex.test(factor.name))
+      .filter((factor) => moduleContains(factor.module, 'A1') && matchesSearch(factor, searchTerm))
+      .sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  if (category === 'affald') {
+    return factors
+      .filter(
+        (factor) =>
+          (moduleContains(factor.module, 'A5') || AFFALD_KEYWORDS.some((regex) => regex.test(factor.name))) &&
+          matchesSearch(factor, searchTerm)
       )
       .sort((a, b) => a.name.localeCompare(b.name));
   }
@@ -24,5 +47,6 @@ export function getFactorsForCategory(factors: Factor[], category: Category): Fa
   const matchers = KEYWORD_FILTERS[category];
   return factors
     .filter((factor) => matchers.some((regex) => regex.test(factor.name) || regex.test(factor.key)))
+    .filter((factor) => matchesSearch(factor, searchTerm))
     .sort((a, b) => a.name.localeCompare(b.name));
 }
