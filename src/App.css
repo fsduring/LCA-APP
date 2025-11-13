@@ -199,3 +199,18 @@ button.primary:active {
     padding-bottom: 80px;
   }
 }
+
+button.danger {
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+button.danger:hover {
+  background: #b91c1c;
+}

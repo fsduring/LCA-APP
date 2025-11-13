@@ -1,58 +1,70 @@
-import { FormEvent, useMemo, useState } from 'react';
+import { FormEvent, useEffect, useMemo, useState } from 'react';
 import { useData } from '../data/DataProvider';
-import { BRAENDSTOF_TYPES } from '../data/options';
+import { getFactorsForCategory } from '../data/options';
 
 const today = new Date().toISOString().slice(0, 10);
 
 type BraendstofFormState = {
   dato: string;
-  type: string;
+  factorKey: string;
   maengde: string;
   kilde: string;
   kommentar: string;
 };
 
 export default function BraendstofPage() {
-  const { faktorer, braendstof, addBraendstof, getFaktor } = useData();
+  const { factors, braendstof, addBraendstof, getFactorByKey, deleteRecord } = useData();
+  const availableFactors = useMemo(() => getFactorsForCategory(factors, 'braendstof'), [factors]);
   const [form, setForm] = useState<BraendstofFormState>({
     dato: today,
-    type: BRAENDSTOF_TYPES[0] ?? '',
+    factorKey: '',
     maengde: '',
     kilde: '',
     kommentar: '',
   });
   const [error, setError] = useState('');
 
-  const availableTypes = useMemo(
-    () => faktorer.filter((f) => BRAENDSTOF_TYPES.includes(f.type)),
-    [faktorer]
-  );
+  useEffect(() => {
+    if (!form.factorKey && availableFactors.length > 0) {
+      setForm((prev) => ({ ...prev, factorKey: availableFactors[0].key }));
+    }
+  }, [availableFactors, form.factorKey]);
 
-  const faktor = form.type ? getFaktor(form.type) : null;
-  const beregnetCo2 = faktor && form.maengde ? Number(form.maengde) * faktor.co2FaktorKgPerEnhed : 0;
+  const faktor = form.factorKey ? getFactorByKey(form.factorKey) : undefined;
+  const beregnetCo2 = faktor && form.maengde ? Number(form.maengde) * faktor.factorKgCo2PerUnit : 0;
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const maengdeNumber = Number(form.maengde);
-    if (!form.dato || !form.type || Number.isNaN(maengdeNumber) || maengdeNumber <= 0) {
+    if (!form.dato || !form.factorKey || Number.isNaN(maengdeNumber) || maengdeNumber <= 0) {
       setError('Udfyld dato, type og en positiv mængde.');
+      return;
+    }
+    const factor = getFactorByKey(form.factorKey);
+    if (!factor) {
+      setError('Den valgte faktor findes ikke.');
       return;
     }
     setError('');
     addBraendstof({
       dato: form.dato,
-      type: form.type,
+      factorKey: form.factorKey,
       maengde: maengdeNumber,
       kilde: form.kilde,
       kommentar: form.kommentar || undefined,
     });
-    setForm({
+    setForm((prev) => ({
+      ...prev,
       dato: today,
-      type: form.type,
       maengde: '',
       kilde: '',
       kommentar: '',
-    });
+    }));
+  };
+
+  const handleDelete = (id: string) => {
+    if (!window.confirm('Er du sikker på, at du vil slette denne registrering?')) return;
+    deleteRecord('braendstof', id);
   };
 
   return (
@@ -72,20 +84,20 @@ export default function BraendstofPage() {
           <label>
             Type
             <select
-              value={form.type}
-              onChange={(event) => setForm((prev) => ({ ...prev, type: event.target.value }))}
+              value={form.factorKey}
+              onChange={(event) => setForm((prev) => ({ ...prev, factorKey: event.target.value }))}
               required
             >
               <option value="">Vælg type</option>
-              {availableTypes.map((item) => (
-                <option key={item.type} value={item.type}>
-                  {item.type}
+              {availableFactors.map((item) => (
+                <option key={item.key} value={item.key}>
+                  {item.name}
                 </option>
               ))}
             </select>
           </label>
           <label>
-            Mængde ({faktor?.enhed ?? 'enhed'})
+            Mængde ({faktor?.unit ?? 'enhed'})
             <input
               type="number"
               min="0"
@@ -104,15 +116,15 @@ export default function BraendstofPage() {
             />
           </label>
           <label className="full">
-            Kommentar (maskine, note m.m.)
+            Kommentar
             <textarea
               value={form.kommentar}
               onChange={(event) => setForm((prev) => ({ ...prev, kommentar: event.target.value }))}
             />
           </label>
           <label>
-            CO₂-faktor (kg CO₂e/{faktor?.enhed ?? '-'})
-            <input type="text" value={faktor?.co2FaktorKgPerEnhed ?? ''} readOnly />
+            CO₂-faktor (kg CO₂e/{faktor?.unit ?? '-'})
+            <input type="text" value={faktor?.factorKgCo2PerUnit ?? ''} readOnly />
           </label>
           <label>
             Beregnet CO₂ (kg CO₂e)
@@ -120,7 +132,7 @@ export default function BraendstofPage() {
           </label>
           {error && <span className="error-text">{error}</span>}
           <button type="submit" className="primary">
-            Gem brændstof
+            Gem forbrug
           </button>
         </form>
       </section>
@@ -131,11 +143,16 @@ export default function BraendstofPage() {
           {braendstof.map((post) => (
             <article key={post.id} className="data-card">
               <h3>{post.dato}</h3>
-              <p>Type: {post.type}</p>
-              <p>Mængde: {post.maengde} {post.enhed}</p>
+              <p>Type: {post.factorName}</p>
+              <p>
+                Mængde: {post.maengde} {post.enhed}
+              </p>
               <p>CO₂: {post.beregnetCo2Kg.toFixed(2)} kg</p>
               {post.kilde && <p>Kilde: {post.kilde}</p>}
               {post.kommentar && <p>Note: {post.kommentar}</p>}
+              <button type="button" className="danger" onClick={() => handleDelete(post.id)}>
+                Slet
+              </button>
             </article>
           ))}
           {braendstof.length === 0 && <p>Ingen registreringer endnu.</p>}

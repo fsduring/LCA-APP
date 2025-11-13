@@ -1,12 +1,12 @@
-import { FormEvent, useMemo, useState } from 'react';
+import { FormEvent, useEffect, useMemo, useState } from 'react';
 import { useData } from '../data/DataProvider';
-import { MATERIALE_TYPES } from '../data/options';
+import { getFactorsForCategory } from '../data/options';
 
 const today = new Date().toISOString().slice(0, 10);
 
 type MaterialeFormState = {
   dato: string;
-  materiale: string;
+  factorKey: string;
   maengde: string;
   produktNote: string;
   leverandoer: string;
@@ -15,10 +15,11 @@ type MaterialeFormState = {
 };
 
 export default function MaterialerPage() {
-  const { faktorer, materialer, addMateriale, getFaktor } = useData();
+  const { factors, materialer, addMateriale, getFactorByKey, deleteRecord } = useData();
+  const availableFactors = useMemo(() => getFactorsForCategory(factors, 'materialer'), [factors]);
   const [form, setForm] = useState<MaterialeFormState>({
     dato: today,
-    materiale: MATERIALE_TYPES[0] ?? '',
+    factorKey: '',
     maengde: '',
     produktNote: '',
     leverandoer: '',
@@ -27,42 +28,51 @@ export default function MaterialerPage() {
   });
   const [error, setError] = useState('');
 
-  const availableTypes = useMemo(
-    () => faktorer.filter((f) => MATERIALE_TYPES.includes(f.type)),
-    [faktorer]
-  );
+  useEffect(() => {
+    if (!form.factorKey && availableFactors.length > 0) {
+      setForm((prev) => ({ ...prev, factorKey: availableFactors[0].key }));
+    }
+  }, [availableFactors, form.factorKey]);
 
-  const faktor = form.materiale ? getFaktor(form.materiale) : null;
-  const beregnetCo2 = faktor && form.maengde ? Number(form.maengde) * faktor.co2FaktorKgPerEnhed : 0;
+  const faktor = form.factorKey ? getFactorByKey(form.factorKey) : undefined;
+  const beregnetCo2 = faktor && form.maengde ? Number(form.maengde) * faktor.factorKgCo2PerUnit : 0;
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const maengdeNumber = Number(form.maengde);
-    if (!form.dato || !form.materiale || Number.isNaN(maengdeNumber) || maengdeNumber <= 0) {
+    if (!form.dato || !form.factorKey || Number.isNaN(maengdeNumber) || maengdeNumber <= 0) {
       setError('Udfyld dato, materiale og en positiv mængde.');
+      return;
+    }
+    const factor = getFactorByKey(form.factorKey);
+    if (!factor) {
+      setError('Den valgte faktor findes ikke.');
       return;
     }
     setError('');
     addMateriale({
       dato: form.dato,
-      materiale: form.materiale,
+      factorKey: form.factorKey,
       maengde: maengdeNumber,
       produktNote: form.produktNote || undefined,
       leverandoer: form.leverandoer || undefined,
       transportmetodeAbc: form.transportmetodeAbc || undefined,
-      transportdistanceKm: form.transportdistanceKm
-        ? Number(form.transportdistanceKm)
-        : undefined,
+      transportdistanceKm: form.transportdistanceKm ? Number(form.transportdistanceKm) : undefined,
     });
-    setForm({
+    setForm((prev) => ({
+      ...prev,
       dato: today,
-      materiale: form.materiale,
       maengde: '',
       produktNote: '',
       leverandoer: '',
       transportmetodeAbc: '',
       transportdistanceKm: '',
-    });
+    }));
+  };
+
+  const handleDelete = (id: string) => {
+    if (!window.confirm('Er du sikker på, at du vil slette denne registrering?')) return;
+    deleteRecord('materialer', id);
   };
 
   return (
@@ -82,20 +92,20 @@ export default function MaterialerPage() {
           <label>
             Materiale
             <select
-              value={form.materiale}
-              onChange={(event) => setForm((prev) => ({ ...prev, materiale: event.target.value }))}
+              value={form.factorKey}
+              onChange={(event) => setForm((prev) => ({ ...prev, factorKey: event.target.value }))}
               required
             >
               <option value="">Vælg materiale</option>
-              {availableTypes.map((item) => (
-                <option key={item.type} value={item.type}>
-                  {item.type}
+              {availableFactors.map((item) => (
+                <option key={item.key} value={item.key}>
+                  {item.name}
                 </option>
               ))}
             </select>
           </label>
           <label>
-            Mængde ({faktor?.enhed ?? 'enhed'})
+            Mængde ({faktor?.unit ?? 'enhed'})
             <input
               type="number"
               min="0"
@@ -126,7 +136,7 @@ export default function MaterialerPage() {
             <select
               value={form.transportmetodeAbc}
               onChange={(event) =>
-                setForm((prev) => ({ ...prev, transportmetodeAbc: event.target.value as 'a' | 'b' | 'c' | '' }))
+                setForm((prev) => ({ ...prev, transportmetodeAbc: event.target.value as '' | 'a' | 'b' | 'c' }))
               }
             >
               <option value="">Ikke angivet</option>
@@ -146,8 +156,8 @@ export default function MaterialerPage() {
             />
           </label>
           <label>
-            CO₂-faktor (kg CO₂e/{faktor?.enhed ?? '-'})
-            <input type="text" value={faktor?.co2FaktorKgPerEnhed ?? ''} readOnly />
+            CO₂-faktor (kg CO₂e/{faktor?.unit ?? '-'})
+            <input type="text" value={faktor?.factorKgCo2PerUnit ?? ''} readOnly />
           </label>
           <label>
             Beregnet CO₂ (kg CO₂e)
@@ -167,16 +177,17 @@ export default function MaterialerPage() {
             <article key={post.id} className="data-card">
               <h3>{post.dato}</h3>
               <p>Materiale: {post.materiale}</p>
-              <p>Mængde: {post.maengde} {post.enhed}</p>
+              <p>
+                Mængde: {post.maengde} {post.enhed}
+              </p>
               <p>CO₂: {post.beregnetCo2Kg.toFixed(2)} kg</p>
               {post.produktNote && <p>Note: {post.produktNote}</p>}
               {post.leverandoer && <p>Leverandør: {post.leverandoer}</p>}
-              {post.transportmetodeAbc && (
-                <p>Transportmetode: {post.transportmetodeAbc.toUpperCase()}</p>
-              )}
-              {typeof post.transportdistanceKm === 'number' && (
-                <p>Transportdistance: {post.transportdistanceKm} km</p>
-              )}
+              {post.transportmetodeAbc && <p>Transportmetode: {post.transportmetodeAbc.toUpperCase()}</p>}
+              {typeof post.transportdistanceKm === 'number' && <p>Transportdistance: {post.transportdistanceKm} km</p>}
+              <button type="button" className="danger" onClick={() => handleDelete(post.id)}>
+                Slet
+              </button>
             </article>
           ))}
           {materialer.length === 0 && <p>Ingen registreringer endnu.</p>}

@@ -1,14 +1,10 @@
-export type Faktor = {
-  type: string;
-  enhed: string;
-  co2FaktorKgPerEnhed: number;
-  kilde: string;
-};
+import { Factor } from './factors';
 
 export type ElPost = {
   id: string;
   dato: string;
-  type: string;
+  factorKey: string;
+  factorName: string;
   enhed: string;
   maengde: number;
   kilde: string;
@@ -20,7 +16,8 @@ export type ElPost = {
 export type VandPost = {
   id: string;
   dato: string;
-  type: string;
+  factorKey: string;
+  factorName: string;
   enhed: string;
   maengde: number;
   kilde: string;
@@ -32,7 +29,8 @@ export type VandPost = {
 export type BraendstofPost = {
   id: string;
   dato: string;
-  type: string;
+  factorKey: string;
+  factorName: string;
   enhed: string;
   maengde: number;
   kilde: string;
@@ -44,6 +42,7 @@ export type BraendstofPost = {
 export type MaterialePost = {
   id: string;
   dato: string;
+  factorKey: string;
   materiale: string;
   produktNote?: string;
   enhed: string;
@@ -58,6 +57,7 @@ export type MaterialePost = {
 export type AffaldPost = {
   id: string;
   dato: string;
+  factorKey: string;
   fraktion: string;
   enhed: string;
   maengde: number;
@@ -75,11 +75,68 @@ export type BygningInfo = {
 };
 
 export type DataState = {
-  faktorer: Faktor[];
   el: ElPost[];
   vand: VandPost[];
   braendstof: BraendstofPost[];
   materialer: MaterialePost[];
   affald: AffaldPost[];
   bygning: BygningInfo;
+};
+
+export type Category = 'el' | 'vand' | 'braendstof' | 'materialer' | 'affald';
+
+export type DataContextValue = DataState & {
+  factors: Factor[];
+  addEl: (input: AddEl) => void;
+  addVand: (input: AddVand) => void;
+  addBraendstof: (input: AddBraendstof) => void;
+  addMateriale: (input: AddMateriale) => void;
+  addAffald: (input: AddAffald) => void;
+  deleteRecord: (category: Category, id: string) => void;
+  updateBygning: (info: BygningInfo) => void;
+  getFactorByKey: (key: string) => Factor | undefined;
+};
+
+export type AddEl = {
+  dato: string;
+  factorKey: string;
+  maengde: number;
+  kilde: string;
+  kommentar?: string;
+};
+
+export type AddVand = {
+  dato: string;
+  factorKey: string;
+  maengde: number;
+  kilde: string;
+  kommentar?: string;
+};
+
+export type AddBraendstof = {
+  dato: string;
+  factorKey: string;
+  maengde: number;
+  kilde: string;
+  kommentar?: string;
+};
+
+export type AddMateriale = {
+  dato: string;
+  factorKey: string;
+  maengde: number;
+  produktNote?: string;
+  leverandoer?: string;
+  transportmetodeAbc?: 'a' | 'b' | 'c';
+  transportdistanceKm?: number;
+};
+
+export type AddAffald = {
+  dato: string;
+  factorKey: string;
+  maengde: number;
+  modtager?: string;
+  genanvendelseProcent?: number;
+  kommentar?: string;
+  erSpild: boolean;
 };
