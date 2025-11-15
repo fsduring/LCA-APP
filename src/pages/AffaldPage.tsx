@@ -1,12 +1,12 @@
-import { FormEvent, useMemo, useState } from 'react';
+import { FormEvent, useEffect, useMemo, useState } from 'react';
 import { useData } from '../data/DataProvider';
-import { AFFALD_TYPES } from '../data/options';
+import { getFactorsForCategory } from '../data/options';
 
 const today = new Date().toISOString().slice(0, 10);
 
 type AffaldFormState = {
   dato: string;
-  fraktion: string;
+  factorKey: string;
   maengde: string;
   modtager: string;
   genanvendelseProcent: string;
@@ -15,10 +15,15 @@ type AffaldFormState = {
 };
 
 export default function AffaldPage() {
-  const { faktorer, affald, addAffald, getFaktor } = useData();
+  const { factors, affald, addAffald, getFactorByKey, deleteRecord } = useData();
+  const [searchTerm, setSearchTerm] = useState('');
+  const availableFactors = useMemo(
+    () => getFactorsForCategory(factors, 'affald', searchTerm),
+    [factors, searchTerm]
+  );
   const [form, setForm] = useState<AffaldFormState>({
     dato: today,
-    fraktion: AFFALD_TYPES[0] ?? '',
+    factorKey: '',
     maengde: '',
     modtager: '',
     genanvendelseProcent: '',
@@ -27,18 +32,26 @@ export default function AffaldPage() {
   });
   const [error, setError] = useState('');
 
-  const availableTypes = useMemo(
-    () => faktorer.filter((f) => AFFALD_TYPES.includes(f.type)),
-    [faktorer]
-  );
+  useEffect(() => {
+    if (availableFactors.length === 0) {
+      if (form.factorKey) {
+        setForm((prev) => ({ ...prev, factorKey: '' }));
+      }
+      return;
+    }
 
-  const faktor = form.fraktion ? getFaktor(form.fraktion) : null;
-  const beregnetCo2 = faktor && form.maengde ? Number(form.maengde) * faktor.co2FaktorKgPerEnhed : 0;
+    if (!availableFactors.some((item) => item.key === form.factorKey)) {
+      setForm((prev) => ({ ...prev, factorKey: availableFactors[0].key }));
+    }
+  }, [availableFactors, form.factorKey]);
+
+  const faktor = form.factorKey ? getFactorByKey(form.factorKey) : undefined;
+  const beregnetCo2 = faktor && form.maengde ? Number(form.maengde) * faktor.factorKgCo2PerUnit : 0;
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const maengdeNumber = Number(form.maengde);
-    if (!form.dato || !form.fraktion || Number.isNaN(maengdeNumber) || maengdeNumber <= 0) {
+    if (!form.dato || !form.factorKey || Number.isNaN(maengdeNumber) || maengdeNumber <= 0) {
       setError('Udfyld dato, fraktion og en positiv mængde.');
       return;
     }
@@ -47,25 +60,35 @@ export default function AffaldPage() {
       setError('Genanvendelse skal være mellem 0 og 100 %.');
       return;
     }
+    const factor = getFactorByKey(form.factorKey);
+    if (!factor) {
+      setError('Den valgte faktor findes ikke.');
+      return;
+    }
     setError('');
     addAffald({
       dato: form.dato,
-      fraktion: form.fraktion,
+      factorKey: form.factorKey,
       maengde: maengdeNumber,
       modtager: form.modtager || undefined,
       genanvendelseProcent: genanvendelse,
       kommentar: form.kommentar || undefined,
       erSpild: form.erSpild,
     });
-    setForm({
+    setForm((prev) => ({
+      ...prev,
       dato: today,
-      fraktion: form.fraktion,
       maengde: '',
       modtager: '',
       genanvendelseProcent: '',
       kommentar: '',
       erSpild: false,
-    });
+    }));
+  };
+
+  const handleDelete = (id: string) => {
+    if (!window.confirm('Er du sikker på, at du vil slette denne registrering?')) return;
+    deleteRecord('affald', id);
   };
 
   return (
@@ -82,23 +105,32 @@ export default function AffaldPage() {
               required
             />
           </label>
+          <label className="full">
+            Søg fraktion
+            <input
+              type="text"
+              value={searchTerm}
+              onChange={(event) => setSearchTerm(event.target.value)}
+              placeholder="Søg efter affaldstype"
+            />
+          </label>
           <label>
             Fraktion
             <select
-              value={form.fraktion}
-              onChange={(event) => setForm((prev) => ({ ...prev, fraktion: event.target.value }))}
+              value={form.factorKey}
+              onChange={(event) => setForm((prev) => ({ ...prev, factorKey: event.target.value }))}
               required
             >
               <option value="">Vælg fraktion</option>
-              {availableTypes.map((item) => (
-                <option key={item.type} value={item.type}>
-                  {item.type}
+              {availableFactors.map((item) => (
+                <option key={item.key} value={item.key}>
+                  {item.name}
                 </option>
               ))}
             </select>
           </label>
           <label>
-            Mængde ({faktor?.enhed ?? 'enhed'})
+            Mængde ({faktor?.unit ?? 'enhed'})
             <input
               type="number"
               min="0"
@@ -133,17 +165,17 @@ export default function AffaldPage() {
               onChange={(event) => setForm((prev) => ({ ...prev, kommentar: event.target.value }))}
             />
           </label>
-          <label className="full">
+          <label className="full" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <input
               type="checkbox"
               checked={form.erSpild}
               onChange={(event) => setForm((prev) => ({ ...prev, erSpild: event.target.checked }))}
-            />{' '}
+            />
             Er spild?
           </label>
           <label>
-            CO₂-faktor (kg CO₂e/{faktor?.enhed ?? '-'})
-            <input type="text" value={faktor?.co2FaktorKgPerEnhed ?? ''} readOnly />
+            CO₂-faktor (kg CO₂e/{faktor?.unit ?? '-'})
+            <input type="text" value={faktor?.factorKgCo2PerUnit ?? ''} readOnly />
           </label>
           <label>
             Beregnet CO₂ (kg CO₂e)
@@ -163,14 +195,17 @@ export default function AffaldPage() {
             <article key={post.id} className="data-card">
               <h3>{post.dato}</h3>
               <p>Fraktion: {post.fraktion}</p>
-              <p>Mængde: {post.maengde} {post.enhed}</p>
+              <p>
+                Mængde: {post.maengde} {post.enhed}
+              </p>
               <p>CO₂: {post.beregnetCo2Kg.toFixed(2)} kg</p>
               {post.modtager && <p>Modtager: {post.modtager}</p>}
-              {typeof post.genanvendelseProcent === 'number' && (
-                <p>Genanvendelse: {post.genanvendelseProcent}%</p>
-              )}
+              {typeof post.genanvendelseProcent === 'number' && <p>Genanvendelse: {post.genanvendelseProcent}%</p>}
               {post.kommentar && <p>Note: {post.kommentar}</p>}
               <p>Spild: {post.erSpild ? 'Ja' : 'Nej'}</p>
+              <button type="button" className="danger" onClick={() => handleDelete(post.id)}>
+                Slet
+              </button>
             </article>
           ))}
           {affald.length === 0 && <p>Ingen registreringer endnu.</p>}
