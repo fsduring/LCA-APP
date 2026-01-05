@@ -13,6 +13,7 @@ import {
 } from './types';
 
 const STORAGE_KEY = 'lca-app-data';
+const CUSTOM_FACTORS_KEY = 'customFactorsV1';
 
 const defaultDate = () => new Date().toISOString().slice(0, 10);
 
@@ -31,12 +32,54 @@ function cloneInitial(): DataState {
   return JSON.parse(JSON.stringify(initialData)) as DataState;
 }
 
-function getFactor(key: string | undefined): Factor | undefined {
+function getFactorFromList(factors: Factor[], key: string | undefined): Factor | undefined {
   if (!key) return undefined;
-  return FACTORS.find((item) => item.key === key || item.name === key);
+  return factors.find((item) => item.key === key || item.name === key);
 }
 
-function normalizeElPost(raw: any): DataState['el'][number] {
+function normalizeFactor(raw: any): Factor | null {
+  const key = typeof raw?.key === 'string' ? raw.key.trim() : '';
+  const name = typeof raw?.name === 'string' ? raw.name.trim() : '';
+  if (!key || !name) return null;
+  const moduleValue = typeof raw?.module === 'string' ? raw.module.trim() : '';
+  const unit = typeof raw?.unit === 'string' ? raw.unit.trim() : 'enhed';
+  const source = typeof raw?.source === 'string' ? raw.source.trim() : '';
+  const factorValue = Number(raw?.factorKgCo2PerUnit ?? 0);
+  return {
+    key,
+    name,
+    module: moduleValue,
+    unit,
+    factorKgCo2PerUnit: Number.isFinite(factorValue) ? factorValue : 0,
+    source,
+  };
+}
+
+function loadCustomFactors(): Factor[] | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const stored = window.localStorage.getItem(CUSTOM_FACTORS_KEY);
+    if (!stored) return null;
+    const parsed = JSON.parse(stored);
+    if (!Array.isArray(parsed)) return null;
+    const normalized = parsed.map(normalizeFactor).filter((item): item is Factor => item !== null);
+    return normalized.length > 0 ? normalized : null;
+  } catch (error) {
+    console.warn('Kunne ikke indlæse custom factors', error);
+    return null;
+  }
+}
+
+function persistCustomFactors(factors: Factor[] | null) {
+  if (typeof window === 'undefined') return;
+  if (!factors || factors.length === 0) {
+    window.localStorage.removeItem(CUSTOM_FACTORS_KEY);
+    return;
+  }
+  window.localStorage.setItem(CUSTOM_FACTORS_KEY, JSON.stringify(factors));
+}
+
+function normalizeElPost(raw: any, factors: Factor[]): DataState['el'][number] {
   if (raw && typeof raw === 'object' && 'factorKey' in raw && 'factorName' in raw) {
     const amount = Number(raw.maengde ?? 0);
     const co2Factor = Number(raw.co2FaktorKgPerEnhed ?? 0);
@@ -56,7 +99,7 @@ function normalizeElPost(raw: any): DataState['el'][number] {
   }
 
   const fallbackKey = typeof raw?.factorKey === 'string' && raw.factorKey ? raw.factorKey : raw?.type;
-  const factor = getFactor(fallbackKey);
+  const factor = getFactorFromList(factors, fallbackKey);
   const amount = Number(raw?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(raw?.co2FaktorKgPerEnhed ?? 0);
   const storedCo2 = Number(raw?.beregnetCo2Kg);
@@ -74,7 +117,7 @@ function normalizeElPost(raw: any): DataState['el'][number] {
   };
 }
 
-function normalizeVandPost(raw: any): DataState['vand'][number] {
+function normalizeVandPost(raw: any, factors: Factor[]): DataState['vand'][number] {
   if (raw && typeof raw === 'object' && 'factorKey' in raw && 'factorName' in raw) {
     const amount = Number(raw.maengde ?? 0);
     const co2Factor = Number(raw.co2FaktorKgPerEnhed ?? 0);
@@ -94,7 +137,7 @@ function normalizeVandPost(raw: any): DataState['vand'][number] {
   }
 
   const fallbackKey = typeof raw?.factorKey === 'string' && raw.factorKey ? raw.factorKey : raw?.type;
-  const factor = getFactor(fallbackKey);
+  const factor = getFactorFromList(factors, fallbackKey);
   const amount = Number(raw?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(raw?.co2FaktorKgPerEnhed ?? 0);
   const storedCo2 = Number(raw?.beregnetCo2Kg);
@@ -112,7 +155,7 @@ function normalizeVandPost(raw: any): DataState['vand'][number] {
   };
 }
 
-function normalizeBraendstofPost(raw: any): DataState['braendstof'][number] {
+function normalizeBraendstofPost(raw: any, factors: Factor[]): DataState['braendstof'][number] {
   if (raw && typeof raw === 'object' && 'factorKey' in raw && 'factorName' in raw) {
     const amount = Number(raw.maengde ?? 0);
     const co2Factor = Number(raw.co2FaktorKgPerEnhed ?? 0);
@@ -132,7 +175,7 @@ function normalizeBraendstofPost(raw: any): DataState['braendstof'][number] {
   }
 
   const fallbackKey = typeof raw?.factorKey === 'string' && raw.factorKey ? raw.factorKey : raw?.type;
-  const factor = getFactor(fallbackKey);
+  const factor = getFactorFromList(factors, fallbackKey);
   const amount = Number(raw?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(raw?.co2FaktorKgPerEnhed ?? 0);
   const storedCo2 = Number(raw?.beregnetCo2Kg);
@@ -150,7 +193,7 @@ function normalizeBraendstofPost(raw: any): DataState['braendstof'][number] {
   };
 }
 
-function normalizeMaterialePost(raw: any): DataState['materialer'][number] {
+function normalizeMaterialePost(raw: any, factors: Factor[]): DataState['materialer'][number] {
   if (raw && typeof raw === 'object' && 'factorKey' in raw) {
     const amount = Number(raw.maengde ?? 0);
     const co2Factor = Number(raw.co2FaktorKgPerEnhed ?? 0);
@@ -182,7 +225,7 @@ function normalizeMaterialePost(raw: any): DataState['materialer'][number] {
   }
 
   const fallbackKey = typeof raw?.factorKey === 'string' && raw.factorKey ? raw.factorKey : raw?.materiale;
-  const factor = getFactor(fallbackKey);
+  const factor = getFactorFromList(factors, fallbackKey);
   const amount = Number(raw?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(raw?.co2FaktorKgPerEnhed ?? 0);
   const storedCo2 = Number(raw?.beregnetCo2Kg);
@@ -212,7 +255,7 @@ function normalizeMaterialePost(raw: any): DataState['materialer'][number] {
   };
 }
 
-function normalizeAffaldPost(raw: any): DataState['affald'][number] {
+function normalizeAffaldPost(raw: any, factors: Factor[]): DataState['affald'][number] {
   if (raw && typeof raw === 'object' && 'factorKey' in raw) {
     const amount = Number(raw.maengde ?? 0);
     const co2Factor = Number(raw.co2FaktorKgPerEnhed ?? 0);
@@ -241,7 +284,7 @@ function normalizeAffaldPost(raw: any): DataState['affald'][number] {
   }
 
   const fallbackKey = typeof raw?.factorKey === 'string' && raw.factorKey ? raw.factorKey : raw?.fraktion;
-  const factor = getFactor(fallbackKey);
+  const factor = getFactorFromList(factors, fallbackKey);
   const amount = Number(raw?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(raw?.co2FaktorKgPerEnhed ?? 0);
   const storedCo2 = Number(raw?.beregnetCo2Kg);
@@ -268,14 +311,14 @@ function normalizeAffaldPost(raw: any): DataState['affald'][number] {
   };
 }
 
-function migrateState(raw: Partial<DataState> | null | undefined): DataState {
+function migrateState(raw: Partial<DataState> | null | undefined, factors: Factor[]): DataState {
   const defaults = cloneInitial();
   return {
-    el: (raw?.el ?? defaults.el).map(normalizeElPost),
-    vand: (raw?.vand ?? defaults.vand).map(normalizeVandPost),
-    braendstof: (raw?.braendstof ?? defaults.braendstof).map(normalizeBraendstofPost),
-    materialer: (raw?.materialer ?? defaults.materialer).map(normalizeMaterialePost),
-    affald: (raw?.affald ?? defaults.affald).map(normalizeAffaldPost),
+    el: (raw?.el ?? defaults.el).map((item) => normalizeElPost(item, factors)),
+    vand: (raw?.vand ?? defaults.vand).map((item) => normalizeVandPost(item, factors)),
+    braendstof: (raw?.braendstof ?? defaults.braendstof).map((item) => normalizeBraendstofPost(item, factors)),
+    materialer: (raw?.materialer ?? defaults.materialer).map((item) => normalizeMaterialePost(item, factors)),
+    affald: (raw?.affald ?? defaults.affald).map((item) => normalizeAffaldPost(item, factors)),
     bygning: {
       projektNavn:
         typeof raw?.bygning?.projektNavn === 'string' && raw.bygning.projektNavn.trim()
@@ -289,7 +332,7 @@ function migrateState(raw: Partial<DataState> | null | undefined): DataState {
   };
 }
 
-function loadState(): DataState {
+function loadState(factors: Factor[]): DataState {
   if (typeof window === 'undefined') {
     return cloneInitial();
   }
@@ -300,7 +343,7 @@ function loadState(): DataState {
       return cloneInitial();
     }
     const parsed = JSON.parse(stored) as Partial<DataState> | null;
-    return migrateState(parsed);
+    return migrateState(parsed, factors);
   } catch (error) {
     console.warn('Kunne ikke indlæse data fra localStorage', error);
     return cloneInitial();
@@ -310,15 +353,24 @@ function loadState(): DataState {
 const DataContext = createContext<DataContextValue | undefined>(undefined);
 
 export function DataProvider({ children }: { children: ReactNode }) {
-  const [state, setState] = useState<DataState>(() => loadState());
+  const [customFactors, setCustomFactors] = useState<Factor[] | null>(() => loadCustomFactors());
+  const activeFactors = useMemo(
+    () => (customFactors && customFactors.length > 0 ? customFactors : FACTORS),
+    [customFactors]
+  );
+  const [state, setState] = useState<DataState>(() => loadState(activeFactors));
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   }, [state]);
 
+  useEffect(() => {
+    persistCustomFactors(customFactors);
+  }, [customFactors]);
+
   const addEl = (input: AddEl) => {
-    const factor = getFactor(input.factorKey);
+    const factor = getFactorFromList(activeFactors, input.factorKey);
     if (!factor) return;
     const post = {
       id: generateId('el'),
@@ -336,7 +388,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   };
 
   const addVand = (input: AddVand) => {
-    const factor = getFactor(input.factorKey);
+    const factor = getFactorFromList(activeFactors, input.factorKey);
     if (!factor) return;
     const post = {
       id: generateId('vand'),
@@ -354,7 +406,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   };
 
   const addBraendstof = (input: AddBraendstof) => {
-    const factor = getFactor(input.factorKey);
+    const factor = getFactorFromList(activeFactors, input.factorKey);
     if (!factor) return;
     const post = {
       id: generateId('braendstof'),
@@ -372,7 +424,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   };
 
   const addMateriale = (input: AddMateriale) => {
-    const factor = getFactor(input.factorKey);
+    const factor = getFactorFromList(activeFactors, input.factorKey);
     if (!factor) return;
     const post = {
       id: generateId('materiale'),
@@ -392,7 +444,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   };
 
   const addAffald = (input: AddAffald) => {
-    const factor = getFactor(input.factorKey);
+    const factor = getFactorFromList(activeFactors, input.factorKey);
     if (!factor) return;
     const post = {
       id: generateId('affald'),
@@ -422,10 +474,18 @@ export function DataProvider({ children }: { children: ReactNode }) {
     setState((prev) => ({ ...prev, bygning: info }));
   };
 
+  const saveCustomFactors = (factors: Factor[]) => {
+    setCustomFactors(factors.length > 0 ? factors : null);
+  };
+
+  const resetCustomFactors = () => {
+    setCustomFactors(null);
+  };
+
   const value: DataContextValue = useMemo(
     () => ({
       ...state,
-      factors: FACTORS,
+      factors: activeFactors,
       addEl,
       addVand,
       addBraendstof,
@@ -433,9 +493,12 @@ export function DataProvider({ children }: { children: ReactNode }) {
       addAffald,
       deleteRecord,
       updateBygning,
-      getFactorByKey: (key: string) => getFactor(key),
+      getFactorByKey: (key: string) => getFactorFromList(activeFactors, key),
+      setCustomFactors: saveCustomFactors,
+      resetCustomFactors,
+      hasCustomFactors: !!(customFactors && customFactors.length > 0),
     }),
-    [state]
+    [activeFactors, customFactors, state]
   );
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

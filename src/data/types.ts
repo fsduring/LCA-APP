@@ -95,6 +95,9 @@ export type DataContextValue = DataState & {
   deleteRecord: (category: Category, id: string) => void;
   updateBygning: (info: BygningInfo) => void;
   getFactorByKey: (key: string) => Factor | undefined;
+  setCustomFactors: (factors: Factor[]) => void;
+  resetCustomFactors: () => void;
+  hasCustomFactors: boolean;
 };
 
 export type AddEl = {
