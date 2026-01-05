@@ -126,4 +126,5 @@ export const initialData: DataState = {
     projektNavn: 'BBBO Blok I',
     bygningArealM2: 7850,
   },
+  uploadedFactors: [],
 };

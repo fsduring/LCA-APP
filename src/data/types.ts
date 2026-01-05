@@ -81,6 +81,7 @@ export type DataState = {
   materialer: MaterialePost[];
   affald: AffaldPost[];
   bygning: BygningInfo;
+  uploadedFactors: Factor[];
 };
 
 export type Category = 'el' | 'vand' | 'braendstof' | 'materialer' | 'affald';
@@ -95,6 +96,13 @@ export type DataContextValue = DataState & {
   deleteRecord: (category: Category, id: string) => void;
   updateBygning: (info: BygningInfo) => void;
   getFactorByKey: (key: string) => Factor | undefined;
+  importFactors: (file: File) => Promise<ImportResult>;
+};
+
+export type ImportResult = {
+  format: 'Format A' | 'Format B';
+  imported: number;
+  skipped: number;
 };
 
 export type AddEl = {

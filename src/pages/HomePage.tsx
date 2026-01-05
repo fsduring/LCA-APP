@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useMemo } from 'react';
+import { FactorUpload } from '../components/FactorUpload';
 import { useData } from '../data/DataProvider';
 
 const navCards = [
@@ -35,6 +36,7 @@ export default function HomePage() {
 
   return (
     <div>
+      <FactorUpload />
       <section className="card">
         <h2 className="section-title">Overblik</h2>
         <div className="summary-grid">
