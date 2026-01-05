@@ -1,4 +1,5 @@
 import { ReactNode, createContext, useContext, useEffect, useMemo, useState } from 'react';
+import * as XLSX from 'xlsx';
 import { initialData } from './initialData';
 import { FACTORS, Factor } from './factors';
 import {
@@ -15,6 +16,92 @@ import {
 const STORAGE_KEY = 'lca-app-data';
 
 const defaultDate = () => new Date().toISOString().slice(0, 10);
+
+const KEY_ALIASES: Record<string, string> = {
+  dato: 'dato',
+  date: 'dato',
+  type: 'type',
+  typ: 'type',
+  materiale: 'materiale',
+  material: 'materiale',
+  fraktion: 'fraktion',
+  maengde: 'maengde',
+  quantity: 'maengde',
+  enhed: 'enhed',
+  unit: 'enhed',
+  kilde: 'kilde',
+  kommentar: 'kommentar',
+  comment: 'kommentar',
+  produktnote: 'produktNote',
+  leverandor: 'leverandoer',
+  leverandorid: 'leverandoer',
+  leverandoer: 'leverandoer',
+  transportmetodeabc: 'transportmetodeAbc',
+  transportmetode: 'transportmetodeAbc',
+  transportdistancekm: 'transportdistanceKm',
+  co2faktorkgco2eprenhed: 'co2FaktorKgPerEnhed',
+  co2faktorkgco2eprunit: 'co2FaktorKgPerEnhed',
+  beregnetco2kg: 'beregnetCo2Kg',
+  beregnetco2kgco2e: 'beregnetCo2Kg',
+  modtager: 'modtager',
+  genanvendelseprocent: 'genanvendelseProcent',
+  erspild: 'erSpild',
+  erspildjanej: 'erSpild',
+  faktorkey: 'factorKey',
+  faktorkode: 'factorKey',
+  factorkey: 'factorKey',
+  faktornavn: 'factorName',
+  factorname: 'factorName',
+  projektnavn: 'projektNavn',
+  bygningarealm2: 'bygningArealM2',
+  bruttoarealm2: 'bygningArealM2',
+};
+
+const SHEET_ALIASES: Record<string, string[]> = {
+  el: ['el'],
+  vand: ['vand'],
+  braendstof: ['braendstof', 'brændstof'],
+  materialer: ['materialer', 'materiale'],
+  affald: ['affald'],
+  bygning: ['bygning', 'projekt'],
+};
+
+function normalizeKey(value: string) {
+  return value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .replace(/[^a-z0-9]/g, '');
+}
+
+function mapRowKeys(row: Record<string, unknown>) {
+  const mapped: Record<string, unknown> = {};
+  for (const [key, value] of Object.entries(row)) {
+    const normalized = normalizeKey(key);
+    const alias = KEY_ALIASES[normalized] ?? key;
+    mapped[alias] = value instanceof Date ? value.toISOString().slice(0, 10) : value;
+  }
+  return mapped;
+}
+
+function isRowEmpty(row: Record<string, unknown>) {
+  return !Object.values(row).some((value) => value !== '' && value !== null && value !== undefined);
+}
+
+function findSheetName(workbook: XLSX.WorkBook, names: string[]) {
+  const normalizedNames = names.map((name) => normalizeKey(name));
+  return workbook.SheetNames.find((name) => normalizedNames.includes(normalizeKey(name)));
+}
+
+function parseSheetRows(workbook: XLSX.WorkBook, names: string[]) {
+  const sheetName = findSheetName(workbook, names);
+  if (!sheetName) return undefined;
+  const sheet = workbook.Sheets[sheetName];
+  if (!sheet) return undefined;
+  const rows = XLSX.utils.sheet_to_json<Record<string, unknown>>(sheet, { defval: '' });
+  const mapped = rows.map(mapRowKeys).filter((row) => !isRowEmpty(row));
+  return mapped;
+}
 
 function fallbackDate(value: unknown) {
   return typeof value === 'string' && value.trim() ? value : defaultDate();
@@ -422,6 +509,36 @@ export function DataProvider({ children }: { children: ReactNode }) {
     setState((prev) => ({ ...prev, bygning: info }));
   };
 
+  const importFromExcel = async (file: File) => {
+    const buffer = await file.arrayBuffer();
+    const workbook = XLSX.read(buffer, { type: 'array', cellDates: true });
+    const elRows = parseSheetRows(workbook, SHEET_ALIASES.el);
+    const vandRows = parseSheetRows(workbook, SHEET_ALIASES.vand);
+    const braendstofRows = parseSheetRows(workbook, SHEET_ALIASES.braendstof);
+    const materialerRows = parseSheetRows(workbook, SHEET_ALIASES.materialer);
+    const affaldRows = parseSheetRows(workbook, SHEET_ALIASES.affald);
+    const bygningRows = parseSheetRows(workbook, SHEET_ALIASES.bygning);
+    const bygningRow = bygningRows?.[0];
+    const rawBygning = bygningRow
+      ? {
+          projektNavn: String(bygningRow.projektNavn ?? bygningRow.projekt ?? ''),
+          bygningArealM2: Number(bygningRow.bygningArealM2 ?? bygningRow.bygningAreal ?? bygningRow.areal ?? 0),
+        }
+      : undefined;
+
+    setState((prev) =>
+      migrateState({
+        ...prev,
+        ...(elRows ? { el: elRows } : {}),
+        ...(vandRows ? { vand: vandRows } : {}),
+        ...(braendstofRows ? { braendstof: braendstofRows } : {}),
+        ...(materialerRows ? { materialer: materialerRows } : {}),
+        ...(affaldRows ? { affald: affaldRows } : {}),
+        ...(rawBygning ? { bygning: rawBygning } : {}),
+      })
+    );
+  };
+
   const value: DataContextValue = useMemo(
     () => ({
       ...state,
@@ -433,9 +550,10 @@ export function DataProvider({ children }: { children: ReactNode }) {
       addAffald,
       deleteRecord,
       updateBygning,
+      importFromExcel,
       getFactorByKey: (key: string) => getFactor(key),
     }),
-    [state]
+    [state, importFromExcel]
   );
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

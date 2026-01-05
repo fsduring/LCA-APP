@@ -95,6 +95,7 @@ export type DataContextValue = DataState & {
   deleteRecord: (category: Category, id: string) => void;
   updateBygning: (info: BygningInfo) => void;
   getFactorByKey: (key: string) => Factor | undefined;
+  importFromExcel: (file: File) => Promise<void>;
 };
 
 export type AddEl = {
