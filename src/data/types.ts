@@ -75,6 +75,7 @@ export type BygningInfo = {
 };
 
 export type DataState = {
+  factors: Factor[];
   el: ElPost[];
   vand: VandPost[];
   braendstof: BraendstofPost[];
@@ -86,7 +87,6 @@ export type DataState = {
 export type Category = 'el' | 'vand' | 'braendstof' | 'materialer' | 'affald';
 
 export type DataContextValue = DataState & {
-  factors: Factor[];
   addEl: (input: AddEl) => void;
   addVand: (input: AddVand) => void;
   addBraendstof: (input: AddBraendstof) => void;
@@ -95,6 +95,7 @@ export type DataContextValue = DataState & {
   deleteRecord: (category: Category, id: string) => void;
   updateBygning: (info: BygningInfo) => void;
   getFactorByKey: (key: string) => Factor | undefined;
+  replaceFactors: (factors: Factor[]) => void;
 };
 
 export type AddEl = {

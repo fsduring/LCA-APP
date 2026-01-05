@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { useMemo } from 'react';
+import { ChangeEvent, useMemo, useState } from 'react';
 import { useData } from '../data/DataProvider';
+import { parseFactorsFromWorkbook } from '../data/excel';
 
 const navCards = [
   { to: '/el', label: 'El' },
@@ -13,7 +14,9 @@ const navCards = [
 ];
 
 export default function HomePage() {
-  const { el, vand, braendstof, materialer, affald } = useData();
+  const { el, vand, braendstof, materialer, affald, replaceFactors } = useData();
+  const [uploadMessage, setUploadMessage] = useState('');
+  const [uploadError, setUploadError] = useState('');
 
   const totals = useMemo(() => {
     const sum = (values: number[]) => values.reduce((acc, value) => acc + value, 0);
@@ -33,8 +36,38 @@ export default function HomePage() {
     };
   }, [affald, braendstof, el, materialer, vand]);
 
+  const handleUpload = async (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    try {
+      setUploadError('');
+      const buffer = await file.arrayBuffer();
+      const factors = parseFactorsFromWorkbook(buffer);
+      replaceFactors(factors);
+      setUploadMessage(`Indlæste ${factors.length} faktorer fra ${file.name}.`);
+    } catch (error) {
+      setUploadMessage('');
+      const message = error instanceof Error ? error.message : 'Kunne ikke læse Excel-arket.';
+      setUploadError(message);
+    } finally {
+      event.target.value = '';
+    }
+  };
+
   return (
     <div>
+      <section className="card">
+        <h2 className="section-title">Upload emissionsfaktorer</h2>
+        <form className="form-grid">
+          <label className="full">
+            Excel-ark (fx BR2025 Tabel 7)
+            <input type="file" accept=".xlsx,.xls" onChange={handleUpload} />
+          </label>
+          {uploadError && <span className="error-text">{uploadError}</span>}
+          {uploadMessage && <span style={{ color: '#059669', fontSize: '0.9rem' }}>{uploadMessage}</span>}
+        </form>
+      </section>
+
       <section className="card">
         <h2 className="section-title">Overblik</h2>
         <div className="summary-grid">
