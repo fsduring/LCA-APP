@@ -10,6 +10,7 @@ const navCards = [
   { to: '/affald', label: 'Affald' },
   { to: '/bygning', label: 'Bygning' },
   { to: '/oversigt', label: 'Oversigt' },
+  { to: '/faktorer', label: 'Faktorer / Standard' },
 ];
 
 export default function HomePage() {

@@ -87,6 +87,10 @@ export type Category = 'el' | 'vand' | 'braendstof' | 'materialer' | 'affald';
 
 export type DataContextValue = DataState & {
   factors: Factor[];
+  factorMeta: FactorImportMeta | null;
+  setImportedFactors: (payload: FactorImportPayload) => void;
+  resetFactors: () => void;
+  getActiveFactors: () => Factor[];
   addEl: (input: AddEl) => void;
   addVand: (input: AddVand) => void;
   addBraendstof: (input: AddBraendstof) => void;
@@ -95,6 +99,16 @@ export type DataContextValue = DataState & {
   deleteRecord: (category: Category, id: string) => void;
   updateBygning: (info: BygningInfo) => void;
   getFactorByKey: (key: string) => Factor | undefined;
+};
+
+export type FactorImportMeta = {
+  filename: string;
+  importedAt: string;
+};
+
+export type FactorImportPayload = {
+  meta: FactorImportMeta;
+  factors: Factor[];
 };
 
 export type AddEl = {

@@ -3,8 +3,9 @@ export type Factor = {
   name: string;
   module: string;
   unit: string;
-  factorKgCo2PerUnit: number;
+  factorKgCO2ePerUnit: number;
   source: string;
+  kgPerUnitForAffald?: number;
 };
 
 export const FACTORS: Factor[] = [
@@ -13,7 +14,7 @@ export const FACTORS: Factor[] = [
     "name": "El (DK elmix)",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.233,
+    "factorKgCO2ePerUnit": 0.233,
     "source": "Placeholder"
   },
   {
@@ -21,7 +22,7 @@ export const FACTORS: Factor[] = [
     "name": "Vand (drikkevand)",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.344,
+    "factorKgCO2ePerUnit": 0.344,
     "source": "Placeholder"
   },
   {
@@ -29,7 +30,7 @@ export const FACTORS: Factor[] = [
     "name": "Diesel (B7)",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.67,
+    "factorKgCO2ePerUnit": 2.67,
     "source": "Placeholder"
   },
   {
@@ -37,7 +38,7 @@ export const FACTORS: Factor[] = [
     "name": "Fabriksbeton (C25/30) i eksponeringsklasserne X0 og XC1",
     "module": "A1-A3",
     "unit": "m3",
-    "factorKgCo2PerUnit": 320.5,
+    "factorKgCO2ePerUnit": 320.5,
     "source": "Placeholder"
   },
   {
@@ -45,7 +46,7 @@ export const FACTORS: Factor[] = [
     "name": "Gipsplade 13 mm",
     "module": "A1-A3",
     "unit": "m2",
-    "factorKgCo2PerUnit": 12.5,
+    "factorKgCO2ePerUnit": 12.5,
     "source": "Placeholder"
   },
   {
@@ -53,7 +54,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald - teglsten (genanvendelse)",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.22,
+    "factorKgCO2ePerUnit": 0.22,
     "source": "Placeholder"
   },
   {
@@ -61,7 +62,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald - gips (håndtering)",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.08,
+    "factorKgCO2ePerUnit": 0.08,
     "source": "Placeholder"
   },
   {
@@ -69,7 +70,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 1",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.0525,
+    "factorKgCO2ePerUnit": 0.0525,
     "source": "Placeholder"
   },
   {
@@ -77,7 +78,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 2",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.055,
+    "factorKgCO2ePerUnit": 0.055,
     "source": "Placeholder"
   },
   {
@@ -85,7 +86,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 3",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.0575,
+    "factorKgCO2ePerUnit": 0.0575,
     "source": "Placeholder"
   },
   {
@@ -93,7 +94,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 4",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.06,
+    "factorKgCO2ePerUnit": 0.06,
     "source": "Placeholder"
   },
   {
@@ -101,7 +102,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 5",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.0625,
+    "factorKgCO2ePerUnit": 0.0625,
     "source": "Placeholder"
   },
   {
@@ -109,7 +110,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 6",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.065,
+    "factorKgCO2ePerUnit": 0.065,
     "source": "Placeholder"
   },
   {
@@ -117,7 +118,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 7",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.0675,
+    "factorKgCO2ePerUnit": 0.0675,
     "source": "Placeholder"
   },
   {
@@ -125,7 +126,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 8",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.07,
+    "factorKgCO2ePerUnit": 0.07,
     "source": "Placeholder"
   },
   {
@@ -133,7 +134,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 9",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.0725,
+    "factorKgCO2ePerUnit": 0.0725,
     "source": "Placeholder"
   },
   {
@@ -141,7 +142,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 10",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.075,
+    "factorKgCO2ePerUnit": 0.075,
     "source": "Placeholder"
   },
   {
@@ -149,7 +150,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 11",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.0775,
+    "factorKgCO2ePerUnit": 0.0775,
     "source": "Placeholder"
   },
   {
@@ -157,7 +158,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 12",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.08,
+    "factorKgCO2ePerUnit": 0.08,
     "source": "Placeholder"
   },
   {
@@ -165,7 +166,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 13",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.0825,
+    "factorKgCO2ePerUnit": 0.0825,
     "source": "Placeholder"
   },
   {
@@ -173,7 +174,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 14",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.085,
+    "factorKgCO2ePerUnit": 0.085,
     "source": "Placeholder"
   },
   {
@@ -181,7 +182,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 15",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.0875,
+    "factorKgCO2ePerUnit": 0.0875,
     "source": "Placeholder"
   },
   {
@@ -189,7 +190,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 16",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.09,
+    "factorKgCO2ePerUnit": 0.09,
     "source": "Placeholder"
   },
   {
@@ -197,7 +198,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 17",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.0925,
+    "factorKgCO2ePerUnit": 0.0925,
     "source": "Placeholder"
   },
   {
@@ -205,7 +206,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 18",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.095,
+    "factorKgCO2ePerUnit": 0.095,
     "source": "Placeholder"
   },
   {
@@ -213,7 +214,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 19",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.0975,
+    "factorKgCO2ePerUnit": 0.0975,
     "source": "Placeholder"
   },
   {
@@ -221,7 +222,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 20",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1,
+    "factorKgCO2ePerUnit": 0.1,
     "source": "Placeholder"
   },
   {
@@ -229,7 +230,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 21",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1025,
+    "factorKgCO2ePerUnit": 0.1025,
     "source": "Placeholder"
   },
   {
@@ -237,7 +238,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 22",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.105,
+    "factorKgCO2ePerUnit": 0.105,
     "source": "Placeholder"
   },
   {
@@ -245,7 +246,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 23",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1075,
+    "factorKgCO2ePerUnit": 0.1075,
     "source": "Placeholder"
   },
   {
@@ -253,7 +254,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 24",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.11,
+    "factorKgCO2ePerUnit": 0.11,
     "source": "Placeholder"
   },
   {
@@ -261,7 +262,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 25",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1125,
+    "factorKgCO2ePerUnit": 0.1125,
     "source": "Placeholder"
   },
   {
@@ -269,7 +270,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 26",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.115,
+    "factorKgCO2ePerUnit": 0.115,
     "source": "Placeholder"
   },
   {
@@ -277,7 +278,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 27",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1175,
+    "factorKgCO2ePerUnit": 0.1175,
     "source": "Placeholder"
   },
   {
@@ -285,7 +286,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 28",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.12,
+    "factorKgCO2ePerUnit": 0.12,
     "source": "Placeholder"
   },
   {
@@ -293,7 +294,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 29",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1225,
+    "factorKgCO2ePerUnit": 0.1225,
     "source": "Placeholder"
   },
   {
@@ -301,7 +302,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 30",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.125,
+    "factorKgCO2ePerUnit": 0.125,
     "source": "Placeholder"
   },
   {
@@ -309,7 +310,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 31",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1275,
+    "factorKgCO2ePerUnit": 0.1275,
     "source": "Placeholder"
   },
   {
@@ -317,7 +318,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 32",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.13,
+    "factorKgCO2ePerUnit": 0.13,
     "source": "Placeholder"
   },
   {
@@ -325,7 +326,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 33",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1325,
+    "factorKgCO2ePerUnit": 0.1325,
     "source": "Placeholder"
   },
   {
@@ -333,7 +334,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 34",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.135,
+    "factorKgCO2ePerUnit": 0.135,
     "source": "Placeholder"
   },
   {
@@ -341,7 +342,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 35",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1375,
+    "factorKgCO2ePerUnit": 0.1375,
     "source": "Placeholder"
   },
   {
@@ -349,7 +350,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 36",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.14,
+    "factorKgCO2ePerUnit": 0.14,
     "source": "Placeholder"
   },
   {
@@ -357,7 +358,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 37",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1425,
+    "factorKgCO2ePerUnit": 0.1425,
     "source": "Placeholder"
   },
   {
@@ -365,7 +366,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 38",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.145,
+    "factorKgCO2ePerUnit": 0.145,
     "source": "Placeholder"
   },
   {
@@ -373,7 +374,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 39",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1475,
+    "factorKgCO2ePerUnit": 0.1475,
     "source": "Placeholder"
   },
   {
@@ -381,7 +382,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 40",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.15,
+    "factorKgCO2ePerUnit": 0.15,
     "source": "Placeholder"
   },
   {
@@ -389,7 +390,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 41",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1525,
+    "factorKgCO2ePerUnit": 0.1525,
     "source": "Placeholder"
   },
   {
@@ -397,7 +398,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 42",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.155,
+    "factorKgCO2ePerUnit": 0.155,
     "source": "Placeholder"
   },
   {
@@ -405,7 +406,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 43",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1575,
+    "factorKgCO2ePerUnit": 0.1575,
     "source": "Placeholder"
   },
   {
@@ -413,7 +414,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 44",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.16,
+    "factorKgCO2ePerUnit": 0.16,
     "source": "Placeholder"
   },
   {
@@ -421,7 +422,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 45",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1625,
+    "factorKgCO2ePerUnit": 0.1625,
     "source": "Placeholder"
   },
   {
@@ -429,7 +430,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 46",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.165,
+    "factorKgCO2ePerUnit": 0.165,
     "source": "Placeholder"
   },
   {
@@ -437,7 +438,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 47",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1675,
+    "factorKgCO2ePerUnit": 0.1675,
     "source": "Placeholder"
   },
   {
@@ -445,7 +446,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 48",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.17,
+    "factorKgCO2ePerUnit": 0.17,
     "source": "Placeholder"
   },
   {
@@ -453,7 +454,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 49",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.1725,
+    "factorKgCO2ePerUnit": 0.1725,
     "source": "Placeholder"
   },
   {
@@ -461,7 +462,7 @@ export const FACTORS: Factor[] = [
     "name": "El-type 50",
     "module": "A5",
     "unit": "kWh",
-    "factorKgCo2PerUnit": 0.175,
+    "factorKgCO2ePerUnit": 0.175,
     "source": "Placeholder"
   },
   {
@@ -469,7 +470,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 1",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.2035,
+    "factorKgCO2ePerUnit": 0.2035,
     "source": "Placeholder"
   },
   {
@@ -477,7 +478,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 2",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.207,
+    "factorKgCO2ePerUnit": 0.207,
     "source": "Placeholder"
   },
   {
@@ -485,7 +486,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 3",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.2105,
+    "factorKgCO2ePerUnit": 0.2105,
     "source": "Placeholder"
   },
   {
@@ -493,7 +494,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 4",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.214,
+    "factorKgCO2ePerUnit": 0.214,
     "source": "Placeholder"
   },
   {
@@ -501,7 +502,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 5",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.2175,
+    "factorKgCO2ePerUnit": 0.2175,
     "source": "Placeholder"
   },
   {
@@ -509,7 +510,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 6",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.221,
+    "factorKgCO2ePerUnit": 0.221,
     "source": "Placeholder"
   },
   {
@@ -517,7 +518,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 7",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.2245,
+    "factorKgCO2ePerUnit": 0.2245,
     "source": "Placeholder"
   },
   {
@@ -525,7 +526,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 8",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.228,
+    "factorKgCO2ePerUnit": 0.228,
     "source": "Placeholder"
   },
   {
@@ -533,7 +534,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 9",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.2315,
+    "factorKgCO2ePerUnit": 0.2315,
     "source": "Placeholder"
   },
   {
@@ -541,7 +542,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 10",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.235,
+    "factorKgCO2ePerUnit": 0.235,
     "source": "Placeholder"
   },
   {
@@ -549,7 +550,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 11",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.2385,
+    "factorKgCO2ePerUnit": 0.2385,
     "source": "Placeholder"
   },
   {
@@ -557,7 +558,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 12",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.242,
+    "factorKgCO2ePerUnit": 0.242,
     "source": "Placeholder"
   },
   {
@@ -565,7 +566,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 13",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.2455,
+    "factorKgCO2ePerUnit": 0.2455,
     "source": "Placeholder"
   },
   {
@@ -573,7 +574,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 14",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.249,
+    "factorKgCO2ePerUnit": 0.249,
     "source": "Placeholder"
   },
   {
@@ -581,7 +582,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 15",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.2525,
+    "factorKgCO2ePerUnit": 0.2525,
     "source": "Placeholder"
   },
   {
@@ -589,7 +590,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 16",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.256,
+    "factorKgCO2ePerUnit": 0.256,
     "source": "Placeholder"
   },
   {
@@ -597,7 +598,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 17",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.2595,
+    "factorKgCO2ePerUnit": 0.2595,
     "source": "Placeholder"
   },
   {
@@ -605,7 +606,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 18",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.263,
+    "factorKgCO2ePerUnit": 0.263,
     "source": "Placeholder"
   },
   {
@@ -613,7 +614,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 19",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.2665,
+    "factorKgCO2ePerUnit": 0.2665,
     "source": "Placeholder"
   },
   {
@@ -621,7 +622,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 20",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.27,
+    "factorKgCO2ePerUnit": 0.27,
     "source": "Placeholder"
   },
   {
@@ -629,7 +630,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 21",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.2735,
+    "factorKgCO2ePerUnit": 0.2735,
     "source": "Placeholder"
   },
   {
@@ -637,7 +638,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 22",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.277,
+    "factorKgCO2ePerUnit": 0.277,
     "source": "Placeholder"
   },
   {
@@ -645,7 +646,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 23",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.2805,
+    "factorKgCO2ePerUnit": 0.2805,
     "source": "Placeholder"
   },
   {
@@ -653,7 +654,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 24",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.284,
+    "factorKgCO2ePerUnit": 0.284,
     "source": "Placeholder"
   },
   {
@@ -661,7 +662,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 25",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.2875,
+    "factorKgCO2ePerUnit": 0.2875,
     "source": "Placeholder"
   },
   {
@@ -669,7 +670,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 26",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.291,
+    "factorKgCO2ePerUnit": 0.291,
     "source": "Placeholder"
   },
   {
@@ -677,7 +678,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 27",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.2945,
+    "factorKgCO2ePerUnit": 0.2945,
     "source": "Placeholder"
   },
   {
@@ -685,7 +686,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 28",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.298,
+    "factorKgCO2ePerUnit": 0.298,
     "source": "Placeholder"
   },
   {
@@ -693,7 +694,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 29",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.3015,
+    "factorKgCO2ePerUnit": 0.3015,
     "source": "Placeholder"
   },
   {
@@ -701,7 +702,7 @@ export const FACTORS: Factor[] = [
     "name": "Vandtype 30",
     "module": "A5",
     "unit": "m3",
-    "factorKgCo2PerUnit": 0.305,
+    "factorKgCO2ePerUnit": 0.305,
     "source": "Placeholder"
   },
   {
@@ -709,7 +710,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 1",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.525,
+    "factorKgCO2ePerUnit": 1.525,
     "source": "Placeholder"
   },
   {
@@ -717,7 +718,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 2",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.55,
+    "factorKgCO2ePerUnit": 1.55,
     "source": "Placeholder"
   },
   {
@@ -725,7 +726,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 3",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.575,
+    "factorKgCO2ePerUnit": 1.575,
     "source": "Placeholder"
   },
   {
@@ -733,7 +734,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 4",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.6,
+    "factorKgCO2ePerUnit": 1.6,
     "source": "Placeholder"
   },
   {
@@ -741,7 +742,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 5",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.625,
+    "factorKgCO2ePerUnit": 1.625,
     "source": "Placeholder"
   },
   {
@@ -749,7 +750,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 6",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.65,
+    "factorKgCO2ePerUnit": 1.65,
     "source": "Placeholder"
   },
   {
@@ -757,7 +758,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 7",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.675,
+    "factorKgCO2ePerUnit": 1.675,
     "source": "Placeholder"
   },
   {
@@ -765,7 +766,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 8",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.7,
+    "factorKgCO2ePerUnit": 1.7,
     "source": "Placeholder"
   },
   {
@@ -773,7 +774,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 9",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.725,
+    "factorKgCO2ePerUnit": 1.725,
     "source": "Placeholder"
   },
   {
@@ -781,7 +782,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 10",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.75,
+    "factorKgCO2ePerUnit": 1.75,
     "source": "Placeholder"
   },
   {
@@ -789,7 +790,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 11",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.775,
+    "factorKgCO2ePerUnit": 1.775,
     "source": "Placeholder"
   },
   {
@@ -797,7 +798,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 12",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.8,
+    "factorKgCO2ePerUnit": 1.8,
     "source": "Placeholder"
   },
   {
@@ -805,7 +806,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 13",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.825,
+    "factorKgCO2ePerUnit": 1.825,
     "source": "Placeholder"
   },
   {
@@ -813,7 +814,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 14",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.85,
+    "factorKgCO2ePerUnit": 1.85,
     "source": "Placeholder"
   },
   {
@@ -821,7 +822,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 15",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.875,
+    "factorKgCO2ePerUnit": 1.875,
     "source": "Placeholder"
   },
   {
@@ -829,7 +830,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 16",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.9,
+    "factorKgCO2ePerUnit": 1.9,
     "source": "Placeholder"
   },
   {
@@ -837,7 +838,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 17",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.925,
+    "factorKgCO2ePerUnit": 1.925,
     "source": "Placeholder"
   },
   {
@@ -845,7 +846,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 18",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.95,
+    "factorKgCO2ePerUnit": 1.95,
     "source": "Placeholder"
   },
   {
@@ -853,7 +854,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 19",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 1.975,
+    "factorKgCO2ePerUnit": 1.975,
     "source": "Placeholder"
   },
   {
@@ -861,7 +862,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 20",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2,
+    "factorKgCO2ePerUnit": 2,
     "source": "Placeholder"
   },
   {
@@ -869,7 +870,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 21",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.025,
+    "factorKgCO2ePerUnit": 2.025,
     "source": "Placeholder"
   },
   {
@@ -877,7 +878,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 22",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.05,
+    "factorKgCO2ePerUnit": 2.05,
     "source": "Placeholder"
   },
   {
@@ -885,7 +886,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 23",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.075,
+    "factorKgCO2ePerUnit": 2.075,
     "source": "Placeholder"
   },
   {
@@ -893,7 +894,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 24",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.1,
+    "factorKgCO2ePerUnit": 2.1,
     "source": "Placeholder"
   },
   {
@@ -901,7 +902,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 25",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.125,
+    "factorKgCO2ePerUnit": 2.125,
     "source": "Placeholder"
   },
   {
@@ -909,7 +910,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 26",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.15,
+    "factorKgCO2ePerUnit": 2.15,
     "source": "Placeholder"
   },
   {
@@ -917,7 +918,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 27",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.175,
+    "factorKgCO2ePerUnit": 2.175,
     "source": "Placeholder"
   },
   {
@@ -925,7 +926,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 28",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.2,
+    "factorKgCO2ePerUnit": 2.2,
     "source": "Placeholder"
   },
   {
@@ -933,7 +934,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 29",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.225,
+    "factorKgCO2ePerUnit": 2.225,
     "source": "Placeholder"
   },
   {
@@ -941,7 +942,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 30",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.25,
+    "factorKgCO2ePerUnit": 2.25,
     "source": "Placeholder"
   },
   {
@@ -949,7 +950,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 31",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.275,
+    "factorKgCO2ePerUnit": 2.275,
     "source": "Placeholder"
   },
   {
@@ -957,7 +958,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 32",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.3,
+    "factorKgCO2ePerUnit": 2.3,
     "source": "Placeholder"
   },
   {
@@ -965,7 +966,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 33",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.325,
+    "factorKgCO2ePerUnit": 2.325,
     "source": "Placeholder"
   },
   {
@@ -973,7 +974,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 34",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.35,
+    "factorKgCO2ePerUnit": 2.35,
     "source": "Placeholder"
   },
   {
@@ -981,7 +982,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 35",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.375,
+    "factorKgCO2ePerUnit": 2.375,
     "source": "Placeholder"
   },
   {
@@ -989,7 +990,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 36",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.4,
+    "factorKgCO2ePerUnit": 2.4,
     "source": "Placeholder"
   },
   {
@@ -997,7 +998,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 37",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.425,
+    "factorKgCO2ePerUnit": 2.425,
     "source": "Placeholder"
   },
   {
@@ -1005,7 +1006,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 38",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.45,
+    "factorKgCO2ePerUnit": 2.45,
     "source": "Placeholder"
   },
   {
@@ -1013,7 +1014,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 39",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.475,
+    "factorKgCO2ePerUnit": 2.475,
     "source": "Placeholder"
   },
   {
@@ -1021,7 +1022,7 @@ export const FACTORS: Factor[] = [
     "name": "Brændstof-type 40",
     "module": "A4",
     "unit": "L",
-    "factorKgCo2PerUnit": 2.5,
+    "factorKgCO2ePerUnit": 2.5,
     "source": "Placeholder"
   },
   {
@@ -1029,7 +1030,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 1",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.154,
+    "factorKgCO2ePerUnit": 0.154,
     "source": "Placeholder"
   },
   {
@@ -1037,7 +1038,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 2",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.158,
+    "factorKgCO2ePerUnit": 0.158,
     "source": "Placeholder"
   },
   {
@@ -1045,7 +1046,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 3",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.162,
+    "factorKgCO2ePerUnit": 0.162,
     "source": "Placeholder"
   },
   {
@@ -1053,7 +1054,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 4",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.166,
+    "factorKgCO2ePerUnit": 0.166,
     "source": "Placeholder"
   },
   {
@@ -1061,7 +1062,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 5",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.17,
+    "factorKgCO2ePerUnit": 0.17,
     "source": "Placeholder"
   },
   {
@@ -1069,7 +1070,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 6",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.174,
+    "factorKgCO2ePerUnit": 0.174,
     "source": "Placeholder"
   },
   {
@@ -1077,7 +1078,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 7",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.178,
+    "factorKgCO2ePerUnit": 0.178,
     "source": "Placeholder"
   },
   {
@@ -1085,7 +1086,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 8",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.182,
+    "factorKgCO2ePerUnit": 0.182,
     "source": "Placeholder"
   },
   {
@@ -1093,7 +1094,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 9",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.186,
+    "factorKgCO2ePerUnit": 0.186,
     "source": "Placeholder"
   },
   {
@@ -1101,7 +1102,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 10",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.19,
+    "factorKgCO2ePerUnit": 0.19,
     "source": "Placeholder"
   },
   {
@@ -1109,7 +1110,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 11",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.194,
+    "factorKgCO2ePerUnit": 0.194,
     "source": "Placeholder"
   },
   {
@@ -1117,7 +1118,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 12",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.198,
+    "factorKgCO2ePerUnit": 0.198,
     "source": "Placeholder"
   },
   {
@@ -1125,7 +1126,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 13",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.202,
+    "factorKgCO2ePerUnit": 0.202,
     "source": "Placeholder"
   },
   {
@@ -1133,7 +1134,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 14",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.206,
+    "factorKgCO2ePerUnit": 0.206,
     "source": "Placeholder"
   },
   {
@@ -1141,7 +1142,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 15",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.21,
+    "factorKgCO2ePerUnit": 0.21,
     "source": "Placeholder"
   },
   {
@@ -1149,7 +1150,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 16",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.214,
+    "factorKgCO2ePerUnit": 0.214,
     "source": "Placeholder"
   },
   {
@@ -1157,7 +1158,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 17",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.218,
+    "factorKgCO2ePerUnit": 0.218,
     "source": "Placeholder"
   },
   {
@@ -1165,7 +1166,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 18",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.222,
+    "factorKgCO2ePerUnit": 0.222,
     "source": "Placeholder"
   },
   {
@@ -1173,7 +1174,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 19",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.226,
+    "factorKgCO2ePerUnit": 0.226,
     "source": "Placeholder"
   },
   {
@@ -1181,7 +1182,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 20",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.23,
+    "factorKgCO2ePerUnit": 0.23,
     "source": "Placeholder"
   },
   {
@@ -1189,7 +1190,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 21",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.234,
+    "factorKgCO2ePerUnit": 0.234,
     "source": "Placeholder"
   },
   {
@@ -1197,7 +1198,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 22",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.238,
+    "factorKgCO2ePerUnit": 0.238,
     "source": "Placeholder"
   },
   {
@@ -1205,7 +1206,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 23",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.242,
+    "factorKgCO2ePerUnit": 0.242,
     "source": "Placeholder"
   },
   {
@@ -1213,7 +1214,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 24",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.246,
+    "factorKgCO2ePerUnit": 0.246,
     "source": "Placeholder"
   },
   {
@@ -1221,7 +1222,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 25",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.25,
+    "factorKgCO2ePerUnit": 0.25,
     "source": "Placeholder"
   },
   {
@@ -1229,7 +1230,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 26",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.254,
+    "factorKgCO2ePerUnit": 0.254,
     "source": "Placeholder"
   },
   {
@@ -1237,7 +1238,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 27",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.258,
+    "factorKgCO2ePerUnit": 0.258,
     "source": "Placeholder"
   },
   {
@@ -1245,7 +1246,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 28",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.262,
+    "factorKgCO2ePerUnit": 0.262,
     "source": "Placeholder"
   },
   {
@@ -1253,7 +1254,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 29",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.266,
+    "factorKgCO2ePerUnit": 0.266,
     "source": "Placeholder"
   },
   {
@@ -1261,7 +1262,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 30",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.27,
+    "factorKgCO2ePerUnit": 0.27,
     "source": "Placeholder"
   },
   {
@@ -1269,7 +1270,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 31",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.274,
+    "factorKgCO2ePerUnit": 0.274,
     "source": "Placeholder"
   },
   {
@@ -1277,7 +1278,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 32",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.278,
+    "factorKgCO2ePerUnit": 0.278,
     "source": "Placeholder"
   },
   {
@@ -1285,7 +1286,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 33",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.282,
+    "factorKgCO2ePerUnit": 0.282,
     "source": "Placeholder"
   },
   {
@@ -1293,7 +1294,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 34",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.286,
+    "factorKgCO2ePerUnit": 0.286,
     "source": "Placeholder"
   },
   {
@@ -1301,7 +1302,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 35",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.29,
+    "factorKgCO2ePerUnit": 0.29,
     "source": "Placeholder"
   },
   {
@@ -1309,7 +1310,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 36",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.294,
+    "factorKgCO2ePerUnit": 0.294,
     "source": "Placeholder"
   },
   {
@@ -1317,7 +1318,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 37",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.298,
+    "factorKgCO2ePerUnit": 0.298,
     "source": "Placeholder"
   },
   {
@@ -1325,7 +1326,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 38",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.302,
+    "factorKgCO2ePerUnit": 0.302,
     "source": "Placeholder"
   },
   {
@@ -1333,7 +1334,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 39",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.306,
+    "factorKgCO2ePerUnit": 0.306,
     "source": "Placeholder"
   },
   {
@@ -1341,7 +1342,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 40",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.31,
+    "factorKgCO2ePerUnit": 0.31,
     "source": "Placeholder"
   },
   {
@@ -1349,7 +1350,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 41",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.314,
+    "factorKgCO2ePerUnit": 0.314,
     "source": "Placeholder"
   },
   {
@@ -1357,7 +1358,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 42",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.318,
+    "factorKgCO2ePerUnit": 0.318,
     "source": "Placeholder"
   },
   {
@@ -1365,7 +1366,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 43",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.322,
+    "factorKgCO2ePerUnit": 0.322,
     "source": "Placeholder"
   },
   {
@@ -1373,7 +1374,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 44",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.326,
+    "factorKgCO2ePerUnit": 0.326,
     "source": "Placeholder"
   },
   {
@@ -1381,7 +1382,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 45",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.33,
+    "factorKgCO2ePerUnit": 0.33,
     "source": "Placeholder"
   },
   {
@@ -1389,7 +1390,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 46",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.334,
+    "factorKgCO2ePerUnit": 0.334,
     "source": "Placeholder"
   },
   {
@@ -1397,7 +1398,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 47",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.338,
+    "factorKgCO2ePerUnit": 0.338,
     "source": "Placeholder"
   },
   {
@@ -1405,7 +1406,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 48",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.342,
+    "factorKgCO2ePerUnit": 0.342,
     "source": "Placeholder"
   },
   {
@@ -1413,7 +1414,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 49",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.346,
+    "factorKgCO2ePerUnit": 0.346,
     "source": "Placeholder"
   },
   {
@@ -1421,7 +1422,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 50",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.35,
+    "factorKgCO2ePerUnit": 0.35,
     "source": "Placeholder"
   },
   {
@@ -1429,7 +1430,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 51",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.354,
+    "factorKgCO2ePerUnit": 0.354,
     "source": "Placeholder"
   },
   {
@@ -1437,7 +1438,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 52",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.358,
+    "factorKgCO2ePerUnit": 0.358,
     "source": "Placeholder"
   },
   {
@@ -1445,7 +1446,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 53",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.362,
+    "factorKgCO2ePerUnit": 0.362,
     "source": "Placeholder"
   },
   {
@@ -1453,7 +1454,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 54",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.366,
+    "factorKgCO2ePerUnit": 0.366,
     "source": "Placeholder"
   },
   {
@@ -1461,7 +1462,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 55",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.37,
+    "factorKgCO2ePerUnit": 0.37,
     "source": "Placeholder"
   },
   {
@@ -1469,7 +1470,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 56",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.374,
+    "factorKgCO2ePerUnit": 0.374,
     "source": "Placeholder"
   },
   {
@@ -1477,7 +1478,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 57",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.378,
+    "factorKgCO2ePerUnit": 0.378,
     "source": "Placeholder"
   },
   {
@@ -1485,7 +1486,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 58",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.382,
+    "factorKgCO2ePerUnit": 0.382,
     "source": "Placeholder"
   },
   {
@@ -1493,7 +1494,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 59",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.386,
+    "factorKgCO2ePerUnit": 0.386,
     "source": "Placeholder"
   },
   {
@@ -1501,7 +1502,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 60",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.39,
+    "factorKgCO2ePerUnit": 0.39,
     "source": "Placeholder"
   },
   {
@@ -1509,7 +1510,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 61",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.394,
+    "factorKgCO2ePerUnit": 0.394,
     "source": "Placeholder"
   },
   {
@@ -1517,7 +1518,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 62",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.398,
+    "factorKgCO2ePerUnit": 0.398,
     "source": "Placeholder"
   },
   {
@@ -1525,7 +1526,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 63",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.402,
+    "factorKgCO2ePerUnit": 0.402,
     "source": "Placeholder"
   },
   {
@@ -1533,7 +1534,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 64",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.406,
+    "factorKgCO2ePerUnit": 0.406,
     "source": "Placeholder"
   },
   {
@@ -1541,7 +1542,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 65",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.41,
+    "factorKgCO2ePerUnit": 0.41,
     "source": "Placeholder"
   },
   {
@@ -1549,7 +1550,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 66",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.414,
+    "factorKgCO2ePerUnit": 0.414,
     "source": "Placeholder"
   },
   {
@@ -1557,7 +1558,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 67",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.418,
+    "factorKgCO2ePerUnit": 0.418,
     "source": "Placeholder"
   },
   {
@@ -1565,7 +1566,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 68",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.422,
+    "factorKgCO2ePerUnit": 0.422,
     "source": "Placeholder"
   },
   {
@@ -1573,7 +1574,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 69",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.426,
+    "factorKgCO2ePerUnit": 0.426,
     "source": "Placeholder"
   },
   {
@@ -1581,7 +1582,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 70",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.43,
+    "factorKgCO2ePerUnit": 0.43,
     "source": "Placeholder"
   },
   {
@@ -1589,7 +1590,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 71",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.434,
+    "factorKgCO2ePerUnit": 0.434,
     "source": "Placeholder"
   },
   {
@@ -1597,7 +1598,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 72",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.438,
+    "factorKgCO2ePerUnit": 0.438,
     "source": "Placeholder"
   },
   {
@@ -1605,7 +1606,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 73",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.442,
+    "factorKgCO2ePerUnit": 0.442,
     "source": "Placeholder"
   },
   {
@@ -1613,7 +1614,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 74",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.446,
+    "factorKgCO2ePerUnit": 0.446,
     "source": "Placeholder"
   },
   {
@@ -1621,7 +1622,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 75",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.45,
+    "factorKgCO2ePerUnit": 0.45,
     "source": "Placeholder"
   },
   {
@@ -1629,7 +1630,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 76",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.454,
+    "factorKgCO2ePerUnit": 0.454,
     "source": "Placeholder"
   },
   {
@@ -1637,7 +1638,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 77",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.458,
+    "factorKgCO2ePerUnit": 0.458,
     "source": "Placeholder"
   },
   {
@@ -1645,7 +1646,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 78",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.462,
+    "factorKgCO2ePerUnit": 0.462,
     "source": "Placeholder"
   },
   {
@@ -1653,7 +1654,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 79",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.466,
+    "factorKgCO2ePerUnit": 0.466,
     "source": "Placeholder"
   },
   {
@@ -1661,7 +1662,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 80",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.47,
+    "factorKgCO2ePerUnit": 0.47,
     "source": "Placeholder"
   },
   {
@@ -1669,7 +1670,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 81",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.474,
+    "factorKgCO2ePerUnit": 0.474,
     "source": "Placeholder"
   },
   {
@@ -1677,7 +1678,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 82",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.478,
+    "factorKgCO2ePerUnit": 0.478,
     "source": "Placeholder"
   },
   {
@@ -1685,7 +1686,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 83",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.482,
+    "factorKgCO2ePerUnit": 0.482,
     "source": "Placeholder"
   },
   {
@@ -1693,7 +1694,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 84",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.486,
+    "factorKgCO2ePerUnit": 0.486,
     "source": "Placeholder"
   },
   {
@@ -1701,7 +1702,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 85",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.49,
+    "factorKgCO2ePerUnit": 0.49,
     "source": "Placeholder"
   },
   {
@@ -1709,7 +1710,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 86",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.494,
+    "factorKgCO2ePerUnit": 0.494,
     "source": "Placeholder"
   },
   {
@@ -1717,7 +1718,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 87",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.498,
+    "factorKgCO2ePerUnit": 0.498,
     "source": "Placeholder"
   },
   {
@@ -1725,7 +1726,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 88",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.502,
+    "factorKgCO2ePerUnit": 0.502,
     "source": "Placeholder"
   },
   {
@@ -1733,7 +1734,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 89",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.506,
+    "factorKgCO2ePerUnit": 0.506,
     "source": "Placeholder"
   },
   {
@@ -1741,7 +1742,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 90",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.51,
+    "factorKgCO2ePerUnit": 0.51,
     "source": "Placeholder"
   },
   {
@@ -1749,7 +1750,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 91",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.514,
+    "factorKgCO2ePerUnit": 0.514,
     "source": "Placeholder"
   },
   {
@@ -1757,7 +1758,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 92",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.518,
+    "factorKgCO2ePerUnit": 0.518,
     "source": "Placeholder"
   },
   {
@@ -1765,7 +1766,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 93",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.522,
+    "factorKgCO2ePerUnit": 0.522,
     "source": "Placeholder"
   },
   {
@@ -1773,7 +1774,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 94",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.526,
+    "factorKgCO2ePerUnit": 0.526,
     "source": "Placeholder"
   },
   {
@@ -1781,7 +1782,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 95",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.53,
+    "factorKgCO2ePerUnit": 0.53,
     "source": "Placeholder"
   },
   {
@@ -1789,7 +1790,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 96",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.534,
+    "factorKgCO2ePerUnit": 0.534,
     "source": "Placeholder"
   },
   {
@@ -1797,7 +1798,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 97",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.538,
+    "factorKgCO2ePerUnit": 0.538,
     "source": "Placeholder"
   },
   {
@@ -1805,7 +1806,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 98",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.542,
+    "factorKgCO2ePerUnit": 0.542,
     "source": "Placeholder"
   },
   {
@@ -1813,7 +1814,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 99",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.546,
+    "factorKgCO2ePerUnit": 0.546,
     "source": "Placeholder"
   },
   {
@@ -1821,7 +1822,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 100",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.55,
+    "factorKgCO2ePerUnit": 0.55,
     "source": "Placeholder"
   },
   {
@@ -1829,7 +1830,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 101",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.554,
+    "factorKgCO2ePerUnit": 0.554,
     "source": "Placeholder"
   },
   {
@@ -1837,7 +1838,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 102",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.558,
+    "factorKgCO2ePerUnit": 0.558,
     "source": "Placeholder"
   },
   {
@@ -1845,7 +1846,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 103",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.562,
+    "factorKgCO2ePerUnit": 0.562,
     "source": "Placeholder"
   },
   {
@@ -1853,7 +1854,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 104",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.566,
+    "factorKgCO2ePerUnit": 0.566,
     "source": "Placeholder"
   },
   {
@@ -1861,7 +1862,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 105",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.57,
+    "factorKgCO2ePerUnit": 0.57,
     "source": "Placeholder"
   },
   {
@@ -1869,7 +1870,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 106",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.574,
+    "factorKgCO2ePerUnit": 0.574,
     "source": "Placeholder"
   },
   {
@@ -1877,7 +1878,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 107",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.578,
+    "factorKgCO2ePerUnit": 0.578,
     "source": "Placeholder"
   },
   {
@@ -1885,7 +1886,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 108",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.582,
+    "factorKgCO2ePerUnit": 0.582,
     "source": "Placeholder"
   },
   {
@@ -1893,7 +1894,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 109",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.586,
+    "factorKgCO2ePerUnit": 0.586,
     "source": "Placeholder"
   },
   {
@@ -1901,7 +1902,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 110",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.59,
+    "factorKgCO2ePerUnit": 0.59,
     "source": "Placeholder"
   },
   {
@@ -1909,7 +1910,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 111",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.594,
+    "factorKgCO2ePerUnit": 0.594,
     "source": "Placeholder"
   },
   {
@@ -1917,7 +1918,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 112",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.598,
+    "factorKgCO2ePerUnit": 0.598,
     "source": "Placeholder"
   },
   {
@@ -1925,7 +1926,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 113",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.602,
+    "factorKgCO2ePerUnit": 0.602,
     "source": "Placeholder"
   },
   {
@@ -1933,7 +1934,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 114",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.606,
+    "factorKgCO2ePerUnit": 0.606,
     "source": "Placeholder"
   },
   {
@@ -1941,7 +1942,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 115",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.61,
+    "factorKgCO2ePerUnit": 0.61,
     "source": "Placeholder"
   },
   {
@@ -1949,7 +1950,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 116",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.614,
+    "factorKgCO2ePerUnit": 0.614,
     "source": "Placeholder"
   },
   {
@@ -1957,7 +1958,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 117",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.618,
+    "factorKgCO2ePerUnit": 0.618,
     "source": "Placeholder"
   },
   {
@@ -1965,7 +1966,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 118",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.622,
+    "factorKgCO2ePerUnit": 0.622,
     "source": "Placeholder"
   },
   {
@@ -1973,7 +1974,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 119",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.626,
+    "factorKgCO2ePerUnit": 0.626,
     "source": "Placeholder"
   },
   {
@@ -1981,7 +1982,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 120",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.63,
+    "factorKgCO2ePerUnit": 0.63,
     "source": "Placeholder"
   },
   {
@@ -1989,7 +1990,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 121",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.634,
+    "factorKgCO2ePerUnit": 0.634,
     "source": "Placeholder"
   },
   {
@@ -1997,7 +1998,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 122",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.638,
+    "factorKgCO2ePerUnit": 0.638,
     "source": "Placeholder"
   },
   {
@@ -2005,7 +2006,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 123",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.642,
+    "factorKgCO2ePerUnit": 0.642,
     "source": "Placeholder"
   },
   {
@@ -2013,7 +2014,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 124",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.646,
+    "factorKgCO2ePerUnit": 0.646,
     "source": "Placeholder"
   },
   {
@@ -2021,7 +2022,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 125",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.65,
+    "factorKgCO2ePerUnit": 0.65,
     "source": "Placeholder"
   },
   {
@@ -2029,7 +2030,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 126",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.654,
+    "factorKgCO2ePerUnit": 0.654,
     "source": "Placeholder"
   },
   {
@@ -2037,7 +2038,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 127",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.658,
+    "factorKgCO2ePerUnit": 0.658,
     "source": "Placeholder"
   },
   {
@@ -2045,7 +2046,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 128",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.662,
+    "factorKgCO2ePerUnit": 0.662,
     "source": "Placeholder"
   },
   {
@@ -2053,7 +2054,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 129",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.666,
+    "factorKgCO2ePerUnit": 0.666,
     "source": "Placeholder"
   },
   {
@@ -2061,7 +2062,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 130",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.67,
+    "factorKgCO2ePerUnit": 0.67,
     "source": "Placeholder"
   },
   {
@@ -2069,7 +2070,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 131",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.674,
+    "factorKgCO2ePerUnit": 0.674,
     "source": "Placeholder"
   },
   {
@@ -2077,7 +2078,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 132",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.678,
+    "factorKgCO2ePerUnit": 0.678,
     "source": "Placeholder"
   },
   {
@@ -2085,7 +2086,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 133",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.682,
+    "factorKgCO2ePerUnit": 0.682,
     "source": "Placeholder"
   },
   {
@@ -2093,7 +2094,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 134",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.686,
+    "factorKgCO2ePerUnit": 0.686,
     "source": "Placeholder"
   },
   {
@@ -2101,7 +2102,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 135",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.69,
+    "factorKgCO2ePerUnit": 0.69,
     "source": "Placeholder"
   },
   {
@@ -2109,7 +2110,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 136",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.694,
+    "factorKgCO2ePerUnit": 0.694,
     "source": "Placeholder"
   },
   {
@@ -2117,7 +2118,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 137",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.698,
+    "factorKgCO2ePerUnit": 0.698,
     "source": "Placeholder"
   },
   {
@@ -2125,7 +2126,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 138",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.702,
+    "factorKgCO2ePerUnit": 0.702,
     "source": "Placeholder"
   },
   {
@@ -2133,7 +2134,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 139",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.706,
+    "factorKgCO2ePerUnit": 0.706,
     "source": "Placeholder"
   },
   {
@@ -2141,7 +2142,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 140",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.71,
+    "factorKgCO2ePerUnit": 0.71,
     "source": "Placeholder"
   },
   {
@@ -2149,7 +2150,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 141",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.714,
+    "factorKgCO2ePerUnit": 0.714,
     "source": "Placeholder"
   },
   {
@@ -2157,7 +2158,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 142",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.718,
+    "factorKgCO2ePerUnit": 0.718,
     "source": "Placeholder"
   },
   {
@@ -2165,7 +2166,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 143",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.722,
+    "factorKgCO2ePerUnit": 0.722,
     "source": "Placeholder"
   },
   {
@@ -2173,7 +2174,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 144",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.726,
+    "factorKgCO2ePerUnit": 0.726,
     "source": "Placeholder"
   },
   {
@@ -2181,7 +2182,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 145",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.73,
+    "factorKgCO2ePerUnit": 0.73,
     "source": "Placeholder"
   },
   {
@@ -2189,7 +2190,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 146",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.734,
+    "factorKgCO2ePerUnit": 0.734,
     "source": "Placeholder"
   },
   {
@@ -2197,7 +2198,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 147",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.738,
+    "factorKgCO2ePerUnit": 0.738,
     "source": "Placeholder"
   },
   {
@@ -2205,7 +2206,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 148",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.742,
+    "factorKgCO2ePerUnit": 0.742,
     "source": "Placeholder"
   },
   {
@@ -2213,7 +2214,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 149",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.746,
+    "factorKgCO2ePerUnit": 0.746,
     "source": "Placeholder"
   },
   {
@@ -2221,7 +2222,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 150",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.75,
+    "factorKgCO2ePerUnit": 0.75,
     "source": "Placeholder"
   },
   {
@@ -2229,7 +2230,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 151",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.754,
+    "factorKgCO2ePerUnit": 0.754,
     "source": "Placeholder"
   },
   {
@@ -2237,7 +2238,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 152",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.758,
+    "factorKgCO2ePerUnit": 0.758,
     "source": "Placeholder"
   },
   {
@@ -2245,7 +2246,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 153",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.762,
+    "factorKgCO2ePerUnit": 0.762,
     "source": "Placeholder"
   },
   {
@@ -2253,7 +2254,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 154",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.766,
+    "factorKgCO2ePerUnit": 0.766,
     "source": "Placeholder"
   },
   {
@@ -2261,7 +2262,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 155",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.77,
+    "factorKgCO2ePerUnit": 0.77,
     "source": "Placeholder"
   },
   {
@@ -2269,7 +2270,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 156",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.774,
+    "factorKgCO2ePerUnit": 0.774,
     "source": "Placeholder"
   },
   {
@@ -2277,7 +2278,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 157",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.778,
+    "factorKgCO2ePerUnit": 0.778,
     "source": "Placeholder"
   },
   {
@@ -2285,7 +2286,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 158",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.782,
+    "factorKgCO2ePerUnit": 0.782,
     "source": "Placeholder"
   },
   {
@@ -2293,7 +2294,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 159",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.786,
+    "factorKgCO2ePerUnit": 0.786,
     "source": "Placeholder"
   },
   {
@@ -2301,7 +2302,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 160",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.79,
+    "factorKgCO2ePerUnit": 0.79,
     "source": "Placeholder"
   },
   {
@@ -2309,7 +2310,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 161",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.794,
+    "factorKgCO2ePerUnit": 0.794,
     "source": "Placeholder"
   },
   {
@@ -2317,7 +2318,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 162",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.798,
+    "factorKgCO2ePerUnit": 0.798,
     "source": "Placeholder"
   },
   {
@@ -2325,7 +2326,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 163",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.802,
+    "factorKgCO2ePerUnit": 0.802,
     "source": "Placeholder"
   },
   {
@@ -2333,7 +2334,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 164",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.806,
+    "factorKgCO2ePerUnit": 0.806,
     "source": "Placeholder"
   },
   {
@@ -2341,7 +2342,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 165",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.81,
+    "factorKgCO2ePerUnit": 0.81,
     "source": "Placeholder"
   },
   {
@@ -2349,7 +2350,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 166",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.814,
+    "factorKgCO2ePerUnit": 0.814,
     "source": "Placeholder"
   },
   {
@@ -2357,7 +2358,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 167",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.818,
+    "factorKgCO2ePerUnit": 0.818,
     "source": "Placeholder"
   },
   {
@@ -2365,7 +2366,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 168",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.822,
+    "factorKgCO2ePerUnit": 0.822,
     "source": "Placeholder"
   },
   {
@@ -2373,7 +2374,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 169",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.826,
+    "factorKgCO2ePerUnit": 0.826,
     "source": "Placeholder"
   },
   {
@@ -2381,7 +2382,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 170",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.83,
+    "factorKgCO2ePerUnit": 0.83,
     "source": "Placeholder"
   },
   {
@@ -2389,7 +2390,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 171",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.834,
+    "factorKgCO2ePerUnit": 0.834,
     "source": "Placeholder"
   },
   {
@@ -2397,7 +2398,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 172",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.838,
+    "factorKgCO2ePerUnit": 0.838,
     "source": "Placeholder"
   },
   {
@@ -2405,7 +2406,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 173",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.842,
+    "factorKgCO2ePerUnit": 0.842,
     "source": "Placeholder"
   },
   {
@@ -2413,7 +2414,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 174",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.846,
+    "factorKgCO2ePerUnit": 0.846,
     "source": "Placeholder"
   },
   {
@@ -2421,7 +2422,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 175",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.85,
+    "factorKgCO2ePerUnit": 0.85,
     "source": "Placeholder"
   },
   {
@@ -2429,7 +2430,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 176",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.854,
+    "factorKgCO2ePerUnit": 0.854,
     "source": "Placeholder"
   },
   {
@@ -2437,7 +2438,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 177",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.858,
+    "factorKgCO2ePerUnit": 0.858,
     "source": "Placeholder"
   },
   {
@@ -2445,7 +2446,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 178",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.862,
+    "factorKgCO2ePerUnit": 0.862,
     "source": "Placeholder"
   },
   {
@@ -2453,7 +2454,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 179",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.866,
+    "factorKgCO2ePerUnit": 0.866,
     "source": "Placeholder"
   },
   {
@@ -2461,7 +2462,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 180",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.87,
+    "factorKgCO2ePerUnit": 0.87,
     "source": "Placeholder"
   },
   {
@@ -2469,7 +2470,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 181",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.874,
+    "factorKgCO2ePerUnit": 0.874,
     "source": "Placeholder"
   },
   {
@@ -2477,7 +2478,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 182",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.878,
+    "factorKgCO2ePerUnit": 0.878,
     "source": "Placeholder"
   },
   {
@@ -2485,7 +2486,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 183",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.882,
+    "factorKgCO2ePerUnit": 0.882,
     "source": "Placeholder"
   },
   {
@@ -2493,7 +2494,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 184",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.886,
+    "factorKgCO2ePerUnit": 0.886,
     "source": "Placeholder"
   },
   {
@@ -2501,7 +2502,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 185",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.89,
+    "factorKgCO2ePerUnit": 0.89,
     "source": "Placeholder"
   },
   {
@@ -2509,7 +2510,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 186",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.894,
+    "factorKgCO2ePerUnit": 0.894,
     "source": "Placeholder"
   },
   {
@@ -2517,7 +2518,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 187",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.898,
+    "factorKgCO2ePerUnit": 0.898,
     "source": "Placeholder"
   },
   {
@@ -2525,7 +2526,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 188",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.902,
+    "factorKgCO2ePerUnit": 0.902,
     "source": "Placeholder"
   },
   {
@@ -2533,7 +2534,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 189",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.906,
+    "factorKgCO2ePerUnit": 0.906,
     "source": "Placeholder"
   },
   {
@@ -2541,7 +2542,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 190",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.91,
+    "factorKgCO2ePerUnit": 0.91,
     "source": "Placeholder"
   },
   {
@@ -2549,7 +2550,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 191",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.914,
+    "factorKgCO2ePerUnit": 0.914,
     "source": "Placeholder"
   },
   {
@@ -2557,7 +2558,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 192",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.918,
+    "factorKgCO2ePerUnit": 0.918,
     "source": "Placeholder"
   },
   {
@@ -2565,7 +2566,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 193",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.922,
+    "factorKgCO2ePerUnit": 0.922,
     "source": "Placeholder"
   },
   {
@@ -2573,7 +2574,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 194",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.926,
+    "factorKgCO2ePerUnit": 0.926,
     "source": "Placeholder"
   },
   {
@@ -2581,7 +2582,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 195",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.93,
+    "factorKgCO2ePerUnit": 0.93,
     "source": "Placeholder"
   },
   {
@@ -2589,7 +2590,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 196",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.934,
+    "factorKgCO2ePerUnit": 0.934,
     "source": "Placeholder"
   },
   {
@@ -2597,7 +2598,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 197",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.938,
+    "factorKgCO2ePerUnit": 0.938,
     "source": "Placeholder"
   },
   {
@@ -2605,7 +2606,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 198",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.942,
+    "factorKgCO2ePerUnit": 0.942,
     "source": "Placeholder"
   },
   {
@@ -2613,7 +2614,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 199",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.946,
+    "factorKgCO2ePerUnit": 0.946,
     "source": "Placeholder"
   },
   {
@@ -2621,7 +2622,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 200",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.95,
+    "factorKgCO2ePerUnit": 0.95,
     "source": "Placeholder"
   },
   {
@@ -2629,7 +2630,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 201",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.954,
+    "factorKgCO2ePerUnit": 0.954,
     "source": "Placeholder"
   },
   {
@@ -2637,7 +2638,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 202",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.958,
+    "factorKgCO2ePerUnit": 0.958,
     "source": "Placeholder"
   },
   {
@@ -2645,7 +2646,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 203",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.962,
+    "factorKgCO2ePerUnit": 0.962,
     "source": "Placeholder"
   },
   {
@@ -2653,7 +2654,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 204",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.966,
+    "factorKgCO2ePerUnit": 0.966,
     "source": "Placeholder"
   },
   {
@@ -2661,7 +2662,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 205",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.97,
+    "factorKgCO2ePerUnit": 0.97,
     "source": "Placeholder"
   },
   {
@@ -2669,7 +2670,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 206",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.974,
+    "factorKgCO2ePerUnit": 0.974,
     "source": "Placeholder"
   },
   {
@@ -2677,7 +2678,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 207",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.978,
+    "factorKgCO2ePerUnit": 0.978,
     "source": "Placeholder"
   },
   {
@@ -2685,7 +2686,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 208",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.982,
+    "factorKgCO2ePerUnit": 0.982,
     "source": "Placeholder"
   },
   {
@@ -2693,7 +2694,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 209",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.986,
+    "factorKgCO2ePerUnit": 0.986,
     "source": "Placeholder"
   },
   {
@@ -2701,7 +2702,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 210",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.99,
+    "factorKgCO2ePerUnit": 0.99,
     "source": "Placeholder"
   },
   {
@@ -2709,7 +2710,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 211",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.994,
+    "factorKgCO2ePerUnit": 0.994,
     "source": "Placeholder"
   },
   {
@@ -2717,7 +2718,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 212",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.998,
+    "factorKgCO2ePerUnit": 0.998,
     "source": "Placeholder"
   },
   {
@@ -2725,7 +2726,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 213",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 1.002,
+    "factorKgCO2ePerUnit": 1.002,
     "source": "Placeholder"
   },
   {
@@ -2733,7 +2734,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 214",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 1.006,
+    "factorKgCO2ePerUnit": 1.006,
     "source": "Placeholder"
   },
   {
@@ -2741,7 +2742,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 215",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 1.01,
+    "factorKgCO2ePerUnit": 1.01,
     "source": "Placeholder"
   },
   {
@@ -2749,7 +2750,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 216",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 1.014,
+    "factorKgCO2ePerUnit": 1.014,
     "source": "Placeholder"
   },
   {
@@ -2757,7 +2758,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 217",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 1.018,
+    "factorKgCO2ePerUnit": 1.018,
     "source": "Placeholder"
   },
   {
@@ -2765,7 +2766,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 218",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 1.022,
+    "factorKgCO2ePerUnit": 1.022,
     "source": "Placeholder"
   },
   {
@@ -2773,7 +2774,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 219",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 1.026,
+    "factorKgCO2ePerUnit": 1.026,
     "source": "Placeholder"
   },
   {
@@ -2781,7 +2782,7 @@ export const FACTORS: Factor[] = [
     "name": "Materiale 220",
     "module": "A1-A3",
     "unit": "kg",
-    "factorKgCo2PerUnit": 1.03,
+    "factorKgCO2ePerUnit": 1.03,
     "source": "Placeholder"
   },
   {
@@ -2789,7 +2790,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 1",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.052,
+    "factorKgCO2ePerUnit": 0.052,
     "source": "Placeholder"
   },
   {
@@ -2797,7 +2798,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 2",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.054,
+    "factorKgCO2ePerUnit": 0.054,
     "source": "Placeholder"
   },
   {
@@ -2805,7 +2806,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 3",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.056,
+    "factorKgCO2ePerUnit": 0.056,
     "source": "Placeholder"
   },
   {
@@ -2813,7 +2814,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 4",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.058,
+    "factorKgCO2ePerUnit": 0.058,
     "source": "Placeholder"
   },
   {
@@ -2821,7 +2822,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 5",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.06,
+    "factorKgCO2ePerUnit": 0.06,
     "source": "Placeholder"
   },
   {
@@ -2829,7 +2830,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 6",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.062,
+    "factorKgCO2ePerUnit": 0.062,
     "source": "Placeholder"
   },
   {
@@ -2837,7 +2838,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 7",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.064,
+    "factorKgCO2ePerUnit": 0.064,
     "source": "Placeholder"
   },
   {
@@ -2845,7 +2846,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 8",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.066,
+    "factorKgCO2ePerUnit": 0.066,
     "source": "Placeholder"
   },
   {
@@ -2853,7 +2854,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 9",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.068,
+    "factorKgCO2ePerUnit": 0.068,
     "source": "Placeholder"
   },
   {
@@ -2861,7 +2862,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 10",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.07,
+    "factorKgCO2ePerUnit": 0.07,
     "source": "Placeholder"
   },
   {
@@ -2869,7 +2870,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 11",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.072,
+    "factorKgCO2ePerUnit": 0.072,
     "source": "Placeholder"
   },
   {
@@ -2877,7 +2878,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 12",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.074,
+    "factorKgCO2ePerUnit": 0.074,
     "source": "Placeholder"
   },
   {
@@ -2885,7 +2886,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 13",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.076,
+    "factorKgCO2ePerUnit": 0.076,
     "source": "Placeholder"
   },
   {
@@ -2893,7 +2894,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 14",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.078,
+    "factorKgCO2ePerUnit": 0.078,
     "source": "Placeholder"
   },
   {
@@ -2901,7 +2902,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 15",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.08,
+    "factorKgCO2ePerUnit": 0.08,
     "source": "Placeholder"
   },
   {
@@ -2909,7 +2910,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 16",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.082,
+    "factorKgCO2ePerUnit": 0.082,
     "source": "Placeholder"
   },
   {
@@ -2917,7 +2918,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 17",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.084,
+    "factorKgCO2ePerUnit": 0.084,
     "source": "Placeholder"
   },
   {
@@ -2925,7 +2926,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 18",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.086,
+    "factorKgCO2ePerUnit": 0.086,
     "source": "Placeholder"
   },
   {
@@ -2933,7 +2934,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 19",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.088,
+    "factorKgCO2ePerUnit": 0.088,
     "source": "Placeholder"
   },
   {
@@ -2941,7 +2942,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 20",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.09,
+    "factorKgCO2ePerUnit": 0.09,
     "source": "Placeholder"
   },
   {
@@ -2949,7 +2950,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 21",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.092,
+    "factorKgCO2ePerUnit": 0.092,
     "source": "Placeholder"
   },
   {
@@ -2957,7 +2958,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 22",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.094,
+    "factorKgCO2ePerUnit": 0.094,
     "source": "Placeholder"
   },
   {
@@ -2965,7 +2966,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 23",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.096,
+    "factorKgCO2ePerUnit": 0.096,
     "source": "Placeholder"
   },
   {
@@ -2973,7 +2974,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 24",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.098,
+    "factorKgCO2ePerUnit": 0.098,
     "source": "Placeholder"
   },
   {
@@ -2981,7 +2982,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 25",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.1,
+    "factorKgCO2ePerUnit": 0.1,
     "source": "Placeholder"
   },
   {
@@ -2989,7 +2990,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 26",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.102,
+    "factorKgCO2ePerUnit": 0.102,
     "source": "Placeholder"
   },
   {
@@ -2997,7 +2998,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 27",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.104,
+    "factorKgCO2ePerUnit": 0.104,
     "source": "Placeholder"
   },
   {
@@ -3005,7 +3006,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 28",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.106,
+    "factorKgCO2ePerUnit": 0.106,
     "source": "Placeholder"
   },
   {
@@ -3013,7 +3014,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 29",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.108,
+    "factorKgCO2ePerUnit": 0.108,
     "source": "Placeholder"
   },
   {
@@ -3021,7 +3022,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 30",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.11,
+    "factorKgCO2ePerUnit": 0.11,
     "source": "Placeholder"
   },
   {
@@ -3029,7 +3030,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 31",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.112,
+    "factorKgCO2ePerUnit": 0.112,
     "source": "Placeholder"
   },
   {
@@ -3037,7 +3038,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 32",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.114,
+    "factorKgCO2ePerUnit": 0.114,
     "source": "Placeholder"
   },
   {
@@ -3045,7 +3046,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 33",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.116,
+    "factorKgCO2ePerUnit": 0.116,
     "source": "Placeholder"
   },
   {
@@ -3053,7 +3054,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 34",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.118,
+    "factorKgCO2ePerUnit": 0.118,
     "source": "Placeholder"
   },
   {
@@ -3061,7 +3062,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 35",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.12,
+    "factorKgCO2ePerUnit": 0.12,
     "source": "Placeholder"
   },
   {
@@ -3069,7 +3070,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 36",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.122,
+    "factorKgCO2ePerUnit": 0.122,
     "source": "Placeholder"
   },
   {
@@ -3077,7 +3078,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 37",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.124,
+    "factorKgCO2ePerUnit": 0.124,
     "source": "Placeholder"
   },
   {
@@ -3085,7 +3086,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 38",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.126,
+    "factorKgCO2ePerUnit": 0.126,
     "source": "Placeholder"
   },
   {
@@ -3093,7 +3094,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 39",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.128,
+    "factorKgCO2ePerUnit": 0.128,
     "source": "Placeholder"
   },
   {
@@ -3101,7 +3102,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 40",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.13,
+    "factorKgCO2ePerUnit": 0.13,
     "source": "Placeholder"
   },
   {
@@ -3109,7 +3110,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 41",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.132,
+    "factorKgCO2ePerUnit": 0.132,
     "source": "Placeholder"
   },
   {
@@ -3117,7 +3118,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 42",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.134,
+    "factorKgCO2ePerUnit": 0.134,
     "source": "Placeholder"
   },
   {
@@ -3125,7 +3126,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 43",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.136,
+    "factorKgCO2ePerUnit": 0.136,
     "source": "Placeholder"
   },
   {
@@ -3133,7 +3134,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 44",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.138,
+    "factorKgCO2ePerUnit": 0.138,
     "source": "Placeholder"
   },
   {
@@ -3141,7 +3142,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 45",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.14,
+    "factorKgCO2ePerUnit": 0.14,
     "source": "Placeholder"
   },
   {
@@ -3149,7 +3150,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 46",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.142,
+    "factorKgCO2ePerUnit": 0.142,
     "source": "Placeholder"
   },
   {
@@ -3157,7 +3158,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 47",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.144,
+    "factorKgCO2ePerUnit": 0.144,
     "source": "Placeholder"
   },
   {
@@ -3165,7 +3166,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 48",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.146,
+    "factorKgCO2ePerUnit": 0.146,
     "source": "Placeholder"
   },
   {
@@ -3173,7 +3174,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 49",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.148,
+    "factorKgCO2ePerUnit": 0.148,
     "source": "Placeholder"
   },
   {
@@ -3181,7 +3182,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 50",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.15,
+    "factorKgCO2ePerUnit": 0.15,
     "source": "Placeholder"
   },
   {
@@ -3189,7 +3190,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 51",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.152,
+    "factorKgCO2ePerUnit": 0.152,
     "source": "Placeholder"
   },
   {
@@ -3197,7 +3198,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 52",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.154,
+    "factorKgCO2ePerUnit": 0.154,
     "source": "Placeholder"
   },
   {
@@ -3205,7 +3206,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 53",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.156,
+    "factorKgCO2ePerUnit": 0.156,
     "source": "Placeholder"
   },
   {
@@ -3213,7 +3214,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 54",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.158,
+    "factorKgCO2ePerUnit": 0.158,
     "source": "Placeholder"
   },
   {
@@ -3221,7 +3222,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 55",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.16,
+    "factorKgCO2ePerUnit": 0.16,
     "source": "Placeholder"
   },
   {
@@ -3229,7 +3230,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 56",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.162,
+    "factorKgCO2ePerUnit": 0.162,
     "source": "Placeholder"
   },
   {
@@ -3237,7 +3238,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 57",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.164,
+    "factorKgCO2ePerUnit": 0.164,
     "source": "Placeholder"
   },
   {
@@ -3245,7 +3246,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 58",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.166,
+    "factorKgCO2ePerUnit": 0.166,
     "source": "Placeholder"
   },
   {
@@ -3253,7 +3254,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 59",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.168,
+    "factorKgCO2ePerUnit": 0.168,
     "source": "Placeholder"
   },
   {
@@ -3261,7 +3262,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 60",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.17,
+    "factorKgCO2ePerUnit": 0.17,
     "source": "Placeholder"
   },
   {
@@ -3269,7 +3270,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 61",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.172,
+    "factorKgCO2ePerUnit": 0.172,
     "source": "Placeholder"
   },
   {
@@ -3277,7 +3278,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 62",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.174,
+    "factorKgCO2ePerUnit": 0.174,
     "source": "Placeholder"
   },
   {
@@ -3285,7 +3286,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 63",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.176,
+    "factorKgCO2ePerUnit": 0.176,
     "source": "Placeholder"
   },
   {
@@ -3293,7 +3294,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 64",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.178,
+    "factorKgCO2ePerUnit": 0.178,
     "source": "Placeholder"
   },
   {
@@ -3301,7 +3302,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 65",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.18,
+    "factorKgCO2ePerUnit": 0.18,
     "source": "Placeholder"
   },
   {
@@ -3309,7 +3310,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 66",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.182,
+    "factorKgCO2ePerUnit": 0.182,
     "source": "Placeholder"
   },
   {
@@ -3317,7 +3318,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 67",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.184,
+    "factorKgCO2ePerUnit": 0.184,
     "source": "Placeholder"
   },
   {
@@ -3325,7 +3326,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 68",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.186,
+    "factorKgCO2ePerUnit": 0.186,
     "source": "Placeholder"
   },
   {
@@ -3333,7 +3334,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 69",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.188,
+    "factorKgCO2ePerUnit": 0.188,
     "source": "Placeholder"
   },
   {
@@ -3341,7 +3342,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 70",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.19,
+    "factorKgCO2ePerUnit": 0.19,
     "source": "Placeholder"
   },
   {
@@ -3349,7 +3350,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 71",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.192,
+    "factorKgCO2ePerUnit": 0.192,
     "source": "Placeholder"
   },
   {
@@ -3357,7 +3358,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 72",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.194,
+    "factorKgCO2ePerUnit": 0.194,
     "source": "Placeholder"
   },
   {
@@ -3365,7 +3366,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 73",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.196,
+    "factorKgCO2ePerUnit": 0.196,
     "source": "Placeholder"
   },
   {
@@ -3373,7 +3374,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 74",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.198,
+    "factorKgCO2ePerUnit": 0.198,
     "source": "Placeholder"
   },
   {
@@ -3381,7 +3382,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 75",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.2,
+    "factorKgCO2ePerUnit": 0.2,
     "source": "Placeholder"
   },
   {
@@ -3389,7 +3390,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 76",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.202,
+    "factorKgCO2ePerUnit": 0.202,
     "source": "Placeholder"
   },
   {
@@ -3397,7 +3398,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 77",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.204,
+    "factorKgCO2ePerUnit": 0.204,
     "source": "Placeholder"
   },
   {
@@ -3405,7 +3406,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 78",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.206,
+    "factorKgCO2ePerUnit": 0.206,
     "source": "Placeholder"
   },
   {
@@ -3413,7 +3414,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 79",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.208,
+    "factorKgCO2ePerUnit": 0.208,
     "source": "Placeholder"
   },
   {
@@ -3421,7 +3422,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 80",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.21,
+    "factorKgCO2ePerUnit": 0.21,
     "source": "Placeholder"
   },
   {
@@ -3429,7 +3430,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 81",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.212,
+    "factorKgCO2ePerUnit": 0.212,
     "source": "Placeholder"
   },
   {
@@ -3437,7 +3438,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 82",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.214,
+    "factorKgCO2ePerUnit": 0.214,
     "source": "Placeholder"
   },
   {
@@ -3445,7 +3446,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 83",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.216,
+    "factorKgCO2ePerUnit": 0.216,
     "source": "Placeholder"
   },
   {
@@ -3453,7 +3454,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 84",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.218,
+    "factorKgCO2ePerUnit": 0.218,
     "source": "Placeholder"
   },
   {
@@ -3461,7 +3462,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 85",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.22,
+    "factorKgCO2ePerUnit": 0.22,
     "source": "Placeholder"
   },
   {
@@ -3469,7 +3470,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 86",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.222,
+    "factorKgCO2ePerUnit": 0.222,
     "source": "Placeholder"
   },
   {
@@ -3477,7 +3478,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 87",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.224,
+    "factorKgCO2ePerUnit": 0.224,
     "source": "Placeholder"
   },
   {
@@ -3485,7 +3486,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 88",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.226,
+    "factorKgCO2ePerUnit": 0.226,
     "source": "Placeholder"
   },
   {
@@ -3493,7 +3494,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 89",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.228,
+    "factorKgCO2ePerUnit": 0.228,
     "source": "Placeholder"
   },
   {
@@ -3501,7 +3502,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 90",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.23,
+    "factorKgCO2ePerUnit": 0.23,
     "source": "Placeholder"
   },
   {
@@ -3509,7 +3510,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 91",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.232,
+    "factorKgCO2ePerUnit": 0.232,
     "source": "Placeholder"
   },
   {
@@ -3517,7 +3518,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 92",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.234,
+    "factorKgCO2ePerUnit": 0.234,
     "source": "Placeholder"
   },
   {
@@ -3525,7 +3526,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 93",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.236,
+    "factorKgCO2ePerUnit": 0.236,
     "source": "Placeholder"
   },
   {
@@ -3533,7 +3534,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 94",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.238,
+    "factorKgCO2ePerUnit": 0.238,
     "source": "Placeholder"
   },
   {
@@ -3541,7 +3542,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 95",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.24,
+    "factorKgCO2ePerUnit": 0.24,
     "source": "Placeholder"
   },
   {
@@ -3549,7 +3550,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 96",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.242,
+    "factorKgCO2ePerUnit": 0.242,
     "source": "Placeholder"
   },
   {
@@ -3557,7 +3558,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 97",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.244,
+    "factorKgCO2ePerUnit": 0.244,
     "source": "Placeholder"
   },
   {
@@ -3565,7 +3566,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 98",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.246,
+    "factorKgCO2ePerUnit": 0.246,
     "source": "Placeholder"
   },
   {
@@ -3573,7 +3574,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 99",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.248,
+    "factorKgCO2ePerUnit": 0.248,
     "source": "Placeholder"
   },
   {
@@ -3581,7 +3582,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 100",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.25,
+    "factorKgCO2ePerUnit": 0.25,
     "source": "Placeholder"
   },
   {
@@ -3589,7 +3590,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 101",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.252,
+    "factorKgCO2ePerUnit": 0.252,
     "source": "Placeholder"
   },
   {
@@ -3597,7 +3598,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 102",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.254,
+    "factorKgCO2ePerUnit": 0.254,
     "source": "Placeholder"
   },
   {
@@ -3605,7 +3606,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 103",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.256,
+    "factorKgCO2ePerUnit": 0.256,
     "source": "Placeholder"
   },
   {
@@ -3613,7 +3614,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 104",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.258,
+    "factorKgCO2ePerUnit": 0.258,
     "source": "Placeholder"
   },
   {
@@ -3621,7 +3622,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 105",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.26,
+    "factorKgCO2ePerUnit": 0.26,
     "source": "Placeholder"
   },
   {
@@ -3629,7 +3630,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 106",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.262,
+    "factorKgCO2ePerUnit": 0.262,
     "source": "Placeholder"
   },
   {
@@ -3637,7 +3638,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 107",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.264,
+    "factorKgCO2ePerUnit": 0.264,
     "source": "Placeholder"
   },
   {
@@ -3645,7 +3646,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 108",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.266,
+    "factorKgCO2ePerUnit": 0.266,
     "source": "Placeholder"
   },
   {
@@ -3653,7 +3654,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 109",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.268,
+    "factorKgCO2ePerUnit": 0.268,
     "source": "Placeholder"
   },
   {
@@ -3661,7 +3662,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 110",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.27,
+    "factorKgCO2ePerUnit": 0.27,
     "source": "Placeholder"
   },
   {
@@ -3669,7 +3670,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 111",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.272,
+    "factorKgCO2ePerUnit": 0.272,
     "source": "Placeholder"
   },
   {
@@ -3677,7 +3678,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 112",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.274,
+    "factorKgCO2ePerUnit": 0.274,
     "source": "Placeholder"
   },
   {
@@ -3685,7 +3686,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 113",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.276,
+    "factorKgCO2ePerUnit": 0.276,
     "source": "Placeholder"
   },
   {
@@ -3693,7 +3694,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 114",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.278,
+    "factorKgCO2ePerUnit": 0.278,
     "source": "Placeholder"
   },
   {
@@ -3701,7 +3702,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 115",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.28,
+    "factorKgCO2ePerUnit": 0.28,
     "source": "Placeholder"
   },
   {
@@ -3709,7 +3710,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 116",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.282,
+    "factorKgCO2ePerUnit": 0.282,
     "source": "Placeholder"
   },
   {
@@ -3717,7 +3718,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 117",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.284,
+    "factorKgCO2ePerUnit": 0.284,
     "source": "Placeholder"
   },
   {
@@ -3725,7 +3726,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 118",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.286,
+    "factorKgCO2ePerUnit": 0.286,
     "source": "Placeholder"
   },
   {
@@ -3733,7 +3734,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 119",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.288,
+    "factorKgCO2ePerUnit": 0.288,
     "source": "Placeholder"
   },
   {
@@ -3741,7 +3742,7 @@ export const FACTORS: Factor[] = [
     "name": "Affald 120",
     "module": "A5",
     "unit": "kg",
-    "factorKgCo2PerUnit": 0.29,
+    "factorKgCO2ePerUnit": 0.29,
     "source": "Placeholder"
   }
 ];

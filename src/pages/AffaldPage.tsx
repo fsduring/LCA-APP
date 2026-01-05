@@ -46,7 +46,7 @@ export default function AffaldPage() {
   }, [availableFactors, form.factorKey]);
 
   const faktor = form.factorKey ? getFactorByKey(form.factorKey) : undefined;
-  const beregnetCo2 = faktor && form.maengde ? Number(form.maengde) * faktor.factorKgCo2PerUnit : 0;
+  const beregnetCo2 = faktor && form.maengde ? Number(form.maengde) * faktor.factorKgCO2ePerUnit : 0;
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -175,7 +175,7 @@ export default function AffaldPage() {
           </label>
           <label>
             CO₂-faktor (kg CO₂e/{faktor?.unit ?? '-'})
-            <input type="text" value={faktor?.factorKgCo2PerUnit ?? ''} readOnly />
+            <input type="text" value={faktor?.factorKgCO2ePerUnit ?? ''} readOnly />
           </label>
           <label>
             Beregnet CO₂ (kg CO₂e)

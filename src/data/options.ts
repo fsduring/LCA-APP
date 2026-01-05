@@ -23,6 +23,10 @@ function matchesSearch(factor: Factor, searchTerm: string) {
   return factor.name.toLowerCase().includes(lower) || factor.key.toLowerCase().includes(lower);
 }
 
+function isMaterialPlaceholder(factor: Factor) {
+  return /^materiale\s*\d+/i.test(factor.name);
+}
+
 export function getFactorsForCategory(
   factors: Factor[],
   category: Category,
@@ -30,7 +34,8 @@ export function getFactorsForCategory(
 ): Factor[] {
   if (category === 'materialer') {
     return factors
-      .filter((factor) => moduleContains(factor.module, 'A1') && matchesSearch(factor, searchTerm))
+      .filter((factor) => !isMaterialPlaceholder(factor))
+      .filter((factor) => matchesSearch(factor, searchTerm))
       .sort((a, b) => a.name.localeCompare(b.name));
   }
 
