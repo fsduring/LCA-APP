@@ -1,4 +1,6 @@
 import { ReactNode, createContext, useContext, useEffect, useMemo, useState } from 'react';
+import { read, utils } from 'xlsx';
+import type { WorkSheet } from 'xlsx';
 import { initialData } from './initialData';
 import { FACTORS, Factor } from './factors';
 import {
@@ -10,9 +12,20 @@ import {
   Category,
   DataContextValue,
   DataState,
+  ImportResult,
 } from './types';
 
 const STORAGE_KEY = 'lca-app-data';
+const FORMAT_A_HEADERS = ['Navn', 'Modul', 'Enhed', 'Faktor_kgCO2e_pr_enhed', 'Key'];
+const FORMAT_B_HEADERS = ['Navn DK', 'Global Opvarmning, modul A1-A3', 'Deklareret enhed (FU)'];
+
+type ImportFormat = 'format-a' | 'format-b';
+
+function moduleContains(moduleValue: string | undefined, token: string) {
+  if (!moduleValue) return false;
+  const normalized = moduleValue.replace(/[–—]/g, '-').toUpperCase();
+  return normalized.includes(token.replace(/[–—]/g, '-').toUpperCase());
+}
 
 const defaultDate = () => new Date().toISOString().slice(0, 10);
 
@@ -31,12 +44,108 @@ function cloneInitial(): DataState {
   return JSON.parse(JSON.stringify(initialData)) as DataState;
 }
 
-function getFactor(key: string | undefined): Factor | undefined {
-  if (!key) return undefined;
-  return FACTORS.find((item) => item.key === key || item.name === key);
+function normalizeHeader(value: unknown) {
+  return String(value ?? '')
+    .replace(/\s+/g, ' ')
+    .replace(/[–—]/g, '-')
+    .trim();
 }
 
-function normalizeElPost(raw: any): DataState['el'][number] {
+function parseNumber(value: unknown) {
+  if (value === null || value === undefined) return NaN;
+  const raw = String(value).trim();
+  if (!raw) return NaN;
+  const compact = raw.replace(/\s/g, '');
+  const normalized = compact.includes(',') && compact.includes('.')
+    ? compact.replace(/\./g, '').replace(',', '.')
+    : compact.replace(',', '.');
+  const parsed = Number(normalized);
+  return Number.isFinite(parsed) ? parsed : NaN;
+}
+
+function getFactor(factors: Factor[], key: string | undefined): Factor | undefined {
+  if (!key) return undefined;
+  const normalizedKey = key.toLowerCase();
+  return factors.find(
+    (item) =>
+      item.key === key ||
+      item.name === key ||
+      item.key.toLowerCase() === normalizedKey ||
+      item.name.toLowerCase() === normalizedKey
+  );
+}
+
+function buildEffectiveFactors(uploadedFactors: Factor[]) {
+  const baseFactors =
+    uploadedFactors.length > 0
+      ? FACTORS.filter((factor) => !moduleContains(factor.module, 'A1'))
+      : FACTORS;
+  const merged = new Map<string, Factor>(baseFactors.map((factor) => [factor.key, factor]));
+  uploadedFactors.forEach((factor) => {
+    merged.set(factor.key, factor);
+  });
+  return Array.from(merged.values());
+}
+
+function normalizeUploadedFactors(raw: unknown): Factor[] {
+  if (!Array.isArray(raw)) return [];
+  return raw
+    .map((item) => {
+      if (!item || typeof item !== 'object') return null;
+      const candidate = item as Partial<Factor>;
+      const name = typeof candidate.name === 'string' ? candidate.name.trim() : '';
+      const key = typeof candidate.key === 'string' ? candidate.key.trim() : '';
+      const module = typeof candidate.module === 'string' ? candidate.module.trim() : '';
+      const unit = typeof candidate.unit === 'string' ? candidate.unit.trim() : '';
+      const factorValue = parseNumber(candidate.factorKgCo2PerUnit);
+      const source = typeof candidate.source === 'string' ? candidate.source.trim() : '';
+      if (!name || !key || !unit || !Number.isFinite(factorValue)) return null;
+      return {
+        key,
+        name,
+        module,
+        unit,
+        factorKgCo2PerUnit: factorValue,
+        source,
+      };
+    })
+    .filter((item): item is Factor => item !== null);
+}
+
+function findHeaderRow(rows: unknown[][]) {
+  const maxRows = Math.min(rows.length, 30);
+  for (let i = 0; i < maxRows; i += 1) {
+    const headers = (rows[i] ?? []).map(normalizeHeader);
+    if (FORMAT_A_HEADERS.every((header) => headers.includes(header))) {
+      return { format: 'format-a' as const, headers, index: i };
+    }
+    if (FORMAT_B_HEADERS.every((header) => headers.includes(header))) {
+      return { format: 'format-b' as const, headers, index: i };
+    }
+  }
+  return null;
+}
+
+function createFactorLookup(factors: Factor[]) {
+  const byKey = new Map(factors.map((factor) => [factor.key, factor]));
+  const byName = new Map(factors.map((factor) => [factor.name.toLowerCase(), factor]));
+  return {
+    find: (key?: string, name?: string) => {
+      if (key && byKey.has(key)) return byKey.get(key);
+      if (key) {
+        const normalized = key.toLowerCase();
+        if (byName.has(normalized)) return byName.get(normalized);
+      }
+      if (name) {
+        const normalized = name.toLowerCase();
+        if (byName.has(normalized)) return byName.get(normalized);
+      }
+      return undefined;
+    },
+  };
+}
+
+function normalizeElPost(raw: any, factors: Factor[]): DataState['el'][number] {
   if (raw && typeof raw === 'object' && 'factorKey' in raw && 'factorName' in raw) {
     const amount = Number(raw.maengde ?? 0);
     const co2Factor = Number(raw.co2FaktorKgPerEnhed ?? 0);
@@ -56,7 +165,7 @@ function normalizeElPost(raw: any): DataState['el'][number] {
   }
 
   const fallbackKey = typeof raw?.factorKey === 'string' && raw.factorKey ? raw.factorKey : raw?.type;
-  const factor = getFactor(fallbackKey);
+  const factor = getFactor(factors, fallbackKey);
   const amount = Number(raw?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(raw?.co2FaktorKgPerEnhed ?? 0);
   const storedCo2 = Number(raw?.beregnetCo2Kg);
@@ -74,7 +183,7 @@ function normalizeElPost(raw: any): DataState['el'][number] {
   };
 }
 
-function normalizeVandPost(raw: any): DataState['vand'][number] {
+function normalizeVandPost(raw: any, factors: Factor[]): DataState['vand'][number] {
   if (raw && typeof raw === 'object' && 'factorKey' in raw && 'factorName' in raw) {
     const amount = Number(raw.maengde ?? 0);
     const co2Factor = Number(raw.co2FaktorKgPerEnhed ?? 0);
@@ -94,7 +203,7 @@ function normalizeVandPost(raw: any): DataState['vand'][number] {
   }
 
   const fallbackKey = typeof raw?.factorKey === 'string' && raw.factorKey ? raw.factorKey : raw?.type;
-  const factor = getFactor(fallbackKey);
+  const factor = getFactor(factors, fallbackKey);
   const amount = Number(raw?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(raw?.co2FaktorKgPerEnhed ?? 0);
   const storedCo2 = Number(raw?.beregnetCo2Kg);
@@ -112,7 +221,7 @@ function normalizeVandPost(raw: any): DataState['vand'][number] {
   };
 }
 
-function normalizeBraendstofPost(raw: any): DataState['braendstof'][number] {
+function normalizeBraendstofPost(raw: any, factors: Factor[]): DataState['braendstof'][number] {
   if (raw && typeof raw === 'object' && 'factorKey' in raw && 'factorName' in raw) {
     const amount = Number(raw.maengde ?? 0);
     const co2Factor = Number(raw.co2FaktorKgPerEnhed ?? 0);
@@ -132,7 +241,7 @@ function normalizeBraendstofPost(raw: any): DataState['braendstof'][number] {
   }
 
   const fallbackKey = typeof raw?.factorKey === 'string' && raw.factorKey ? raw.factorKey : raw?.type;
-  const factor = getFactor(fallbackKey);
+  const factor = getFactor(factors, fallbackKey);
   const amount = Number(raw?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(raw?.co2FaktorKgPerEnhed ?? 0);
   const storedCo2 = Number(raw?.beregnetCo2Kg);
@@ -150,7 +259,7 @@ function normalizeBraendstofPost(raw: any): DataState['braendstof'][number] {
   };
 }
 
-function normalizeMaterialePost(raw: any): DataState['materialer'][number] {
+function normalizeMaterialePost(raw: any, factors: Factor[]): DataState['materialer'][number] {
   if (raw && typeof raw === 'object' && 'factorKey' in raw) {
     const amount = Number(raw.maengde ?? 0);
     const co2Factor = Number(raw.co2FaktorKgPerEnhed ?? 0);
@@ -182,7 +291,7 @@ function normalizeMaterialePost(raw: any): DataState['materialer'][number] {
   }
 
   const fallbackKey = typeof raw?.factorKey === 'string' && raw.factorKey ? raw.factorKey : raw?.materiale;
-  const factor = getFactor(fallbackKey);
+  const factor = getFactor(factors, fallbackKey);
   const amount = Number(raw?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(raw?.co2FaktorKgPerEnhed ?? 0);
   const storedCo2 = Number(raw?.beregnetCo2Kg);
@@ -212,7 +321,7 @@ function normalizeMaterialePost(raw: any): DataState['materialer'][number] {
   };
 }
 
-function normalizeAffaldPost(raw: any): DataState['affald'][number] {
+function normalizeAffaldPost(raw: any, factors: Factor[]): DataState['affald'][number] {
   if (raw && typeof raw === 'object' && 'factorKey' in raw) {
     const amount = Number(raw.maengde ?? 0);
     const co2Factor = Number(raw.co2FaktorKgPerEnhed ?? 0);
@@ -241,7 +350,7 @@ function normalizeAffaldPost(raw: any): DataState['affald'][number] {
   }
 
   const fallbackKey = typeof raw?.factorKey === 'string' && raw.factorKey ? raw.factorKey : raw?.fraktion;
-  const factor = getFactor(fallbackKey);
+  const factor = getFactor(factors, fallbackKey);
   const amount = Number(raw?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(raw?.co2FaktorKgPerEnhed ?? 0);
   const storedCo2 = Number(raw?.beregnetCo2Kg);
@@ -270,12 +379,14 @@ function normalizeAffaldPost(raw: any): DataState['affald'][number] {
 
 function migrateState(raw: Partial<DataState> | null | undefined): DataState {
   const defaults = cloneInitial();
+  const uploadedFactors = normalizeUploadedFactors(raw?.uploadedFactors ?? defaults.uploadedFactors);
+  const effectiveFactors = buildEffectiveFactors(uploadedFactors);
   return {
-    el: (raw?.el ?? defaults.el).map(normalizeElPost),
-    vand: (raw?.vand ?? defaults.vand).map(normalizeVandPost),
-    braendstof: (raw?.braendstof ?? defaults.braendstof).map(normalizeBraendstofPost),
-    materialer: (raw?.materialer ?? defaults.materialer).map(normalizeMaterialePost),
-    affald: (raw?.affald ?? defaults.affald).map(normalizeAffaldPost),
+    el: (raw?.el ?? defaults.el).map((item) => normalizeElPost(item, effectiveFactors)),
+    vand: (raw?.vand ?? defaults.vand).map((item) => normalizeVandPost(item, effectiveFactors)),
+    braendstof: (raw?.braendstof ?? defaults.braendstof).map((item) => normalizeBraendstofPost(item, effectiveFactors)),
+    materialer: (raw?.materialer ?? defaults.materialer).map((item) => normalizeMaterialePost(item, effectiveFactors)),
+    affald: (raw?.affald ?? defaults.affald).map((item) => normalizeAffaldPost(item, effectiveFactors)),
     bygning: {
       projektNavn:
         typeof raw?.bygning?.projektNavn === 'string' && raw.bygning.projektNavn.trim()
@@ -286,6 +397,7 @@ function migrateState(raw: Partial<DataState> | null | undefined): DataState {
           ? raw.bygning.bygningArealM2
           : defaults.bygning.bygningArealM2,
     },
+    uploadedFactors,
   };
 }
 
@@ -307,10 +419,139 @@ function loadState(): DataState {
   }
 }
 
+function recalculateRecords(state: DataState, factors: Factor[]): DataState {
+  const lookup = createFactorLookup(factors);
+  const updateWithFactor = (factor: Factor | undefined, amount: number) => {
+    if (!factor) return null;
+    const beregnet = Number((amount * factor.factorKgCo2PerUnit).toFixed(3));
+    return {
+      factorKey: factor.key,
+      factorName: factor.name,
+      enhed: factor.unit,
+      co2FaktorKgPerEnhed: factor.factorKgCo2PerUnit,
+      beregnetCo2Kg: beregnet,
+    };
+  };
+
+  return {
+    ...state,
+    el: state.el.map((post) => {
+      const factor = lookup.find(post.factorKey, post.factorName);
+      const updated = updateWithFactor(factor, Number(post.maengde ?? 0));
+      return updated ? { ...post, ...updated } : post;
+    }),
+    vand: state.vand.map((post) => {
+      const factor = lookup.find(post.factorKey, post.factorName);
+      const updated = updateWithFactor(factor, Number(post.maengde ?? 0));
+      return updated ? { ...post, ...updated } : post;
+    }),
+    braendstof: state.braendstof.map((post) => {
+      const factor = lookup.find(post.factorKey, post.factorName);
+      const updated = updateWithFactor(factor, Number(post.maengde ?? 0));
+      return updated ? { ...post, ...updated } : post;
+    }),
+    materialer: state.materialer.map((post) => {
+      const factor = lookup.find(post.factorKey, post.materiale);
+      if (!factor) return post;
+      return {
+        ...post,
+        factorKey: factor.key,
+        materiale: factor.name,
+        enhed: factor.unit,
+        co2FaktorKgPerEnhed: factor.factorKgCo2PerUnit,
+        beregnetCo2Kg: Number((Number(post.maengde ?? 0) * factor.factorKgCo2PerUnit).toFixed(3)),
+      };
+    }),
+    affald: state.affald.map((post) => {
+      const factor = lookup.find(post.factorKey, post.fraktion);
+      if (!factor) return post;
+      return {
+        ...post,
+        factorKey: factor.key,
+        fraktion: factor.name,
+        enhed: factor.unit,
+        co2FaktorKgPerEnhed: factor.factorKgCo2PerUnit,
+        beregnetCo2Kg: Number((Number(post.maengde ?? 0) * factor.factorKgCo2PerUnit).toFixed(3)),
+      };
+    }),
+  };
+}
+
+function parseFactorsFromSheet(sheet: WorkSheet): {
+  format: ImportFormat;
+  factors: Factor[];
+  skipped: number;
+} {
+  const rows = utils.sheet_to_json<unknown[]>(sheet, { header: 1, defval: '' });
+  const headerInfo = findHeaderRow(rows);
+  if (!headerInfo) {
+    throw new Error('Kunne ikke finde en header-række med de forventede kolonner.');
+  }
+
+  const { format, headers, index } = headerInfo;
+  const dataRows = rows.slice(index + 1);
+  const factors: Factor[] = [];
+  let skipped = 0;
+
+  dataRows.forEach((row) => {
+    if (!row || row.length === 0) return;
+    const record: Record<string, unknown> = {};
+    headers.forEach((header, colIndex) => {
+      if (header) {
+        record[header] = row[colIndex];
+      }
+    });
+
+    if (format === 'format-a') {
+      const name = String(record['Navn'] ?? '').trim();
+      const module = String(record['Modul'] ?? '').trim();
+      const unit = String(record['Enhed'] ?? '').trim();
+      const key = String(record['Key'] ?? '').trim() || `${name}|${module}`;
+      const factorValue = parseNumber(record['Faktor_kgCO2e_pr_enhed']);
+      if (!name || !unit || !Number.isFinite(factorValue)) {
+        skipped += 1;
+        return;
+      }
+      factors.push({
+        key,
+        name,
+        module,
+        unit,
+        factorKgCo2PerUnit: factorValue,
+        source: 'Upload',
+      });
+      return;
+    }
+
+    const name = String(record['Navn DK'] ?? '').trim();
+    const unit = String(record['Deklareret enhed (FU)'] ?? '').trim();
+    const factorValue = parseNumber(record['Global Opvarmning, modul A1-A3']);
+    if (!name || !unit || !Number.isFinite(factorValue)) {
+      skipped += 1;
+      return;
+    }
+    const module = 'A1–A3';
+    factors.push({
+      key: `${name}|${module}`,
+      name,
+      module,
+      unit,
+      factorKgCo2PerUnit: factorValue,
+      source: 'BR2025 Tabel 7 (upload)',
+    });
+  });
+
+  return { format, factors, skipped };
+}
+
 const DataContext = createContext<DataContextValue | undefined>(undefined);
 
 export function DataProvider({ children }: { children: ReactNode }) {
   const [state, setState] = useState<DataState>(() => loadState());
+  const effectiveFactors = useMemo(
+    () => buildEffectiveFactors(state.uploadedFactors),
+    [state.uploadedFactors]
+  );
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -318,7 +559,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   }, [state]);
 
   const addEl = (input: AddEl) => {
-    const factor = getFactor(input.factorKey);
+    const factor = getFactor(effectiveFactors, input.factorKey);
     if (!factor) return;
     const post = {
       id: generateId('el'),
@@ -336,7 +577,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   };
 
   const addVand = (input: AddVand) => {
-    const factor = getFactor(input.factorKey);
+    const factor = getFactor(effectiveFactors, input.factorKey);
     if (!factor) return;
     const post = {
       id: generateId('vand'),
@@ -354,7 +595,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   };
 
   const addBraendstof = (input: AddBraendstof) => {
-    const factor = getFactor(input.factorKey);
+    const factor = getFactor(effectiveFactors, input.factorKey);
     if (!factor) return;
     const post = {
       id: generateId('braendstof'),
@@ -372,7 +613,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   };
 
   const addMateriale = (input: AddMateriale) => {
-    const factor = getFactor(input.factorKey);
+    const factor = getFactor(effectiveFactors, input.factorKey);
     if (!factor) return;
     const post = {
       id: generateId('materiale'),
@@ -392,7 +633,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   };
 
   const addAffald = (input: AddAffald) => {
-    const factor = getFactor(input.factorKey);
+    const factor = getFactor(effectiveFactors, input.factorKey);
     if (!factor) return;
     const post = {
       id: generateId('affald'),
@@ -422,10 +663,32 @@ export function DataProvider({ children }: { children: ReactNode }) {
     setState((prev) => ({ ...prev, bygning: info }));
   };
 
+  const importFactors = async (file: File): Promise<ImportResult> => {
+    const buffer = await file.arrayBuffer();
+    const workbook = read(buffer, { type: 'array' });
+    const sheetName = workbook.SheetNames.includes('Sheet1') ? 'Sheet1' : workbook.SheetNames[0];
+    if (!sheetName) {
+      throw new Error('Regnearket indeholder ingen sheets.');
+    }
+    const sheet = workbook.Sheets[sheetName];
+    if (!sheet) {
+      throw new Error('Kunne ikke finde et ark at importere fra.');
+    }
+    const parsed = parseFactorsFromSheet(sheet);
+    const nextFactors = parsed.factors;
+    const nextEffective = buildEffectiveFactors(nextFactors);
+    setState((prev) => recalculateRecords({ ...prev, uploadedFactors: nextFactors }, nextEffective));
+    return {
+      format: parsed.format === 'format-a' ? 'Format A' : 'Format B',
+      imported: nextFactors.length,
+      skipped: parsed.skipped,
+    };
+  };
+
   const value: DataContextValue = useMemo(
     () => ({
       ...state,
-      factors: FACTORS,
+      factors: effectiveFactors,
       addEl,
       addVand,
       addBraendstof,
@@ -433,9 +696,10 @@ export function DataProvider({ children }: { children: ReactNode }) {
       addAffald,
       deleteRecord,
       updateBygning,
-      getFactorByKey: (key: string) => getFactor(key),
+      getFactorByKey: (key: string) => getFactor(effectiveFactors, key),
+      importFactors,
     }),
-    [state]
+    [state, effectiveFactors]
   );
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
