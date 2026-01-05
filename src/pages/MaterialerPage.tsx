@@ -109,32 +109,34 @@ export default function MaterialerPage() {
               placeholder="Søg efter materiale"
             />
           </label>
-          <label>
-            Materiale
-            <select
-              value={form.factorKey}
-              onChange={(event) => setForm((prev) => ({ ...prev, factorKey: event.target.value }))}
-              required
-            >
-              <option value="">Vælg materiale</option>
-              {availableFactors.map((item) => (
-                <option key={item.key} value={item.key}>
-                  {item.name}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            Mængde ({faktor?.unit ?? 'enhed'})
-            <input
-              type="number"
-              min="0"
-              step="0.01"
-              value={form.maengde}
-              onChange={(event) => setForm((prev) => ({ ...prev, maengde: event.target.value }))}
-              required
-            />
-          </label>
+          <div className="row">
+            <label>
+              Materiale
+              <select
+                value={form.factorKey}
+                onChange={(event) => setForm((prev) => ({ ...prev, factorKey: event.target.value }))}
+                required
+              >
+                <option value="">Vælg materiale</option>
+                {availableFactors.map((item) => (
+                  <option key={item.key} value={item.key}>
+                    {item.name}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              Mængde ({faktor?.unit ?? 'enhed'})
+              <input
+                type="number"
+                min="0"
+                step="0.01"
+                value={form.maengde}
+                onChange={(event) => setForm((prev) => ({ ...prev, maengde: event.target.value }))}
+                required
+              />
+            </label>
+          </div>
           <label>
             Produkt note
             <input
