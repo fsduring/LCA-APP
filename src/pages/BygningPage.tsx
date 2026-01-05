@@ -48,9 +48,13 @@ export default function BygningPage() {
               required
             />
           </label>
-          {error && <span className="error-text">{error}</span>}
-          {message && <span style={{ color: '#059669', fontSize: '0.9rem' }}>{message}</span>}
-          <button type="submit" className="primary">
+          {error && <span className="error-text span2">{error}</span>}
+          {message && (
+            <span className="span2" style={{ color: '#059669', fontSize: '0.9rem' }}>
+              {message}
+            </span>
+          )}
+          <button type="submit" className="primary span2">
             Gem projektdata
           </button>
         </form>
