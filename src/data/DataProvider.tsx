@@ -33,6 +33,10 @@ function asRecord(value: unknown): UnknownRecord | undefined {
   return value && typeof value === 'object' ? (value as UnknownRecord) : undefined;
 }
 
+function readString(value: unknown): string | undefined {
+  return typeof value === 'string' && value.trim() ? value : undefined;
+}
+
 function cloneInitial(): DataState {
   return JSON.parse(JSON.stringify(initialData)) as DataState;
 }
@@ -62,8 +66,7 @@ function normalizeElPost(raw: unknown, factors: Factor[]): DataState['el'][numbe
     };
   }
 
-  const fallbackKey =
-    typeof record?.factorKey === 'string' && record.factorKey ? record.factorKey : record?.type;
+  const fallbackKey = readString(record?.factorKey) ?? readString(record?.type);
   const factor = getFactor(factors, fallbackKey);
   const amount = Number(record?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(record?.co2FaktorKgPerEnhed ?? 0);
@@ -72,7 +75,7 @@ function normalizeElPost(raw: unknown, factors: Factor[]): DataState['el'][numbe
     id: typeof record?.id === 'string' ? record.id : generateId('el'),
     dato: fallbackDate(record?.dato),
     factorKey: factor?.key ?? (typeof fallbackKey === 'string' ? fallbackKey : ''),
-    factorName: factor?.name ?? (typeof record?.type === 'string' ? record.type : 'Ukendt faktor'),
+    factorName: factor?.name ?? (readString(record?.type) ?? 'Ukendt faktor'),
     enhed: factor?.unit ?? (typeof record?.enhed === 'string' ? record.enhed : 'enhed'),
     maengde: amount,
     kilde: typeof record?.kilde === 'string' ? record.kilde : '',
@@ -102,8 +105,7 @@ function normalizeVandPost(raw: unknown, factors: Factor[]): DataState['vand'][n
     };
   }
 
-  const fallbackKey =
-    typeof record?.factorKey === 'string' && record.factorKey ? record.factorKey : record?.type;
+  const fallbackKey = readString(record?.factorKey) ?? readString(record?.type);
   const factor = getFactor(factors, fallbackKey);
   const amount = Number(record?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(record?.co2FaktorKgPerEnhed ?? 0);
@@ -112,7 +114,7 @@ function normalizeVandPost(raw: unknown, factors: Factor[]): DataState['vand'][n
     id: typeof record?.id === 'string' ? record.id : generateId('vand'),
     dato: fallbackDate(record?.dato),
     factorKey: factor?.key ?? (typeof fallbackKey === 'string' ? fallbackKey : ''),
-    factorName: factor?.name ?? (typeof record?.type === 'string' ? record.type : 'Ukendt faktor'),
+    factorName: factor?.name ?? (readString(record?.type) ?? 'Ukendt faktor'),
     enhed: factor?.unit ?? (typeof record?.enhed === 'string' ? record.enhed : 'enhed'),
     maengde: amount,
     kilde: typeof record?.kilde === 'string' ? record.kilde : '',
@@ -142,8 +144,7 @@ function normalizeBraendstofPost(raw: unknown, factors: Factor[]): DataState['br
     };
   }
 
-  const fallbackKey =
-    typeof record?.factorKey === 'string' && record.factorKey ? record.factorKey : record?.type;
+  const fallbackKey = readString(record?.factorKey) ?? readString(record?.type);
   const factor = getFactor(factors, fallbackKey);
   const amount = Number(record?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(record?.co2FaktorKgPerEnhed ?? 0);
@@ -152,7 +153,7 @@ function normalizeBraendstofPost(raw: unknown, factors: Factor[]): DataState['br
     id: typeof record?.id === 'string' ? record.id : generateId('braendstof'),
     dato: fallbackDate(record?.dato),
     factorKey: factor?.key ?? (typeof fallbackKey === 'string' ? fallbackKey : ''),
-    factorName: factor?.name ?? (typeof record?.type === 'string' ? record.type : 'Ukendt faktor'),
+    factorName: factor?.name ?? (readString(record?.type) ?? 'Ukendt faktor'),
     enhed: factor?.unit ?? (typeof record?.enhed === 'string' ? record.enhed : 'enhed'),
     maengde: amount,
     kilde: typeof record?.kilde === 'string' ? record.kilde : '',
@@ -194,8 +195,7 @@ function normalizeMaterialePost(raw: unknown, factors: Factor[]): DataState['mat
     };
   }
 
-  const fallbackKey =
-    typeof record?.factorKey === 'string' && record.factorKey ? record.factorKey : record?.materiale;
+  const fallbackKey = readString(record?.factorKey) ?? readString(record?.materiale);
   const factor = getFactor(factors, fallbackKey);
   const amount = Number(record?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(record?.co2FaktorKgPerEnhed ?? 0);
@@ -214,7 +214,7 @@ function normalizeMaterialePost(raw: unknown, factors: Factor[]): DataState['mat
     id: typeof record?.id === 'string' ? record.id : generateId('materiale'),
     dato: fallbackDate(record?.dato),
     factorKey: factor?.key ?? (typeof fallbackKey === 'string' ? fallbackKey : ''),
-    materiale: factor?.name ?? (typeof record?.materiale === 'string' ? record.materiale : 'Ukendt materiale'),
+    materiale: factor?.name ?? (readString(record?.materiale) ?? 'Ukendt materiale'),
     produktNote: typeof record?.produktNote === 'string' && record.produktNote ? record.produktNote : undefined,
     enhed: factor?.unit ?? (typeof record?.enhed === 'string' ? record.enhed : 'enhed'),
     maengde: amount,
@@ -255,8 +255,7 @@ function normalizeAffaldPost(raw: unknown, factors: Factor[]): DataState['affald
     };
   }
 
-  const fallbackKey =
-    typeof record?.factorKey === 'string' && record.factorKey ? record.factorKey : record?.fraktion;
+  const fallbackKey = readString(record?.factorKey) ?? readString(record?.fraktion);
   const factor = getFactor(factors, fallbackKey);
   const amount = Number(record?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(record?.co2FaktorKgPerEnhed ?? 0);
@@ -272,7 +271,7 @@ function normalizeAffaldPost(raw: unknown, factors: Factor[]): DataState['affald
     id: typeof record?.id === 'string' ? record.id : generateId('affald'),
     dato: fallbackDate(record?.dato),
     factorKey: factor?.key ?? (typeof fallbackKey === 'string' ? fallbackKey : ''),
-    fraktion: factor?.name ?? (typeof record?.fraktion === 'string' ? record.fraktion : 'Ukendt fraktion'),
+    fraktion: factor?.name ?? (readString(record?.fraktion) ?? 'Ukendt fraktion'),
     enhed: factor?.unit ?? (typeof record?.enhed === 'string' ? record.enhed : 'enhed'),
     maengde: amount,
     modtager: typeof record?.modtager === 'string' && record.modtager ? record.modtager : undefined,
