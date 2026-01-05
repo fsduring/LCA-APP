@@ -9,6 +9,7 @@ import MaterialerPage from './pages/MaterialerPage';
 import AffaldPage from './pages/AffaldPage';
 import BygningPage from './pages/BygningPage';
 import OversigtPage from './pages/OversigtPage';
+import StandardFactorsPage from './pages/StandardFactorsPage';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/affald" element={<AffaldPage />} />
             <Route path="/bygning" element={<BygningPage />} />
             <Route path="/oversigt" element={<OversigtPage />} />
+            <Route path="/faktorer" element={<StandardFactorsPage />} />
           </Routes>
         </main>
       </div>
