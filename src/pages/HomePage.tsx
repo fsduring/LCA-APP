@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { useData } from '../data/DataProvider';
 
 const navCards = [
@@ -13,7 +13,10 @@ const navCards = [
 ];
 
 export default function HomePage() {
-  const { el, vand, braendstof, materialer, affald } = useData();
+  const { el, vand, braendstof, materialer, affald, importFromExcel } = useData();
+  const [excelFile, setExcelFile] = useState<File | null>(null);
+  const [importMessage, setImportMessage] = useState('');
+  const [importError, setImportError] = useState('');
 
   const totals = useMemo(() => {
     const sum = (values: number[]) => values.reduce((acc, value) => acc + value, 0);
@@ -65,6 +68,49 @@ export default function HomePage() {
             <p>{totals.affaldTotal.toFixed(1)} kg CO₂e</p>
           </div>
         </div>
+      </section>
+
+      <section className="card">
+        <h2 className="section-title">Importér Excel-fil</h2>
+        <form
+          className="form-grid"
+          onSubmit={async (event) => {
+            event.preventDefault();
+            if (!excelFile) {
+              setImportError('Vælg en Excel-fil først.');
+              setImportMessage('');
+              return;
+            }
+            try {
+              setImportError('');
+              await importFromExcel(excelFile);
+              setImportMessage('Excel-filen er importeret.');
+            } catch (error) {
+              console.error('Fejl ved import af Excel', error);
+              setImportError('Kunne ikke importere filen. Tjek formatet og prøv igen.');
+              setImportMessage('');
+            }
+          }}
+        >
+          <label className="full">
+            Excel-fil (.xlsx)
+            <input
+              type="file"
+              accept=".xlsx,.xls"
+              onChange={(event) => {
+                const file = event.target.files?.[0] ?? null;
+                setExcelFile(file);
+                setImportError('');
+                setImportMessage('');
+              }}
+            />
+          </label>
+          {importError && <span className="error-text">{importError}</span>}
+          {importMessage && <span style={{ color: '#059669', fontSize: '0.9rem' }}>{importMessage}</span>}
+          <button type="submit" className="primary">
+            Importér data
+          </button>
+        </form>
       </section>
 
       <section className="card">

@@ -18,7 +18,7 @@ function App() {
           <h1>CO₂-registrering</h1>
         </header>
         <NavigationBar />
-        <main className="app-content">
+        <main className="app-content page">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/el" element={<ElPage />} />
