@@ -97,15 +97,18 @@ export default function VandPage() {
             </select>
           </label>
           <label>
-            Mængde ({faktor?.unit ?? 'enhed'})
-            <input
-              type="number"
-              min="0"
-              step="0.01"
-              value={form.maengde}
-              onChange={(event) => setForm((prev) => ({ ...prev, maengde: event.target.value }))}
-              required
-            />
+            Mængde
+            <div className="input-with-unit">
+              <input
+                type="number"
+                min="0"
+                step="0.01"
+                value={form.maengde}
+                onChange={(event) => setForm((prev) => ({ ...prev, maengde: event.target.value }))}
+                required
+              />
+              <span className="unit-label">{faktor?.unit ?? ''}</span>
+            </div>
           </label>
           <label>
             Kilde
@@ -123,8 +126,11 @@ export default function VandPage() {
             />
           </label>
           <label>
-            CO₂-faktor (kg CO₂e/{faktor?.unit ?? '-'})
-            <input type="text" value={faktor?.factorKgCo2PerUnit ?? ''} readOnly />
+            CO₂-faktor
+            <div className="input-with-unit">
+              <input type="text" value={faktor?.factorKgCo2PerUnit ?? ''} readOnly />
+              <span className="unit-label">{faktor ? `kg CO₂e/${faktor.unit}` : ''}</span>
+            </div>
           </label>
           <label>
             Beregnet CO₂ (kg CO₂e)
