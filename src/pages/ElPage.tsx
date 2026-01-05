@@ -130,8 +130,8 @@ export default function ElPage() {
             Beregnet CO₂ (kg CO₂e)
             <input type="text" value={beregnetCo2 ? beregnetCo2.toFixed(2) : ''} readOnly />
           </label>
-          {error && <span className="error-text">{error}</span>}
-          <button type="submit" className="primary">
+          {error && <span className="error-text span2">{error}</span>}
+          <button type="submit" className="primary span2">
             Gem forbrug
           </button>
         </form>
