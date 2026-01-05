@@ -84,6 +84,11 @@ button.primary:active {
   font-size: 0.85rem;
 }
 
+.success-text {
+  color: #15803d;
+  font-size: 0.85rem;
+}
+
 .data-list {
   display: flex;
   flex-direction: column;

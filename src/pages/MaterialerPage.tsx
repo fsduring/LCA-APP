@@ -1,5 +1,7 @@
-import { FormEvent, useEffect, useMemo, useState } from 'react';
+import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from 'react';
+import * as XLSX from '@e965/xlsx';
 import { useData } from '../data/DataProvider';
+import { Factor } from '../data/factors';
 import { getFactorsForCategory } from '../data/options';
 
 const today = new Date().toISOString().slice(0, 10);
@@ -14,8 +16,115 @@ type MaterialeFormState = {
   transportdistanceKm: string;
 };
 
+type ParsedFactorRow = {
+  key: string;
+  name: string;
+  module: string;
+  unit: string;
+  factorKgCo2PerUnit: number;
+  source: string;
+};
+
+const normalizeHeader = (value: string) => value.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+const parseNumber = (value: unknown) => {
+  if (value === null || value === undefined) return null;
+  const raw = String(value).trim();
+  if (!raw) return null;
+  let normalized = raw.replace(/\s+/g, '');
+  const hasComma = normalized.includes(',');
+  const hasDot = normalized.includes('.');
+  if (hasComma && hasDot) {
+    if (normalized.lastIndexOf(',') > normalized.lastIndexOf('.')) {
+      normalized = normalized.replace(/\./g, '').replace(',', '.');
+    } else {
+      normalized = normalized.replace(/,/g, '');
+    }
+  } else if (hasComma) {
+    normalized = normalized.replace(',', '.');
+  }
+  const parsed = Number(normalized);
+  return Number.isFinite(parsed) ? parsed : null;
+};
+
+const slugifyKey = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '');
+
+function mapRowToFactor(row: unknown[], headerIndex: Record<string, number | null>): ParsedFactorRow | null {
+  const getValue = (key: keyof typeof headerIndex) => {
+    const index = headerIndex[key];
+    if (typeof index !== 'number') return '';
+    return row[index];
+  };
+  const name = String(getValue('name') ?? '').trim();
+  const moduleValue = String(getValue('module') ?? '').trim();
+  const unit = String(getValue('unit') ?? '').trim();
+  const source = String(getValue('source') ?? '').trim();
+  const keyValue = String(getValue('key') ?? '').trim();
+  const factorValue = parseNumber(getValue('factor'));
+  const affaldFactorValue = parseNumber(getValue('wasteFactor'));
+  const resolvedFactor = factorValue ?? affaldFactorValue;
+  const resolvedName = name;
+  const resolvedKey = keyValue || (resolvedName ? slugifyKey(resolvedName) : '');
+
+  if (!resolvedName || !resolvedKey || resolvedFactor === null) {
+    return null;
+  }
+
+  return {
+    key: resolvedKey,
+    name: resolvedName,
+    module: moduleValue || 'A1-A3',
+    unit: unit || 'enhed',
+    factorKgCo2PerUnit: resolvedFactor,
+    source: source || 'Excel upload',
+  };
+}
+
+function parseFactorsFromSheet(sheet: XLSX.WorkSheet): ParsedFactorRow[] {
+  const rows = XLSX.utils.sheet_to_json(sheet, { header: 1, defval: '' }) as unknown[][];
+  if (rows.length === 0) return [];
+  const headers = rows[0]?.map((value) => String(value ?? '').trim()) ?? [];
+  const normalizedHeaders = headers.map((header) => normalizeHeader(header));
+  const findIndex = (headerName: string) => {
+    const normalized = normalizeHeader(headerName);
+    const index = normalizedHeaders.findIndex((item) => item === normalized);
+    return index >= 0 ? index : null;
+  };
+  const headerIndex = {
+    name: findIndex('Navn'),
+    module: findIndex('Modul'),
+    unit: findIndex('Enhed'),
+    factor: findIndex('Faktor_kgCO2e_pr_enhed'),
+    source: findIndex('Kilde'),
+    key: findIndex('Key'),
+    wasteFactor: findIndex('Kg_pr_enhed_for_Affald'),
+  };
+
+  const parsedRows: ParsedFactorRow[] = [];
+  for (const row of rows.slice(1)) {
+    const hasValues = row.some((cell) => String(cell ?? '').trim());
+    if (!hasValues) continue;
+    const factor = mapRowToFactor(row, headerIndex);
+    if (factor) parsedRows.push(factor);
+  }
+  return parsedRows;
+}
+
 export default function MaterialerPage() {
-  const { factors, materialer, addMateriale, getFactorByKey, deleteRecord } = useData();
+  const {
+    factors,
+    materialer,
+    addMateriale,
+    getFactorByKey,
+    deleteRecord,
+    setCustomFactors,
+    resetCustomFactors,
+    hasCustomFactors,
+  } = useData();
   const [searchTerm, setSearchTerm] = useState('');
   const availableFactors = useMemo(
     () => getFactorsForCategory(factors, 'materialer', searchTerm),
@@ -31,6 +140,8 @@ export default function MaterialerPage() {
     transportdistanceKm: '',
   });
   const [error, setError] = useState('');
+  const [uploadMessage, setUploadMessage] = useState('');
+  const [uploadError, setUploadError] = useState('');
 
   useEffect(() => {
     if (availableFactors.length === 0) {
@@ -86,8 +197,80 @@ export default function MaterialerPage() {
     deleteRecord('materialer', id);
   };
 
+  const handleUpload = async (event: ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    setUploadError('');
+    setUploadMessage('');
+    try {
+      const data = await file.arrayBuffer();
+      const workbook = XLSX.read(data, { type: 'array' });
+      const sheetName =
+        workbook.SheetNames.find((name) => name.trim().toLowerCase() === 'tabel 7') ?? workbook.SheetNames[0];
+      if (!sheetName) {
+        setUploadError('Filen indeholder ingen ark.');
+        return;
+      }
+      const sheet = workbook.Sheets[sheetName];
+      const parsed = parseFactorsFromSheet(sheet);
+      if (parsed.length === 0) {
+        setUploadError('Ingen gyldige rækker blev fundet i arket.');
+        return;
+      }
+      const uniqueFactors = new Map<string, Factor>();
+      parsed.forEach((item) => {
+        uniqueFactors.set(item.key, {
+          key: item.key,
+          name: item.name,
+          module: item.module,
+          unit: item.unit,
+          factorKgCo2PerUnit: item.factorKgCo2PerUnit,
+          source: item.source,
+        });
+      });
+      const factorList = Array.from(uniqueFactors.values());
+      setCustomFactors(factorList);
+      setUploadMessage(`Indlæst ${factorList.length} faktorer fra "${sheetName}".`);
+    } catch (error) {
+      console.error('Fejl ved indlæsning af Excel', error);
+      setUploadError('Kunne ikke indlæse filen. Tjek at det er en gyldig .xlsx.');
+    } finally {
+      event.target.value = '';
+    }
+  };
+
+  const handleResetFactors = () => {
+    if (!window.confirm('Nulstil til standardfaktorer? Dette sletter de brugerdefinerede faktorer.')) return;
+    resetCustomFactors();
+    setUploadMessage('Standardfaktorer er gendannet.');
+    setUploadError('');
+  };
+
   return (
     <div>
+      <section className="card">
+        <h2 className="section-title">Excel upload af emissionsfaktorer</h2>
+        <p>
+          Upload en .xlsx med kolonnerne Navn, Modul, Enhed, Faktor_kgCO2e_pr_enhed, Kilde, Key og
+          Kg_pr_enhed_for_Affald. Hvis arket "Tabel 7" findes, bruges det automatisk.
+        </p>
+        <div className="form-grid">
+          <label>
+            Upload Excel (.xlsx)
+            <input type="file" accept=".xlsx" onChange={handleUpload} />
+          </label>
+          <label>
+            Aktivt datasæt
+            <input type="text" value={hasCustomFactors ? 'Brugerdefinerede faktorer' : 'Standardfaktorer'} readOnly />
+          </label>
+          <button type="button" className="secondary" onClick={handleResetFactors} disabled={!hasCustomFactors}>
+            Nulstil til standard
+          </button>
+        </div>
+        {uploadMessage && <p className="success-text">{uploadMessage}</p>}
+        {uploadError && <p className="error-text">{uploadError}</p>}
+      </section>
+
       <section className="card">
         <h2 className="section-title">Registrér materiale</h2>
         <form className="form-grid" onSubmit={handleSubmit}>
