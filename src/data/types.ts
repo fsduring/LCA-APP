@@ -94,6 +94,7 @@ export type DataContextValue = DataState & {
   addAffald: (input: AddAffald) => void;
   deleteRecord: (category: Category, id: string) => void;
   updateBygning: (info: BygningInfo) => void;
+  updateFactors: (factors: Factor[]) => void;
   getFactorByKey: (key: string) => Factor | undefined;
 };
 

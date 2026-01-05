@@ -1,6 +1,6 @@
 import { ReactNode, createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { initialData } from './initialData';
-import { FACTORS, Factor } from './factors';
+import { DEFAULT_FACTORS, Factor } from './factors';
 import {
   AddAffald,
   AddBraendstof,
@@ -31,12 +31,20 @@ function cloneInitial(): DataState {
   return JSON.parse(JSON.stringify(initialData)) as DataState;
 }
 
-function getFactor(key: string | undefined): Factor | undefined {
+function getFactorFromList(factors: Factor[], key: string | undefined): Factor | undefined {
   if (!key) return undefined;
-  return FACTORS.find((item) => item.key === key || item.name === key);
+  return factors.find((item) => item.key === key || item.name === key);
 }
 
-function normalizeElPost(raw: any): DataState['el'][number] {
+function resolveFactor(factors: Factor[], ...candidates: Array<string | undefined>) {
+  for (const candidate of candidates) {
+    const factor = getFactorFromList(factors, candidate);
+    if (factor) return factor;
+  }
+  return undefined;
+}
+
+function normalizeElPost(raw: any, factors: Factor[]): DataState['el'][number] {
   if (raw && typeof raw === 'object' && 'factorKey' in raw && 'factorName' in raw) {
     const amount = Number(raw.maengde ?? 0);
     const co2Factor = Number(raw.co2FaktorKgPerEnhed ?? 0);
@@ -56,7 +64,7 @@ function normalizeElPost(raw: any): DataState['el'][number] {
   }
 
   const fallbackKey = typeof raw?.factorKey === 'string' && raw.factorKey ? raw.factorKey : raw?.type;
-  const factor = getFactor(fallbackKey);
+  const factor = resolveFactor(factors, fallbackKey, raw?.factorName);
   const amount = Number(raw?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(raw?.co2FaktorKgPerEnhed ?? 0);
   const storedCo2 = Number(raw?.beregnetCo2Kg);
@@ -74,7 +82,7 @@ function normalizeElPost(raw: any): DataState['el'][number] {
   };
 }
 
-function normalizeVandPost(raw: any): DataState['vand'][number] {
+function normalizeVandPost(raw: any, factors: Factor[]): DataState['vand'][number] {
   if (raw && typeof raw === 'object' && 'factorKey' in raw && 'factorName' in raw) {
     const amount = Number(raw.maengde ?? 0);
     const co2Factor = Number(raw.co2FaktorKgPerEnhed ?? 0);
@@ -94,7 +102,7 @@ function normalizeVandPost(raw: any): DataState['vand'][number] {
   }
 
   const fallbackKey = typeof raw?.factorKey === 'string' && raw.factorKey ? raw.factorKey : raw?.type;
-  const factor = getFactor(fallbackKey);
+  const factor = resolveFactor(factors, fallbackKey, raw?.factorName);
   const amount = Number(raw?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(raw?.co2FaktorKgPerEnhed ?? 0);
   const storedCo2 = Number(raw?.beregnetCo2Kg);
@@ -112,7 +120,7 @@ function normalizeVandPost(raw: any): DataState['vand'][number] {
   };
 }
 
-function normalizeBraendstofPost(raw: any): DataState['braendstof'][number] {
+function normalizeBraendstofPost(raw: any, factors: Factor[]): DataState['braendstof'][number] {
   if (raw && typeof raw === 'object' && 'factorKey' in raw && 'factorName' in raw) {
     const amount = Number(raw.maengde ?? 0);
     const co2Factor = Number(raw.co2FaktorKgPerEnhed ?? 0);
@@ -132,7 +140,7 @@ function normalizeBraendstofPost(raw: any): DataState['braendstof'][number] {
   }
 
   const fallbackKey = typeof raw?.factorKey === 'string' && raw.factorKey ? raw.factorKey : raw?.type;
-  const factor = getFactor(fallbackKey);
+  const factor = resolveFactor(factors, fallbackKey, raw?.factorName);
   const amount = Number(raw?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(raw?.co2FaktorKgPerEnhed ?? 0);
   const storedCo2 = Number(raw?.beregnetCo2Kg);
@@ -150,7 +158,7 @@ function normalizeBraendstofPost(raw: any): DataState['braendstof'][number] {
   };
 }
 
-function normalizeMaterialePost(raw: any): DataState['materialer'][number] {
+function normalizeMaterialePost(raw: any, factors: Factor[]): DataState['materialer'][number] {
   if (raw && typeof raw === 'object' && 'factorKey' in raw) {
     const amount = Number(raw.maengde ?? 0);
     const co2Factor = Number(raw.co2FaktorKgPerEnhed ?? 0);
@@ -182,7 +190,7 @@ function normalizeMaterialePost(raw: any): DataState['materialer'][number] {
   }
 
   const fallbackKey = typeof raw?.factorKey === 'string' && raw.factorKey ? raw.factorKey : raw?.materiale;
-  const factor = getFactor(fallbackKey);
+  const factor = resolveFactor(factors, fallbackKey, raw?.materiale);
   const amount = Number(raw?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(raw?.co2FaktorKgPerEnhed ?? 0);
   const storedCo2 = Number(raw?.beregnetCo2Kg);
@@ -212,7 +220,7 @@ function normalizeMaterialePost(raw: any): DataState['materialer'][number] {
   };
 }
 
-function normalizeAffaldPost(raw: any): DataState['affald'][number] {
+function normalizeAffaldPost(raw: any, factors: Factor[]): DataState['affald'][number] {
   if (raw && typeof raw === 'object' && 'factorKey' in raw) {
     const amount = Number(raw.maengde ?? 0);
     const co2Factor = Number(raw.co2FaktorKgPerEnhed ?? 0);
@@ -241,7 +249,7 @@ function normalizeAffaldPost(raw: any): DataState['affald'][number] {
   }
 
   const fallbackKey = typeof raw?.factorKey === 'string' && raw.factorKey ? raw.factorKey : raw?.fraktion;
-  const factor = getFactor(fallbackKey);
+  const factor = resolveFactor(factors, fallbackKey, raw?.fraktion);
   const amount = Number(raw?.maengde ?? 0);
   const co2Factor = factor?.factorKgCo2PerUnit ?? Number(raw?.co2FaktorKgPerEnhed ?? 0);
   const storedCo2 = Number(raw?.beregnetCo2Kg);
@@ -268,14 +276,14 @@ function normalizeAffaldPost(raw: any): DataState['affald'][number] {
   };
 }
 
-function migrateState(raw: Partial<DataState> | null | undefined): DataState {
+function migrateState(raw: Partial<DataState> | null | undefined, factors: Factor[]): DataState {
   const defaults = cloneInitial();
   return {
-    el: (raw?.el ?? defaults.el).map(normalizeElPost),
-    vand: (raw?.vand ?? defaults.vand).map(normalizeVandPost),
-    braendstof: (raw?.braendstof ?? defaults.braendstof).map(normalizeBraendstofPost),
-    materialer: (raw?.materialer ?? defaults.materialer).map(normalizeMaterialePost),
-    affald: (raw?.affald ?? defaults.affald).map(normalizeAffaldPost),
+    el: (raw?.el ?? defaults.el).map((post) => normalizeElPost(post, factors)),
+    vand: (raw?.vand ?? defaults.vand).map((post) => normalizeVandPost(post, factors)),
+    braendstof: (raw?.braendstof ?? defaults.braendstof).map((post) => normalizeBraendstofPost(post, factors)),
+    materialer: (raw?.materialer ?? defaults.materialer).map((post) => normalizeMaterialePost(post, factors)),
+    affald: (raw?.affald ?? defaults.affald).map((post) => normalizeAffaldPost(post, factors)),
     bygning: {
       projektNavn:
         typeof raw?.bygning?.projektNavn === 'string' && raw.bygning.projektNavn.trim()
@@ -289,36 +297,155 @@ function migrateState(raw: Partial<DataState> | null | undefined): DataState {
   };
 }
 
-function loadState(): DataState {
+function isValidFactor(value: any): value is Factor {
+  return (
+    value &&
+    typeof value === 'object' &&
+    typeof value.key === 'string' &&
+    typeof value.name === 'string' &&
+    typeof value.module === 'string' &&
+    typeof value.unit === 'string' &&
+    typeof value.factorKgCo2PerUnit === 'number' &&
+    Number.isFinite(value.factorKgCo2PerUnit) &&
+    typeof value.source === 'string'
+  );
+}
+
+function normalizeFactors(raw: unknown): Factor[] {
+  if (!Array.isArray(raw)) {
+    return DEFAULT_FACTORS;
+  }
+  const normalized = raw.filter(isValidFactor);
+  return normalized.length ? normalized : DEFAULT_FACTORS;
+}
+
+type StoredPayload = {
+  state: DataState;
+  factors: Factor[];
+};
+
+function loadStored(): StoredPayload {
   if (typeof window === 'undefined') {
-    return cloneInitial();
+    return { state: cloneInitial(), factors: DEFAULT_FACTORS };
   }
 
   try {
     const stored = window.localStorage.getItem(STORAGE_KEY);
     if (!stored) {
-      return cloneInitial();
+      return { state: cloneInitial(), factors: DEFAULT_FACTORS };
     }
-    const parsed = JSON.parse(stored) as Partial<DataState> | null;
-    return migrateState(parsed);
+    const parsed = JSON.parse(stored) as Partial<DataState> | { state?: DataState; factors?: Factor[] } | null;
+    if (parsed && typeof parsed === 'object' && 'state' in parsed) {
+      const factors = normalizeFactors((parsed as { factors?: Factor[] }).factors);
+      const state = migrateState((parsed as { state?: Partial<DataState> }).state, factors);
+      return { state, factors };
+    }
+    const factors = DEFAULT_FACTORS;
+    const state = migrateState(parsed as Partial<DataState> | null, factors);
+    return { state, factors };
   } catch (error) {
     console.warn('Kunne ikke indlæse data fra localStorage', error);
-    return cloneInitial();
+    return { state: cloneInitial(), factors: DEFAULT_FACTORS };
   }
+}
+
+function applyFactorsToState(state: DataState, factors: Factor[]): DataState {
+  const updateAmount = (value: number) => Number(value ?? 0);
+
+  const applyEl = (post: DataState['el'][number]) => {
+    const factor = resolveFactor(factors, post.factorKey, post.factorName);
+    if (!factor) return post;
+    const amount = updateAmount(post.maengde);
+    return {
+      ...post,
+      factorKey: factor.key,
+      factorName: factor.name,
+      enhed: factor.unit,
+      co2FaktorKgPerEnhed: factor.factorKgCo2PerUnit,
+      beregnetCo2Kg: Number((amount * factor.factorKgCo2PerUnit).toFixed(3)),
+    };
+  };
+
+  const applyVand = (post: DataState['vand'][number]) => {
+    const factor = resolveFactor(factors, post.factorKey, post.factorName);
+    if (!factor) return post;
+    const amount = updateAmount(post.maengde);
+    return {
+      ...post,
+      factorKey: factor.key,
+      factorName: factor.name,
+      enhed: factor.unit,
+      co2FaktorKgPerEnhed: factor.factorKgCo2PerUnit,
+      beregnetCo2Kg: Number((amount * factor.factorKgCo2PerUnit).toFixed(3)),
+    };
+  };
+
+  const applyBraendstof = (post: DataState['braendstof'][number]) => {
+    const factor = resolveFactor(factors, post.factorKey, post.factorName);
+    if (!factor) return post;
+    const amount = updateAmount(post.maengde);
+    return {
+      ...post,
+      factorKey: factor.key,
+      factorName: factor.name,
+      enhed: factor.unit,
+      co2FaktorKgPerEnhed: factor.factorKgCo2PerUnit,
+      beregnetCo2Kg: Number((amount * factor.factorKgCo2PerUnit).toFixed(3)),
+    };
+  };
+
+  const applyMateriale = (post: DataState['materialer'][number]) => {
+    const factor = resolveFactor(factors, post.factorKey, post.materiale);
+    if (!factor) return post;
+    const amount = updateAmount(post.maengde);
+    return {
+      ...post,
+      factorKey: factor.key,
+      materiale: factor.name,
+      enhed: factor.unit,
+      co2FaktorKgPerEnhed: factor.factorKgCo2PerUnit,
+      beregnetCo2Kg: Number((amount * factor.factorKgCo2PerUnit).toFixed(3)),
+    };
+  };
+
+  const applyAffald = (post: DataState['affald'][number]) => {
+    const factor = resolveFactor(factors, post.factorKey, post.fraktion);
+    if (!factor) return post;
+    const amount = updateAmount(post.maengde);
+    return {
+      ...post,
+      factorKey: factor.key,
+      fraktion: factor.name,
+      enhed: factor.unit,
+      co2FaktorKgPerEnhed: factor.factorKgCo2PerUnit,
+      beregnetCo2Kg: Number((amount * factor.factorKgCo2PerUnit).toFixed(3)),
+    };
+  };
+
+  return {
+    ...state,
+    el: state.el.map(applyEl),
+    vand: state.vand.map(applyVand),
+    braendstof: state.braendstof.map(applyBraendstof),
+    materialer: state.materialer.map(applyMateriale),
+    affald: state.affald.map(applyAffald),
+  };
 }
 
 const DataContext = createContext<DataContextValue | undefined>(undefined);
 
 export function DataProvider({ children }: { children: ReactNode }) {
-  const [state, setState] = useState<DataState>(() => loadState());
+  const [stored] = useState<StoredPayload>(() => loadStored());
+  const [state, setState] = useState<DataState>(stored.state);
+  const [factors, setFactors] = useState<Factor[]>(stored.factors);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  }, [state]);
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify({ state, factors }));
+  }, [factors, state]);
 
   const addEl = (input: AddEl) => {
-    const factor = getFactor(input.factorKey);
+    const factor = getFactorFromList(factors, input.factorKey);
     if (!factor) return;
     const post = {
       id: generateId('el'),
@@ -336,7 +463,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   };
 
   const addVand = (input: AddVand) => {
-    const factor = getFactor(input.factorKey);
+    const factor = getFactorFromList(factors, input.factorKey);
     if (!factor) return;
     const post = {
       id: generateId('vand'),
@@ -354,7 +481,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   };
 
   const addBraendstof = (input: AddBraendstof) => {
-    const factor = getFactor(input.factorKey);
+    const factor = getFactorFromList(factors, input.factorKey);
     if (!factor) return;
     const post = {
       id: generateId('braendstof'),
@@ -372,7 +499,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   };
 
   const addMateriale = (input: AddMateriale) => {
-    const factor = getFactor(input.factorKey);
+    const factor = getFactorFromList(factors, input.factorKey);
     if (!factor) return;
     const post = {
       id: generateId('materiale'),
@@ -392,7 +519,7 @@ export function DataProvider({ children }: { children: ReactNode }) {
   };
 
   const addAffald = (input: AddAffald) => {
-    const factor = getFactor(input.factorKey);
+    const factor = getFactorFromList(factors, input.factorKey);
     if (!factor) return;
     const post = {
       id: generateId('affald'),
@@ -422,10 +549,15 @@ export function DataProvider({ children }: { children: ReactNode }) {
     setState((prev) => ({ ...prev, bygning: info }));
   };
 
+  const updateFactors = (nextFactors: Factor[]) => {
+    setFactors(nextFactors);
+    setState((prev) => applyFactorsToState(prev, nextFactors));
+  };
+
   const value: DataContextValue = useMemo(
     () => ({
       ...state,
-      factors: FACTORS,
+      factors,
       addEl,
       addVand,
       addBraendstof,
@@ -433,9 +565,10 @@ export function DataProvider({ children }: { children: ReactNode }) {
       addAffald,
       deleteRecord,
       updateBygning,
-      getFactorByKey: (key: string) => getFactor(key),
+      updateFactors,
+      getFactorByKey: (key: string) => getFactorFromList(factors, key),
     }),
-    [state]
+    [factors, state]
   );
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
