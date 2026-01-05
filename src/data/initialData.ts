@@ -20,6 +20,7 @@ const teglFactor = factorByKey('teglsten_affald');
 const affaldGipsFactor = factorByKey('affald_gips_haandtering');
 
 export const initialData: DataState = {
+  factors: FACTORS,
   el: [
     {
       id: 'el-1',
