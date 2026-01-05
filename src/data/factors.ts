@@ -7,7 +7,7 @@ export type Factor = {
   source: string;
 };
 
-export const FACTORS: Factor[] = [
+export const DEFAULT_FACTORS: Factor[] = [
   {
     "key": "el_dk_elmix",
     "name": "El (DK elmix)",
