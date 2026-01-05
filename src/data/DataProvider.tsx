@@ -355,22 +355,23 @@ function normalizeAffaldPost(raw: any): DataState['affald'][number] {
   };
 }
 
-function migrateState(raw: Partial<DataState> | null | undefined): DataState {
+function migrateState(raw: Partial<DataState> | Record<string, unknown> | null | undefined): DataState {
   const defaults = cloneInitial();
+  const data = (raw ?? {}) as Partial<DataState>;
   return {
-    el: (raw?.el ?? defaults.el).map(normalizeElPost),
-    vand: (raw?.vand ?? defaults.vand).map(normalizeVandPost),
-    braendstof: (raw?.braendstof ?? defaults.braendstof).map(normalizeBraendstofPost),
-    materialer: (raw?.materialer ?? defaults.materialer).map(normalizeMaterialePost),
-    affald: (raw?.affald ?? defaults.affald).map(normalizeAffaldPost),
+    el: (data.el ?? defaults.el).map(normalizeElPost),
+    vand: (data.vand ?? defaults.vand).map(normalizeVandPost),
+    braendstof: (data.braendstof ?? defaults.braendstof).map(normalizeBraendstofPost),
+    materialer: (data.materialer ?? defaults.materialer).map(normalizeMaterialePost),
+    affald: (data.affald ?? defaults.affald).map(normalizeAffaldPost),
     bygning: {
       projektNavn:
-        typeof raw?.bygning?.projektNavn === 'string' && raw.bygning.projektNavn.trim()
-          ? raw.bygning.projektNavn
+        typeof data.bygning?.projektNavn === 'string' && data.bygning.projektNavn.trim()
+          ? data.bygning.projektNavn
           : defaults.bygning.projektNavn,
       bygningArealM2:
-        typeof raw?.bygning?.bygningArealM2 === 'number' && raw.bygning.bygningArealM2 >= 0
-          ? raw.bygning.bygningArealM2
+        typeof data.bygning?.bygningArealM2 === 'number' && data.bygning.bygningArealM2 >= 0
+          ? data.bygning.bygningArealM2
           : defaults.bygning.bygningArealM2,
     },
   };
