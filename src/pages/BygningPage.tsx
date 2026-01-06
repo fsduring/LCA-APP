@@ -1,12 +1,17 @@
-import { FormEvent, useState } from 'react';
+import { FormEvent, useEffect, useState } from 'react';
 import { useData } from '../data/DataProvider';
 
 export default function BygningPage() {
-  const { bygning, updateBygning } = useData();
+  const { bygning, updateBygning, resetAll } = useData();
   const [projektNavn, setProjektNavn] = useState(bygning.projektNavn);
   const [areal, setAreal] = useState(String(bygning.bygningArealM2));
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    setProjektNavn(bygning.projektNavn);
+    setAreal(String(bygning.bygningArealM2));
+  }, [bygning]);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -22,6 +27,15 @@ export default function BygningPage() {
       bygningArealM2: parsed,
     });
     setMessage('Bygningsdata gemt.');
+  };
+
+  const handleReset = () => {
+    if (!window.confirm('Er du sikker på, at du vil nulstille alle data?')) {
+      return;
+    }
+    resetAll();
+    setError('');
+    setMessage('Alle data er nulstillet.');
   };
 
   return (
@@ -60,6 +74,9 @@ export default function BygningPage() {
         <h2 className="section-title">Aktuelle værdier</h2>
         <p>Projekt: {bygning.projektNavn}</p>
         <p>Areal: {bygning.bygningArealM2} m²</p>
+        <button type="button" className="danger" onClick={handleReset}>
+          Nulstil data
+        </button>
       </section>
     </div>
   );

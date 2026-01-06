@@ -12,8 +12,15 @@ import {
   DataState,
 } from './types';
 
-const STORAGE_KEY = 'lca-app-data';
-const FACTORS_STORAGE_KEY = 'lca_factors';
+const STORAGE_KEYS = {
+  el: 'lca_records_el',
+  vand: 'lca_records_vand',
+  braendstof: 'lca_records_braendstof',
+  materialer: 'lca_records_materialer',
+  affald: 'lca_records_affald',
+  bygning: 'lca_bygning',
+  factors: 'lca_factors',
+};
 
 const defaultDate = () => new Date().toISOString().slice(0, 10);
 
@@ -63,7 +70,7 @@ function loadFactors(): Factor[] {
     return [...FACTORS];
   }
   try {
-    const stored = window.localStorage.getItem(FACTORS_STORAGE_KEY);
+    const stored = window.localStorage.getItem(STORAGE_KEYS.factors);
     if (!stored) {
       return [...FACTORS];
     }
@@ -77,6 +84,33 @@ function loadFactors(): Factor[] {
     console.warn('Kunne ikke indlæse faktorer fra localStorage', error);
     return [...FACTORS];
   }
+}
+
+function loadStoredArray(key: string): unknown[] | undefined {
+  if (typeof window === 'undefined') {
+    return undefined;
+  }
+  const stored = window.localStorage.getItem(key);
+  if (!stored) {
+    return undefined;
+  }
+  const parsed = JSON.parse(stored);
+  return Array.isArray(parsed) ? parsed : undefined;
+}
+
+function loadStoredObject(key: string): Record<string, unknown> | undefined {
+  if (typeof window === 'undefined') {
+    return undefined;
+  }
+  const stored = window.localStorage.getItem(key);
+  if (!stored) {
+    return undefined;
+  }
+  const parsed = JSON.parse(stored);
+  if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) {
+    return undefined;
+  }
+  return parsed as Record<string, unknown>;
 }
 
 function normalizeElPost(raw: any, factors: Factor[]): DataState['el'][number] {
@@ -338,11 +372,14 @@ function loadState(factors: Factor[]): DataState {
   }
 
   try {
-    const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (!stored) {
-      return cloneInitial();
-    }
-    const parsed = JSON.parse(stored) as Partial<DataState> | null;
+    const parsed = {
+      el: loadStoredArray(STORAGE_KEYS.el),
+      vand: loadStoredArray(STORAGE_KEYS.vand),
+      braendstof: loadStoredArray(STORAGE_KEYS.braendstof),
+      materialer: loadStoredArray(STORAGE_KEYS.materialer),
+      affald: loadStoredArray(STORAGE_KEYS.affald),
+      bygning: loadStoredObject(STORAGE_KEYS.bygning),
+    } as Partial<DataState>;
     return migrateState(parsed, factors);
   } catch (error) {
     console.warn('Kunne ikke indlæse data fra localStorage', error);
@@ -358,12 +395,17 @@ export function DataProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    window.localStorage.setItem(STORAGE_KEYS.el, JSON.stringify(state.el));
+    window.localStorage.setItem(STORAGE_KEYS.vand, JSON.stringify(state.vand));
+    window.localStorage.setItem(STORAGE_KEYS.braendstof, JSON.stringify(state.braendstof));
+    window.localStorage.setItem(STORAGE_KEYS.materialer, JSON.stringify(state.materialer));
+    window.localStorage.setItem(STORAGE_KEYS.affald, JSON.stringify(state.affald));
+    window.localStorage.setItem(STORAGE_KEYS.bygning, JSON.stringify(state.bygning));
   }, [state]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    window.localStorage.setItem(FACTORS_STORAGE_KEY, JSON.stringify(factors));
+    window.localStorage.setItem(STORAGE_KEYS.factors, JSON.stringify(factors));
   }, [factors]);
 
   const addEl = (input: AddEl) => {
@@ -479,12 +521,21 @@ export function DataProvider({ children }: { children: ReactNode }) {
     setFactors([...FACTORS]);
   };
 
+  const resetAll = () => {
+    if (typeof window !== 'undefined') {
+      Object.values(STORAGE_KEYS).forEach((key) => window.localStorage.removeItem(key));
+    }
+    setFactors([...FACTORS]);
+    setState(cloneInitial());
+  };
+
   const value: DataContextValue = useMemo(
     () => ({
       ...state,
       factors,
       updateFactors,
       resetFactors,
+      resetAll,
       addEl,
       addVand,
       addBraendstof,

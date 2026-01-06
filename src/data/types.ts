@@ -89,6 +89,7 @@ export type DataContextValue = DataState & {
   factors: Factor[];
   updateFactors: (nextFactors: Factor[]) => void;
   resetFactors: () => void;
+  resetAll: () => void;
   addEl: (input: AddEl) => void;
   addVand: (input: AddVand) => void;
   addBraendstof: (input: AddBraendstof) => void;
