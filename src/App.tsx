@@ -9,6 +9,7 @@ import MaterialerPage from './pages/MaterialerPage';
 import AffaldPage from './pages/AffaldPage';
 import BygningPage from './pages/BygningPage';
 import OversigtPage from './pages/OversigtPage';
+import FaktorerPage from './pages/FaktorerPage';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/materialer" element={<MaterialerPage />} />
             <Route path="/affald" element={<AffaldPage />} />
             <Route path="/bygning" element={<BygningPage />} />
+            <Route path="/faktorer" element={<FaktorerPage />} />
             <Route path="/oversigt" element={<OversigtPage />} />
           </Routes>
         </main>

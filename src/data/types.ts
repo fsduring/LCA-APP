@@ -87,6 +87,8 @@ export type Category = 'el' | 'vand' | 'braendstof' | 'materialer' | 'affald';
 
 export type DataContextValue = DataState & {
   factors: Factor[];
+  updateFactors: (nextFactors: Factor[]) => void;
+  resetFactors: () => void;
   addEl: (input: AddEl) => void;
   addVand: (input: AddVand) => void;
   addBraendstof: (input: AddBraendstof) => void;

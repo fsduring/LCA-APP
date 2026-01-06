@@ -9,6 +9,7 @@ const links = [
   { to: '/materialer', label: 'Materialer' },
   { to: '/affald', label: 'Affald' },
   { to: '/bygning', label: 'Bygning' },
+  { to: '/faktorer', label: 'Faktorer' },
   { to: '/oversigt', label: 'Oversigt' },
 ];
 

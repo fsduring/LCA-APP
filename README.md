@@ -14,6 +14,7 @@ npm run dev
 ## Funktioner
 
 - Registrering af el, vand, brændstof, materialer og affald med opslag i lokale emissionsfaktorer.
+- Upload af emissionsfaktorer understøtter BR2025 Tabel 7 via kolonnerne Navn DK, Global Opvarmning, modul A1-A3 og Deklareret enhed (FU).
 - Automatisk beregning af CO₂-udledning pr. post og summering på oversigtssiden, inkl. A1–A3, A4–A5 og CO₂ pr. m² baseret på bygningsareal.
 - Redigering af bygningsdata, som gemmes i localStorage og deles på tværs af sider.
 - Responsivt layout optimeret til mobil (max bredde 560 px) med bundnavigation mellem siderne.
