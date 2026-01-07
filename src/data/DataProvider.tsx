@@ -1,6 +1,6 @@
 import { ReactNode, createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { initialData } from './initialData';
-import { FACTORS, Factor } from './factors';
+import { DEFAULT_A1A3_FACTORS, DEFAULT_A4A5_FACTORS, DEFAULT_FACTORS, Factor, isA1A3Module } from './factors';
 import {
   AddAffald,
   AddBraendstof,
@@ -46,12 +46,18 @@ function getFactorFromList(factors: Factor[], key: string | undefined): Factor |
 
 function normalizeFactor(raw: any): Factor | null {
   if (!raw || typeof raw !== 'object') return null;
-  const key = String(raw.key ?? '').trim();
-  const name = String(raw.name ?? '').trim();
-  const module = String(raw.module ?? '').trim();
-  const unit = String(raw.unit ?? '').trim();
-  const source = String(raw.source ?? '').trim();
-  const factorValue = Number(raw.factorKgCo2PerUnit ?? raw.factor_kgco2e_pr_enhed ?? raw.faktor_kgco2e_pr_enhed ?? 0);
+  const key = String(raw.key ?? raw.Key ?? '').trim();
+  const name = String(raw.name ?? raw.Navn ?? '').trim();
+  const module = String(raw.module ?? raw.Modul ?? '').trim();
+  const unit = String(raw.unit ?? raw.Enhed ?? '').trim();
+  const source = String(raw.source ?? raw.Kilde ?? '').trim();
+  const factorValue = Number(
+    raw.factorKgCo2PerUnit ??
+      raw.factor_kgco2e_pr_enhed ??
+      raw.faktor_kgco2e_pr_enhed ??
+      raw.Faktor_kgCO2e_pr_enhed ??
+      0
+  );
   if (!key || !name || !module || !unit || Number.isNaN(factorValue)) {
     return null;
   }
@@ -67,22 +73,24 @@ function normalizeFactor(raw: any): Factor | null {
 
 function loadFactors(): Factor[] {
   if (typeof window === 'undefined') {
-    return [...FACTORS];
+    return [...DEFAULT_FACTORS];
   }
   try {
     const stored = window.localStorage.getItem(STORAGE_KEYS.factors);
     if (!stored) {
-      return [...FACTORS];
+      return [...DEFAULT_FACTORS];
     }
     const parsed = JSON.parse(stored);
     if (!Array.isArray(parsed)) {
-      return [...FACTORS];
+      return [...DEFAULT_FACTORS];
     }
     const normalized = parsed.map(normalizeFactor).filter(Boolean) as Factor[];
-    return normalized.length > 0 ? normalized : [...FACTORS];
+    const storedA1A3 = normalized.filter((factor) => isA1A3Module(factor.module));
+    const a1a3Factors = storedA1A3.length > 0 ? storedA1A3 : DEFAULT_A1A3_FACTORS;
+    return [...DEFAULT_A4A5_FACTORS, ...a1a3Factors];
   } catch (error) {
     console.warn('Kunne ikke indlæse faktorer fra localStorage', error);
-    return [...FACTORS];
+    return [...DEFAULT_FACTORS];
   }
 }
 
@@ -518,14 +526,14 @@ export function DataProvider({ children }: { children: ReactNode }) {
   };
 
   const resetFactors = () => {
-    setFactors([...FACTORS]);
+    setFactors([...DEFAULT_FACTORS]);
   };
 
   const resetAll = () => {
     if (typeof window !== 'undefined') {
       Object.values(STORAGE_KEYS).forEach((key) => window.localStorage.removeItem(key));
     }
-    setFactors([...FACTORS]);
+    setFactors([...DEFAULT_FACTORS]);
     setState(cloneInitial());
   };
 

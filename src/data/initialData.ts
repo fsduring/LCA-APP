@@ -1,12 +1,12 @@
-import { FACTORS } from './factors';
+import { DEFAULT_FACTORS } from './factors';
 import { DataState } from './types';
 
 const today = new Date().toISOString().slice(0, 10);
 
 function factorByKey(key: string) {
-  const factor = FACTORS.find((item) => item.key === key);
+  const factor = DEFAULT_FACTORS.find((item) => item.key === key);
   if (!factor) {
-    throw new Error(`Faktor med key '${key}' findes ikke i FACTORS-listen.`);
+    throw new Error(`Faktor med key '${key}' findes ikke i standardlisten.`);
   }
   return factor;
 }
@@ -14,8 +14,8 @@ function factorByKey(key: string) {
 const elFactor = factorByKey('el_dk_elmix');
 const vandFactor = factorByKey('vand_drikkevand');
 const dieselFactor = factorByKey('diesel_b7');
-const betonFactor = factorByKey('beton_c25_30');
-const gipsFactor = factorByKey('gipsplade_13mm');
+const betonFactor = factorByKey('Fabriksbeton (C25/30) i eksponeringsklasserne X0 og XC1|A1–A3');
+const gipsFactor = factorByKey('Gipsplade, standard|A1–A3');
 const teglFactor = factorByKey('teglsten_affald');
 const affaldGipsFactor = factorByKey('affald_gips_haandtering');
 

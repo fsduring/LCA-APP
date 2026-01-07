@@ -1,9 +1,7 @@
 import { ChangeEvent, useState } from 'react';
 import * as XLSX from 'xlsx';
 import { useData } from '../data/DataProvider';
-import { Factor } from '../data/factors';
-
-const A1A3_MODULE = 'A1–A3';
+import { A1A3_MODULE, Factor, isA1A3Module } from '../data/factors';
 
 function normalizeHeader(value: unknown): string {
   return String(value ?? '')
@@ -38,11 +36,6 @@ function parseNumber(value: unknown): number | null {
 
 function findHeaderIndex(headers: string[], matcher: (header: string) => boolean): number {
   return headers.findIndex((header) => matcher(header));
-}
-
-function isA1A3Module(moduleValue: string): boolean {
-  const normalized = moduleValue.replace(/[–—]/g, '-').toUpperCase();
-  return normalized.includes('A1') && normalized.includes('A3');
 }
 
 function detectFormat(headers: string[]) {
