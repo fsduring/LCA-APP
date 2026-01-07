@@ -1,0 +1,4430 @@
+[
+  {
+    "Navn": "Krydslamineret træ, CLT (Forbrænding EoL)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -664.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Krydslamineret træ, CLT (Forbrænding EoL)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 470.0
+  },
+  {
+    "Navn": "Konstruktionstræ af nåletræ, Høvlet (Forbrænding EoL)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -652.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Konstruktionstræ af nåletræ, Høvlet (Forbrænding EoL)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 536.0
+  },
+  {
+    "Navn": "Konstruktionstræ af nåletræ, utørret og opsavet (Forbrænding EoL)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -664.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Konstruktionstræ af nåletræ, utørret og opsavet (Forbrænding EoL)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 644.0
+  },
+  {
+    "Navn": "Limtræs-produkter af fyr og gran, (Forbrænding EoL)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -610.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Limtræs-produkter af fyr og gran, (Forbrænding EoL)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 500.0
+  },
+  {
+    "Navn": "Huldæk element, 22 cm, 6-10 forspændingsliner",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 49.8,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Huldæk element, 22 cm, 6-10 forspændingsliner|A1–A3",
+    "Kg_pr_enhed_for_Affald": 344.6
+  },
+  {
+    "Navn": "Huldæk element, 32 cm, 6-10 forspændingsliner",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 66.4,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Huldæk element, 32 cm, 6-10 forspændingsliner|A1–A3",
+    "Kg_pr_enhed_for_Affald": 459.6
+  },
+  {
+    "Navn": "Huldæk element, 32 cm, 11-17 forspændingsliner",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 67.9,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Huldæk element, 32 cm, 11-17 forspændingsliner|A1–A3",
+    "Kg_pr_enhed_for_Affald": 451.4
+  },
+  {
+    "Navn": "Letklinkerblok, Massiv",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 194.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Letklinkerblok, Massiv|A1–A3",
+    "Kg_pr_enhed_for_Affald": 600.0
+  },
+  {
+    "Navn": "Letklinkerblok med hvid EPS isolering",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 130.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Letklinkerblok med hvid EPS isolering|A1–A3",
+    "Kg_pr_enhed_for_Affald": 375.0
+  },
+  {
+    "Navn": "Letklinkerblok med grå EPS isolering",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 121.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Letklinkerblok med grå EPS isolering|A1–A3",
+    "Kg_pr_enhed_for_Affald": 327.0
+  },
+  {
+    "Navn": "Konstruktionstræ af fyr og gran, Høvlet (Forbrænding EoL)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -670.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Konstruktionstræ af fyr og gran, Høvlet (Forbrænding EoL)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 456.0
+  },
+  {
+    "Navn": "Sandwichelement med mineraluld (Facade)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 90.6,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Sandwichelement med mineraluld (Facade)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 501.8
+  },
+  {
+    "Navn": "Sandwichelement med EPS (Facade)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 87.3,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Sandwichelement med EPS (Facade)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 495.2
+  },
+  {
+    "Navn": "Beton vægelementer, 15 cm tyk væg med 5-15 kg armering  (11% udsparinger)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 53.1,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Beton vægelementer, 15 cm tyk væg med 5-15 kg armering  (11% udsparinger)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 320.9
+  },
+  {
+    "Navn": "Beton vægelementer, 20 cm tyk væg med 5-15 kg armering (11% udsparinger)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 66.9,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Beton vægelementer, 20 cm tyk væg med 5-15 kg armering (11% udsparinger)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 426.4
+  },
+  {
+    "Navn": "Beton vægelementer, 20 cm tyk væg med 16-25 kg armering (11% udsparinger)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 73.2,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Beton vægelementer, 20 cm tyk væg med 16-25 kg armering (11% udsparinger)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 433.9
+  },
+  {
+    "Navn": "Letbeton vægelement, 100 mm tyk væg, 10% udsparinger",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 26.8,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Letbeton vægelement, 100 mm tyk væg, 10% udsparinger|A1–A3",
+    "Kg_pr_enhed_for_Affald": 161.5
+  },
+  {
+    "Navn": "Letbeton vægelement, 150 mm tyk væg, 10% udsparinger",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 38.6,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Letbeton vægelement, 150 mm tyk væg, 10% udsparinger|A1–A3",
+    "Kg_pr_enhed_for_Affald": 242.4
+  },
+  {
+    "Navn": "Letbeton vægelement, 220 mm tyk væg, 10% udsparinger",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 63.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Letbeton vægelement, 220 mm tyk væg, 10% udsparinger|A1–A3",
+    "Kg_pr_enhed_for_Affald": 394.8
+  },
+  {
+    "Navn": "TT-element/Ribbedæk, TT60 med 12-18 STK. L12,5 liner, og 1,3-3,3 kg slap armering",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 56.3,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "TT-element/Ribbedæk, TT60 med 12-18 STK. L12,5 liner, og 1,3-3,3 kg slap armering|A1–A3",
+    "Kg_pr_enhed_for_Affald": 332.7
+  },
+  {
+    "Navn": "TT-element/Ribbedæk, TTS90 med 16-22 STK. L12,5 liner, og 1-2,5 kg slap armering",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 55.3,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "TT-element/Ribbedæk, TTS90 med 16-22 STK. L12,5 liner, og 1-2,5 kg slap armering|A1–A3",
+    "Kg_pr_enhed_for_Affald": 302.0
+  },
+  {
+    "Navn": "TT-element/Ribbedæk, TT60 med 20-28 STK. L12,5 liner, og 2-4 kg slap armering",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 57.7,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "TT-element/Ribbedæk, TT60 med 20-28 STK. L12,5 liner, og 2-4 kg slap armering|A1–A3",
+    "Kg_pr_enhed_for_Affald": 335.1
+  },
+  {
+    "Navn": "Fabriksbeton (C20/25 SCC) i eksponeringsklasserne X0 og XC1",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 215.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fabriksbeton (C20/25 SCC) i eksponeringsklasserne X0 og XC1|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2212.0
+  },
+  {
+    "Navn": "Fabriksbeton (C25/30) i eksponeringsklasserne X0 og XC1",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 241.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fabriksbeton (C25/30) i eksponeringsklasserne X0 og XC1|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2246.0
+  },
+  {
+    "Navn": "Fabriksbeton C35/45 – CEM I SR-5",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 403.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fabriksbeton C35/45 – CEM I SR-5|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2304.0
+  },
+  {
+    "Navn": "Fabriksbeton C35/45 – CEM I",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 362.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fabriksbeton C35/45 – CEM I|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2267.0
+  },
+  {
+    "Navn": "Fabriksbeton C35/45 (fugebeton)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 377.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fabriksbeton C35/45 (fugebeton)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2256.0
+  },
+  {
+    "Navn": "Fabriksbeton C40/50 – CEM I SR-5",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 465.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fabriksbeton C40/50 – CEM I SR-5|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2284.0
+  },
+  {
+    "Navn": "Fabriksbeton C40/50 – CEM I",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 429.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fabriksbeton C40/50 – CEM I|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2267.0
+  },
+  {
+    "Navn": "Fabriksbeton C45/55",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 426.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fabriksbeton C45/55|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2229.0
+  },
+  {
+    "Navn": "Fabriksbeton C30/37",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 282.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fabriksbeton C30/37|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2255.0
+  },
+  {
+    "Navn": "Fabriksbeton C35/45 SCC",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 300.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fabriksbeton C35/45 SCC|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2254.0
+  },
+  {
+    "Navn": "Konstruktionstræ af fyr og gran, Savede og tørrede (Forbrænding EoL)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -680.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Konstruktionstræ af fyr og gran, Savede og tørrede (Forbrænding EoL)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 456.0
+  },
+  {
+    "Navn": "Krydsfiner, ubehandlet (Forbrænding EoL)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -599.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Krydsfiner, ubehandlet (Forbrænding EoL)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 480.0
+  },
+  {
+    "Navn": "Cirkulære ventilationskanaler af galvaniseret stål",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 3.82,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Cirkulære ventilationskanaler af galvaniseret stål|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Rektangulære ventilationskanaler af galvaniseret stål",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 4.1,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rektangulære ventilationskanaler af galvaniseret stål|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Ventilations aggregater (AHU), 3000m3/h",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 3540.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Ventilations aggregater (AHU), 3000m3/h|A1–A3",
+    "Kg_pr_enhed_for_Affald": 656.79
+  },
+  {
+    "Navn": "Ventilations aggregater (AHU), 15000m3/h",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 9210.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Ventilations aggregater (AHU), 15000m3/h|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1710.14
+  },
+  {
+    "Navn": "Tagsten, tegl, røde",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 309.1,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Tagsten, tegl, røde|A1–A3",
+    "Kg_pr_enhed_for_Affald": 52.5
+  },
+  {
+    "Navn": "Tagsten, tegl, ikke røde",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 515.9000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Tagsten, tegl, ikke røde|A1–A3",
+    "Kg_pr_enhed_for_Affald": 52.5
+  },
+  {
+    "Navn": "Tagsten, tegl, dobbelt brændte",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 487.3,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Tagsten, tegl, dobbelt brændte|A1–A3",
+    "Kg_pr_enhed_for_Affald": 52.5
+  },
+  {
+    "Navn": "Tagsten, beton",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 10.032,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Tagsten, beton|A1–A3",
+    "Kg_pr_enhed_for_Affald": 39.1
+  },
+  {
+    "Navn": "Tagpap, overpap + underpap",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 5.687,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Tagpap, overpap + underpap|A1–A3",
+    "Kg_pr_enhed_for_Affald": 12.764285714285712
+  },
+  {
+    "Navn": "Tagpap, overpap",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 3.1570000000000005,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Tagpap, overpap|A1–A3",
+    "Kg_pr_enhed_for_Affald": 5.05
+  },
+  {
+    "Navn": "Tagpap, underpap",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 2.4200000000000004,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Tagpap, underpap|A1–A3",
+    "Kg_pr_enhed_for_Affald": 3.8
+  },
+  {
+    "Navn": "Tagpap, damp- og flammespærre",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 1.1,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Tagpap, damp- og flammespærre|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2.965
+  },
+  {
+    "Navn": "Fibercement, bølgeplade",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 901.351,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fibercement, bølgeplade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1590.0
+  },
+  {
+    "Navn": "Undertag, PP-membran",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 0.8910000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Undertag, PP-membran|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.25425
+  },
+  {
+    "Navn": "Teglsten, røde",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 217.525,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Teglsten, røde|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1800.0
+  },
+  {
+    "Navn": "Teglsten, gule, rosé, brune eller lign. farvenuancer",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 265.375,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Teglsten, gule, rosé, brune eller lign. farvenuancer|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1800.0
+  },
+  {
+    "Navn": "Teglsten, dobbelt brændte",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 521.125,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Teglsten, dobbelt brændte|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1825.0
+  },
+  {
+    "Navn": "Kalksandsten",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 229.9,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kalksandsten|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1800.0
+  },
+  {
+    "Navn": "Porebeton",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 243.10000000000002,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Porebeton|A1–A3",
+    "Kg_pr_enhed_for_Affald": 545.0
+  },
+  {
+    "Navn": "Porebeton, isoleringsplade",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 108.24000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Porebeton, isoleringsplade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 115.0
+  },
+  {
+    "Navn": "Fibercementplade",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 12.870000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fibercementplade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 14.4
+  },
+  {
+    "Navn": "Gipsplade, standard",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 1.7270000000000003,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gipsplade, standard|A1–A3",
+    "Kg_pr_enhed_for_Affald": 9.1
+  },
+  {
+    "Navn": "Gipsplade, let",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 1.353,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gipsplade, let|A1–A3",
+    "Kg_pr_enhed_for_Affald": 7.9
+  },
+  {
+    "Navn": "Gipsplade, vådrum",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 3.4980000000000007,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gipsplade, vådrum|A1–A3",
+    "Kg_pr_enhed_for_Affald": 10.5
+  },
+  {
+    "Navn": "Gipsplade, glasfiberarmeret",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 2.7390000000000003,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gipsplade, glasfiberarmeret|A1–A3",
+    "Kg_pr_enhed_for_Affald": 12.2
+  },
+  {
+    "Navn": "Gipsplade, akustik",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 2.5850000000000004,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gipsplade, akustik|A1–A3",
+    "Kg_pr_enhed_for_Affald": 10.6
+  },
+  {
+    "Navn": "Gipsplade, vindspærre",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 1.837,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gipsplade, vindspærre|A1–A3",
+    "Kg_pr_enhed_for_Affald": 7.5
+  },
+  {
+    "Navn": "Gipsplade, brand",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 3.8940000000000006,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gipsplade, brand|A1–A3",
+    "Kg_pr_enhed_for_Affald": 12.7
+  },
+  {
+    "Navn": "Akustikpanel, træbeton, umalet",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 1.6582500000000002,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Akustikpanel, træbeton, umalet|A1–A3",
+    "Kg_pr_enhed_for_Affald": 459.5
+  },
+  {
+    "Navn": "Akustikpanel, træbeton, malet",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 2.1835,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Akustikpanel, træbeton, malet|A1–A3",
+    "Kg_pr_enhed_for_Affald": 470.5
+  },
+  {
+    "Navn": "Akustikpanel, trælister på filt",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 24.937000000000005,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Akustikpanel, trælister på filt|A1–A3",
+    "Kg_pr_enhed_for_Affald": 8.65
+  },
+  {
+    "Navn": "Akustikpanel, glasuld, tekstil, 20 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 9.955000000000002,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Akustikpanel, glasuld, tekstil, 20 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 154.0
+  },
+  {
+    "Navn": "Akustikpanel, glasuld, tekstil, 40 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 13.200000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Akustikpanel, glasuld, tekstil, 40 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 126.0
+  },
+  {
+    "Navn": "Glasvægge inkl. montering, tykkelse mindre end 15 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 52.36000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Glasvægge inkl. montering, tykkelse mindre end 15 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 30.7
+  },
+  {
+    "Navn": "Glasvægge inkl. montering, tykkelse 15 til 19 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 69.52000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Glasvægge inkl. montering, tykkelse 15 til 19 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 41.7
+  },
+  {
+    "Navn": "Glasvægge inkl. montering, tykkelse 20 til 25 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 81.84000000000002,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Glasvægge inkl. montering, tykkelse 20 til 25 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 50.9
+  },
+  {
+    "Navn": "Glasvægge inkl. montering, tykkelse 26 til 45 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 95.7,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Glasvægge inkl. montering, tykkelse 26 til 45 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 59.8
+  },
+  {
+    "Navn": "Træfiberplade, vindspærre",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.18700000000000003,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Træfiberplade, vindspærre|A1–A3",
+    "Kg_pr_enhed_for_Affald": 255.0
+  },
+  {
+    "Navn": "Mineraluld, fleksibel isolering, kl. 30",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 1.551,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, fleksibel isolering, kl. 30|A1–A3",
+    "Kg_pr_enhed_for_Affald": 60.0
+  },
+  {
+    "Navn": "Mineraluld, fleksibel isolering, kl. 32",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 1.09395,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, fleksibel isolering, kl. 32|A1–A3",
+    "Kg_pr_enhed_for_Affald": 28.5
+  },
+  {
+    "Navn": "Mineraluld, fleksibel isolering, kl. 34",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 0.7817700000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, fleksibel isolering, kl. 34|A1–A3",
+    "Kg_pr_enhed_for_Affald": 27.75
+  },
+  {
+    "Navn": "Mineraluld, fleksibel isolering, kl. 37",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 0.5901500000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, fleksibel isolering, kl. 37|A1–A3",
+    "Kg_pr_enhed_for_Affald": 29.75
+  },
+  {
+    "Navn": "Mineraluld, hård isolering, kl. 34",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 1.2429999999999999,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, hård isolering, kl. 34|A1–A3",
+    "Kg_pr_enhed_for_Affald": 60.0
+  },
+  {
+    "Navn": "Mineraluld, hård isolering, kl. 37",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 1.5015000000000003,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, hård isolering, kl. 37|A1–A3",
+    "Kg_pr_enhed_for_Affald": 30.0
+  },
+  {
+    "Navn": "Mineraluld, murbatts, kl. 30",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 1.562,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, murbatts, kl. 30|A1–A3",
+    "Kg_pr_enhed_for_Affald": 60.0
+  },
+  {
+    "Navn": "Mineraluld, murbatts, kl. 32",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 0.8151,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, murbatts, kl. 32|A1–A3",
+    "Kg_pr_enhed_for_Affald": 49.5
+  },
+  {
+    "Navn": "Mineraluld, murbatts, kl. 34",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 0.5951000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, murbatts, kl. 34|A1–A3",
+    "Kg_pr_enhed_for_Affald": 36.45
+  },
+  {
+    "Navn": "Mineraluld, murbatts, kl. 37",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 0.5511,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, murbatts, kl. 37|A1–A3",
+    "Kg_pr_enhed_for_Affald": 29.0
+  },
+  {
+    "Navn": "Mineraluld, udv. façade, kl. 40",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 4.3043000000000005,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, udv. façade, kl. 40|A1–A3",
+    "Kg_pr_enhed_for_Affald": 78.25
+  },
+  {
+    "Navn": "Mineraluld, granulat, kl. 32",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 1.0439,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, granulat, kl. 32|A1–A3",
+    "Kg_pr_enhed_for_Affald": 30.0
+  },
+  {
+    "Navn": "Mineraluld, granulat, kl. 34",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 0.8970500000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, granulat, kl. 34|A1–A3",
+    "Kg_pr_enhed_for_Affald": 25.0
+  },
+  {
+    "Navn": "Mineraluld, granulat, kl. 37",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 0.726,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, granulat, kl. 37|A1–A3",
+    "Kg_pr_enhed_for_Affald": 17.0
+  },
+  {
+    "Navn": "Mineraluld, granulat, kl. 42",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 0.8536000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, granulat, kl. 42|A1–A3",
+    "Kg_pr_enhed_for_Affald": 26.5
+  },
+  {
+    "Navn": "Mineraluld, fladt tag, topplade",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 5.456,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, fladt tag, topplade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 172.5
+  },
+  {
+    "Navn": "Mineraluld, fladt tag, kl. 33-35",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 2.9700000000000006,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, fladt tag, kl. 33-35|A1–A3",
+    "Kg_pr_enhed_for_Affald": 115.0
+  },
+  {
+    "Navn": "Mineraluld, fladt tag, kl. 36-39",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 2.343,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, fladt tag, kl. 36-39|A1–A3",
+    "Kg_pr_enhed_for_Affald": 78.0
+  },
+  {
+    "Navn": "Mineraluld, terrændæk, kl. 35",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 4.719,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, terrændæk, kl. 35|A1–A3",
+    "Kg_pr_enhed_for_Affald": 100.0
+  },
+  {
+    "Navn": "Mineraluld, terrændæk, kl. 37",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 1.4410000000000003,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, terrændæk, kl. 37|A1–A3",
+    "Kg_pr_enhed_for_Affald": 100.0
+  },
+  {
+    "Navn": "Mineraluld, teknisk isolering",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 1.9470000000000003,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, teknisk isolering|A1–A3",
+    "Kg_pr_enhed_for_Affald": 43.75
+  },
+  {
+    "Navn": "Mineraluld, akustik isolering",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 4.4759,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, akustik isolering|A1–A3",
+    "Kg_pr_enhed_for_Affald": 85.0
+  },
+  {
+    "Navn": "Mineraluld, trinlydsplade",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 8.093800000000002,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, trinlydsplade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 149.0
+  },
+  {
+    "Navn": "Mineraluld, teknisk rørisolering, alufolie",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 0.9801000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mineraluld, teknisk rørisolering, alufolie|A1–A3",
+    "Kg_pr_enhed_for_Affald": 75.0
+  },
+  {
+    "Navn": "EPS isolering, hvid, 60 kPa",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 2.50954,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "EPS isolering, hvid, 60 kPa|A1–A3",
+    "Kg_pr_enhed_for_Affald": 13.25
+  },
+  {
+    "Navn": "EPS isolering, hvid, 80 kPa",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 2.68235,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "EPS isolering, hvid, 80 kPa|A1–A3",
+    "Kg_pr_enhed_for_Affald": 15.0
+  },
+  {
+    "Navn": "EPS isolering, hvid, over 80 kPa",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 4.5609850000000005,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "EPS isolering, hvid, over 80 kPa|A1–A3",
+    "Kg_pr_enhed_for_Affald": 37.0
+  },
+  {
+    "Navn": "EPS isolering, grå, 30 kPa",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 0.8624,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "EPS isolering, grå, 30 kPa|A1–A3",
+    "Kg_pr_enhed_for_Affald": 11.2
+  },
+  {
+    "Navn": "EPS isolering, grå, 60 kPa",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 1.518,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "EPS isolering, grå, 60 kPa|A1–A3",
+    "Kg_pr_enhed_for_Affald": 12.9
+  },
+  {
+    "Navn": "EPS isolering, grå, 80 kPa",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 2.42132,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "EPS isolering, grå, 80 kPa|A1–A3",
+    "Kg_pr_enhed_for_Affald": 16.0
+  },
+  {
+    "Navn": "XPS isolering, 300 kPa",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 4.4264,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "XPS isolering, 300 kPa|A1–A3",
+    "Kg_pr_enhed_for_Affald": 32.625
+  },
+  {
+    "Navn": "PIR Isolering",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 2.181666666666667,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "PIR Isolering|A1–A3",
+    "Kg_pr_enhed_for_Affald": 30.0
+  },
+  {
+    "Navn": "Fenolskum, plade",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": 1.7854736842105265,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fenolskum, plade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 35.0
+  },
+  {
+    "Navn": "PU fugeskum",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.9800000000000002,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "PU fugeskum|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.8
+  },
+  {
+    "Navn": "Perlite, granulat",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 22.990000000000002,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Perlite, granulat|A1–A3",
+    "Kg_pr_enhed_for_Affald": 85.0
+  },
+  {
+    "Navn": "Cement 42,5 MPa",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 1017.5000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Cement 42,5 MPa|A1–A3",
+    "Kg_pr_enhed_for_Affald": 3100.0
+  },
+  {
+    "Navn": "Cement 52,5 MPa",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 1144.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Cement 52,5 MPa|A1–A3",
+    "Kg_pr_enhed_for_Affald": 3100.0
+  },
+  {
+    "Navn": "Muremørtel, tør, kalk-cement (KC)",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 366.3,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Muremørtel, tør, kalk-cement (KC)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1660.0
+  },
+  {
+    "Navn": "Muremørtel, våd, kalk-cement (KC)",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 172.15,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Muremørtel, våd, kalk-cement (KC)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1783.75
+  },
+  {
+    "Navn": "Pudsemørtel, tør, kalk-cement (KC)",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 491.70000000000005,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Pudsemørtel, tør, kalk-cement (KC)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1600.0
+  },
+  {
+    "Navn": "Funktionsmørtel, tør",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 195.25000000000003,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Funktionsmørtel, tør|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1344.0
+  },
+  {
+    "Navn": "Funktionsmørtel, våd",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 162.8,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Funktionsmørtel, våd|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1820.0
+  },
+  {
+    "Navn": "Elementfugemørtel, tør, cement",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 433.40000000000003,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Elementfugemørtel, tør, cement|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2150.0
+  },
+  {
+    "Navn": "Bakkemørtel, kalktilpasset vådmørtel",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 75.57000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Bakkemørtel, kalktilpasset vådmørtel|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1760.0
+  },
+  {
+    "Navn": "Kalkmørtel (Kh, KKh)",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 273.90000000000003,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kalkmørtel (Kh, KKh)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1850.0
+  },
+  {
+    "Navn": "Fiberpuds, cement",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 445.50000000000006,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fiberpuds, cement|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1400.0
+  },
+  {
+    "Navn": "Mørtel, fliseklæb",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.4960000000000002,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Mørtel, fliseklæb|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1700.0
+  },
+  {
+    "Navn": "Flydemørtel, spartel til gulv",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 331.1,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Flydemørtel, spartel til gulv|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.7625
+  },
+  {
+    "Navn": "Støbemasse",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.6138000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Støbemasse|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1700.0
+  },
+  {
+    "Navn": "Flisefuge",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.4960000000000002,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Flisefuge|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2300.0
+  },
+  {
+    "Navn": "Fugemasse, Silikone",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 5.896000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fugemasse, Silikone|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.5
+  },
+  {
+    "Navn": "Vådrumsmembran",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.4960000000000002,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Vådrumsmembran|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1500.0
+  },
+  {
+    "Navn": "Primere og bindere",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.9040000000000004,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Primere og bindere|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1500.0
+  },
+  {
+    "Navn": "Montagelim",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.4960000000000002,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Montagelim|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1500.0
+  },
+  {
+    "Navn": "Armeringsstål",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 1144.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Armeringsstål|A1–A3",
+    "Kg_pr_enhed_for_Affald": 7850.0
+  },
+  {
+    "Navn": "Konstruktionsstål, valsede profiler, lille forarbejdning",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 1639.0000000000002,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Konstruktionsstål, valsede profiler, lille forarbejdning|A1–A3",
+    "Kg_pr_enhed_for_Affald": 7850.0
+  },
+  {
+    "Navn": "Konstruktionsstål, opsvejste stålprofiler, stor forarbejdning",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 2191.75,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Konstruktionsstål, opsvejste stålprofiler, stor forarbejdning|A1–A3",
+    "Kg_pr_enhed_for_Affald": 7850.0
+  },
+  {
+    "Navn": "Konstruktionsstål, rørprofiler",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 2849.0000000000005,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Konstruktionsstål, rørprofiler|A1–A3",
+    "Kg_pr_enhed_for_Affald": 7850.0
+  },
+  {
+    "Navn": "Lette stålprofiler og -komponenter",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 4125.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Lette stålprofiler og -komponenter|A1–A3",
+    "Kg_pr_enhed_for_Affald": 7850.0
+  },
+  {
+    "Navn": "Stål, plade",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": 3432.0000000000005,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Stål, plade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 7850.0
+  },
+  {
+    "Navn": "Letklinker, ekspanderet ler, nødder",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 119.31700000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Letklinker, ekspanderet ler, nødder|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.285
+  },
+  {
+    "Navn": "Letklinker, ekspanderet ler, coated, nødder",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 102.74000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Letklinker, ekspanderet ler, coated, nødder|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.245
+  },
+  {
+    "Navn": "Beton belægningssten",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 28.270000000000003,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Beton belægningssten|A1–A3",
+    "Kg_pr_enhed_for_Affald": 180.0
+  },
+  {
+    "Navn": "Epoxy gulvsystem",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 6.391,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Epoxy gulvsystem|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2.25
+  },
+  {
+    "Navn": "Vinyl",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 23.249050000000004,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Vinyl|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2.7
+  },
+  {
+    "Navn": "Fjernvarmeanlæg",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 4.655338360378155,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fjernvarmeanlæg|A1–A3",
+    "Kg_pr_enhed_for_Affald": 23.2
+  },
+  {
+    "Navn": "Solcellepanel, monokrystallinsk",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 174.9,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Solcellepanel, monokrystallinsk|A1–A3",
+    "Kg_pr_enhed_for_Affald": 19.0
+  },
+  {
+    "Navn": "Solcellepanel, polykrystallinsk",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 51.69120000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Solcellepanel, polykrystallinsk|A1–A3",
+    "Kg_pr_enhed_for_Affald": 13.967611336032387
+  },
+  {
+    "Navn": "Solcellepanel, tyndfilm",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 14.045900000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Solcellepanel, tyndfilm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2.9948356352044936
+  },
+  {
+    "Navn": "Solafskærmning, screen",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 42.68,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Solafskærmning, screen|A1–A3",
+    "Kg_pr_enhed_for_Affald": 5.4925
+  },
+  {
+    "Navn": "PEX rør, brugsvand, rør i rør, 12 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m (12 mm)",
+    "Faktor_kgCO2e_pr_enhed": 0.604098,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "PEX rør, brugsvand, rør i rør, 12 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.162
+  },
+  {
+    "Navn": "PEX rør, brugsvand, rør i rør, 15 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m (15 mm)",
+    "Faktor_kgCO2e_pr_enhed": 0.7458000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "PEX rør, brugsvand, rør i rør, 15 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.2
+  },
+  {
+    "Navn": "PEX rør, brugsvand, rør i rør, 18 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m (18 mm)",
+    "Faktor_kgCO2e_pr_enhed": 0.775632,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "PEX rør, brugsvand, rør i rør, 18 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.208
+  },
+  {
+    "Navn": "PEX rør, brugsvand, rør i rør, 22 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m (22 mm)",
+    "Faktor_kgCO2e_pr_enhed": 1.1187,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "PEX rør, brugsvand, rør i rør, 22 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.3
+  },
+  {
+    "Navn": "PEX rør, gulvvarme, 16 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m (16 mm)",
+    "Faktor_kgCO2e_pr_enhed": 0.341715,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "PEX rør, gulvvarme, 16 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.109
+  },
+  {
+    "Navn": "PEX rør, gulvvarme, 20 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m (20 mm)",
+    "Faktor_kgCO2e_pr_enhed": 0.4138200000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "PEX rør, gulvvarme, 20 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.132
+  },
+  {
+    "Navn": "Betonrør, u-armeret",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 141.9,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Betonrør, u-armeret|A1–A3",
+    "Kg_pr_enhed_for_Affald": 696.0
+  },
+  {
+    "Navn": "Sandfangsbrønd",
+    "Modul": "A1–A3",
+    "Enhed": "stk. Ø1000 mm",
+    "Faktor_kgCO2e_pr_enhed": 312.40000000000003,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Sandfangsbrønd|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1590.0
+  },
+  {
+    "Navn": "Tagrende, stål",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 7.076666666666667,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Tagrende, stål|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2.24
+  },
+  {
+    "Navn": "Akustikpanel, ålegræs",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": -3.22704,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Akustikpanel, ålegræs|A1–A3",
+    "Kg_pr_enhed_for_Affald": 137.0
+  },
+  {
+    "Navn": "Akustikpanel, ålegræs, brandhæmmende",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": -1.5724799999999999,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Akustikpanel, ålegræs, brandhæmmende|A1–A3",
+    "Kg_pr_enhed_for_Affald": 137.0
+  },
+  {
+    "Navn": "Akustikpanel, strå",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -135.126,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Akustikpanel, strå|A1–A3",
+    "Kg_pr_enhed_for_Affald": 280.0
+  },
+  {
+    "Navn": "Isoleringsplade, hamp",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": -0.8191800000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Isoleringsplade, hamp|A1–A3",
+    "Kg_pr_enhed_for_Affald": 35.0
+  },
+  {
+    "Navn": "Isoleringsplade, kork",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": -7.128,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Isoleringsplade, kork|A1–A3",
+    "Kg_pr_enhed_for_Affald": 115.0
+  },
+  {
+    "Navn": "Isoleringsplade, græs",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": -1.8261619433198377,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Isoleringsplade, græs|A1–A3",
+    "Kg_pr_enhed_for_Affald": 40.0
+  },
+  {
+    "Navn": "Papiruldsisolering, granulat",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": -1.19097,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Papiruldsisolering, granulat|A1–A3",
+    "Kg_pr_enhed_for_Affald": 43.75
+  },
+  {
+    "Navn": "Slaggegrus",
+    "Modul": "A1–A3",
+    "Enhed": "ton",
+    "Faktor_kgCO2e_pr_enhed": -8.973,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Slaggegrus|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2700.0
+  },
+  {
+    "Navn": "Stråtag",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -139.5,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Stråtag|A1–A3",
+    "Kg_pr_enhed_for_Affald": 103.3
+  },
+  {
+    "Navn": "Træfiberisolering, løsuld",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": -1.026,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Træfiberisolering, løsuld|A1–A3",
+    "Kg_pr_enhed_for_Affald": 36.75
+  },
+  {
+    "Navn": "Træfiberisolering, plade",
+    "Modul": "A1–A3",
+    "Enhed": "m² with R=1 m²K/W",
+    "Faktor_kgCO2e_pr_enhed": -2.142,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Træfiberisolering, plade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 50.0
+  },
+  {
+    "Navn": "Træfiberisolering, plade, trykfast",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -166.5,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Træfiberisolering, plade, trykfast|A1–A3",
+    "Kg_pr_enhed_for_Affald": 140.0
+  },
+  {
+    "Navn": "Træfiberplade, trinlyd, tykkelse 30 - 40 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": -1.899,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Træfiberplade, trinlyd, tykkelse 30 - 40 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 250.0
+  },
+  {
+    "Navn": "Trægulv, ubehandlet, 13 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": -7.533000000000001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Trægulv, ubehandlet, 13 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 650.0
+  },
+  {
+    "Navn": "Trægulv, overfladebehandlet, 18 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": -10.35,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Trægulv, overfladebehandlet, 18 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 790.0
+  },
+  {
+    "Navn": "Plastvindue i hård PVC med stålindlæg i profilet og 3-lags rude",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 101.233,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Plastvindue i hård PVC med stålindlæg i profilet og 3-lags rude|A1–A3",
+    "Kg_pr_enhed_for_Affald": 38.7
+  },
+  {
+    "Navn": "Plastvindue med glasfiberforstærket profil (FRP) og 3-lags rude",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 87.164,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Plastvindue med glasfiberforstærket profil (FRP) og 3-lags rude|A1–A3",
+    "Kg_pr_enhed_for_Affald": 35.1
+  },
+  {
+    "Navn": "Træ-alu vindue med 3-lags rude",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 90.58500000000002,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Træ-alu vindue med 3-lags rude|A1–A3",
+    "Kg_pr_enhed_for_Affald": 36.4
+  },
+  {
+    "Navn": "Trævindue med 3-lags rude",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 51.667,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Trævindue med 3-lags rude|A1–A3",
+    "Kg_pr_enhed_for_Affald": 34.2
+  },
+  {
+    "Navn": "Celleglas-isolering 165 kg/m³",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.45,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Celleglas-isolering 165 kg/m³|A1–A3",
+    "Kg_pr_enhed_for_Affald": 165.0
+  },
+  {
+    "Navn": "Tæppeflise",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 5.082,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Tæppeflise|A1–A3",
+    "Kg_pr_enhed_for_Affald": 4.345
+  },
+  {
+    "Navn": "Zink, patineret",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 3.222,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Zink, patineret|A1–A3",
+    "Kg_pr_enhed_for_Affald": 7200.0
+  },
+  {
+    "Navn": "Celleglas-isolering 110 kg/m³",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.43,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Celleglas-isolering 110 kg/m³|A1–A3",
+    "Kg_pr_enhed_for_Affald": 115.0
+  },
+  {
+    "Navn": "Overflade, Facademaling, grunder, dispersion",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.877313718966455,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Facademaling, grunder, dispersion|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Rør til el-varmepumpe (vand-vand) 70 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 410.681695858033,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rør til el-varmepumpe (vand-vand) 70 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 123.0
+  },
+  {
+    "Navn": "Gipssten",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.00215621885447134,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gipssten|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Boksventilator 30.000 m3/h",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 845.767644386368,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Boksventilator 30.000 m3/h|A1–A3",
+    "Kg_pr_enhed_for_Affald": 168.0
+  },
+  {
+    "Navn": "Varmepumpe, jordvarmesonde, 70 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 6069.95879454117,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Varmepumpe, jordvarmesonde, 70 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 4855.0
+  },
+  {
+    "Navn": "Glasfiberdug",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 0.274166343262821,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Glasfiberdug|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.12
+  },
+  {
+    "Navn": "Curtain wall facade med 3-lags ruder, stål",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 95.9285807261742,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Curtain wall facade med 3-lags ruder, stål|A1–A3",
+    "Kg_pr_enhed_for_Affald": 21.4
+  },
+  {
+    "Navn": "Lavagrus",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.00387499779812787,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Lavagrus|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1100.0
+  },
+  {
+    "Navn": "Rør, Afløbsrør, PVC",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.59454115832662,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rør, Afløbsrør, PVC|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Teflon-membran, polytetrafluoroethylen (PTFE)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 20.0832228945251,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Teflon-membran, polytetrafluoroethylen (PTFE)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2200.0
+  },
+  {
+    "Navn": "Decentralt ventilationsanlæg med varmegenvinding (væg & loft) 60 m3/h",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 25.1677296931611,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Decentralt ventilationsanlæg med varmegenvinding (væg & loft) 60 m3/h|A1–A3",
+    "Kg_pr_enhed_for_Affald": 3.691
+  },
+  {
+    "Navn": "Varmepumpe (luft-vand) 7kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 319.362562469703,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Varmepumpe (luft-vand) 7kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 93.8
+  },
+  {
+    "Navn": "Gips, beta-halvhydrat",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.100682742334716,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gips, beta-halvhydrat|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Gulvvarmesystem inkl. isolering, PEX, 100 mm afstand",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 6.13311925897034,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gulvvarmesystem inkl. isolering, PEX, 100 mm afstand|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.9
+  },
+  {
+    "Navn": "Overflade, Anodisering af aluminiumplade",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 5.49033722512914,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Anodisering af aluminiumplade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Overflade, Pulverlakering (Industri, udendørs, hvid)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 4.54300167414261,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Pulverlakering (Industri, udendørs, hvid)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Beslag, stålvindue",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 9.67607819344313,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Beslag, stålvindue|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2.63
+  },
+  {
+    "Navn": "Afretningslag, hårdt plast",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.315414169513135,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Afretningslag, hårdt plast|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1800.0
+  },
+  {
+    "Navn": "Boksventilator 10.000 m3/h",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 342.631660820325,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Boksventilator 10.000 m3/h|A1–A3",
+    "Kg_pr_enhed_for_Affald": 68.0
+  },
+  {
+    "Navn": "Grus 2-32 mm, tørret",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.032837115249705603,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Grus 2-32 mm, tørret|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1850.0
+  },
+  {
+    "Navn": "Polystyren skumfyldning (uden bindemiddel)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 48.9691557254446,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Polystyren skumfyldning (uden bindemiddel)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 15.0
+  },
+  {
+    "Navn": "Oliekedel, lav temperatur, 20-120 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 1207.85513778074,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Oliekedel, lav temperatur, 20-120 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 354.0
+  },
+  {
+    "Navn": "Oliekedel, lav temperatur, kondenserende, 20-120 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 1207.85513778074,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Oliekedel, lav temperatur, kondenserende, 20-120 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 354.0
+  },
+  {
+    "Navn": "Ekspanderet glasgranulat",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.659902518100548,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Ekspanderet glasgranulat|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Rør, Kloakrør PVC",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.59454115832662,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rør, Kloakrør PVC|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Gaskedel, kondenserende, <20 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 414.317098620903,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gaskedel, kondenserende, <20 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 118.0
+  },
+  {
+    "Navn": "EPDM skum (rørisolering)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 231.751456510938,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "EPDM skum (rørisolering)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 55.0
+  },
+  {
+    "Navn": "Vindueskarm, aluminium",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 15.7894744191549,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Vindueskarm, aluminium|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.43
+  },
+  {
+    "Navn": "Storkerfyr20-120 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 2203.02992759597,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Storkerfyr20-120 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 921.0
+  },
+  {
+    "Navn": "Grus 16/32 (tørret)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.0273184277721275,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Grus 16/32 (tørret)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1400.0
+  },
+  {
+    "Navn": "Fjernvarmeanlæg",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 4.5423531471817,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fjernvarmeanlæg|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Grå støbejern",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.53569520186568,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Grå støbejern|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Messing",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.2957370579067,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Messing|A1–A3",
+    "Kg_pr_enhed_for_Affald": 8750.0
+  },
+  {
+    "Navn": "Rør, Regnvandsrør, PVC",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.24391584440799,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rør, Regnvandsrør, PVC|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Rude, 2-lags",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 36.6414059961997,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rude, 2-lags|A1–A3",
+    "Kg_pr_enhed_for_Affald": 20.5
+  },
+  {
+    "Navn": "Bære-/slidlag, Asfalt",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.0797797989911647,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Bære-/slidlag, Asfalt|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Kalkpuds",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 397.708601007652,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kalkpuds|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1800.0
+  },
+  {
+    "Navn": "Rør til el-varmepumpe (lodret jordvarme, saltvand), probe, 10 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 595.828322484248,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rør til el-varmepumpe (lodret jordvarme, saltvand), probe, 10 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 188.8
+  },
+  {
+    "Navn": "Træ, lærk",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -902.763660690763,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Træ, lærk|A1–A3",
+    "Kg_pr_enhed_for_Affald": 660.8
+  },
+  {
+    "Navn": "Rør til el-varmepumpe (lodret jordvarme, saltvand), probe, 20 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 1749.20993820203,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rør til el-varmepumpe (lodret jordvarme, saltvand), probe, 20 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 551.5
+  },
+  {
+    "Navn": "Overflade, Pulver coating af metal",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 3.76615771827836,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Pulver coating af metal|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.18
+  },
+  {
+    "Navn": "Overflade, trævinduer, hvid grunder",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.89303595015902,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, trævinduer, hvid grunder|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Blyplader",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.25161707050245,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Blyplader|A1–A3",
+    "Kg_pr_enhed_for_Affald": 11342.0
+  },
+  {
+    "Navn": "Buffertank, rustfast stål",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 3.99668740796676,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Buffertank, rustfast stål|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Porebeton 474 kg/m³, armeret",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 261.960344981327,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Porebeton 474 kg/m³, armeret|A1–A3",
+    "Kg_pr_enhed_for_Affald": 500.0
+  },
+  {
+    "Navn": "Facadeklinker",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 532.861846040442,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Facadeklinker|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2000.0
+  },
+  {
+    "Navn": "Kalk, malet",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.46231339778829,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kalk, malet|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Difluormethan (R32)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 4.82676125197584,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Difluormethan (R32)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Gas varmepumpe (luft) 20-70 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 344.784068045542,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gas varmepumpe (luft) 20-70 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 157.0
+  },
+  {
+    "Navn": "Gaskedel, kondenserende, 120-400 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 2643.13589008393,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gaskedel, kondenserende, 120-400 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 937.0
+  },
+  {
+    "Navn": "Papiruldsplader",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -1.17357533435774,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Papiruldsplader|A1–A3",
+    "Kg_pr_enhed_for_Affald": 80.0
+  },
+  {
+    "Navn": "Kunststenplade (bundet af epoxyharpiks)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 26.1383196057284,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kunststenplade (bundet af epoxyharpiks)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 52.0
+  },
+  {
+    "Navn": "Elevator (grundkomponenter pr. stk.)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 5073.7353712319,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Elevator (grundkomponenter pr. stk.)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1603.0
+  },
+  {
+    "Navn": "Sanitetskeramik",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.68640156609746,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Sanitetskeramik|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Ventilationsanlæg decentraliseret (væg & loft) 60 m3/h",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 3.89285056026345,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Ventilationsanlæg decentraliseret (væg & loft) 60 m3/h|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.878
+  },
+  {
+    "Navn": "Radiator, stålplade",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 4.51388255782563,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Radiator, stålplade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "EPDM-tætning til aluminiumsprofil, med kuldebroafbrydelse",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 1.33115785914987,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "EPDM-tætning til aluminiumsprofil, med kuldebroafbrydelse|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.43
+  },
+  {
+    "Navn": "Klordifluormethan (R22)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 7.91966213837126,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Klordifluormethan (R22)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "PUR fugemasse",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 5.57324693567393,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "PUR fugemasse|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "LPG tank 6400 l / t 2,9 (overjordiske)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 3138.9789562581,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "LPG tank 6400 l / t 2,9 (overjordiske)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1170.0
+  },
+  {
+    "Navn": "Vinduesramme, aluminium",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 17.0444699086916,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Vinduesramme, aluminium|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.51
+  },
+  {
+    "Navn": "Overflade, Træmaling, udendørs, dækkende (topcoat-system)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.56773336341221,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Træmaling, udendørs, dækkende (topcoat-system)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Sand 0-2 mm, tørret",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.032837115249705603,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Sand 0-2 mm, tørret|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1350.0
+  },
+  {
+    "Navn": "Overflade, Parket lak transparent",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.91422770828443,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Parket lak transparent|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "EVA-tagmembran",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 5.38635663985026,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "EVA-tagmembran|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2.0
+  },
+  {
+    "Navn": "Betonmursten",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 228.261403092991,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Betonmursten|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2000.0
+  },
+  {
+    "Navn": "Aluminiumsprofil",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 10.6977657687905,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Aluminiumsprofil|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2700.0
+  },
+  {
+    "Navn": "Skærver 16-32 mm",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.00784068997280792,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Skærver 16-32 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1400.0
+  },
+  {
+    "Navn": "Keramikfliser, u-glaseret",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 6.71403280772271,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Keramikfliser, u-glaseret|A1–A3",
+    "Kg_pr_enhed_for_Affald": 20.0
+  },
+  {
+    "Navn": "Puds, gips-kalk",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 112.277865935908,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Puds, gips-kalk|A1–A3",
+    "Kg_pr_enhed_for_Affald": 900.0
+  },
+  {
+    "Navn": "Ekspanderet skifer",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.367582697481523,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Ekspanderet skifer|A1–A3",
+    "Kg_pr_enhed_for_Affald": 600.0
+  },
+  {
+    "Navn": "Boksventilator 5.000 m3/h",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 216.804822644444,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Boksventilator 5.000 m3/h|A1–A3",
+    "Kg_pr_enhed_for_Affald": 43.0
+  },
+  {
+    "Navn": "Lerrør, glaseret, DN 400",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 49.8683893722111,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Lerrør, glaseret, DN 400|A1–A3",
+    "Kg_pr_enhed_for_Affald": 142.0
+  },
+  {
+    "Navn": "Kork, expanderet",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -86.4287432946448,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kork, expanderet|A1–A3",
+    "Kg_pr_enhed_for_Affald": 80.0
+  },
+  {
+    "Navn": "Kertotræ (LVL)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -424.399394486794,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kertotræ (LVL)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 465.7
+  },
+  {
+    "Navn": "Cirkulationspumpe 50-250 W",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 24.8864327650855,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Cirkulationspumpe 50-250 W|A1–A3",
+    "Kg_pr_enhed_for_Affald": 4.94
+  },
+  {
+    "Navn": "Tetrafluorethan (R134a)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 7.59343122819559,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Tetrafluorethan (R134a)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Tetrafluorpropen (R1234ze)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 5.66982622251217,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Tetrafluorpropen (R1234ze)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Buffertank, stål",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.9953227520113,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Buffertank, stål|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Beslag til dreje-kip vinduer (aluminium)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 13.7501377278224,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Beslag til dreje-kip vinduer (aluminium)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.65
+  },
+  {
+    "Navn": "Byggepap",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": -0.0863485894716581,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Byggepap|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.08
+  },
+  {
+    "Navn": "Rør til el-varmepumpe (lodret jordvarme, saltvand), collector, 70 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 2518.49692469703,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rør til el-varmepumpe (lodret jordvarme, saltvand), collector, 70 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 987.0
+  },
+  {
+    "Navn": "Rør til el-varmepumpe (vand-vand) 20 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 171.545746399966,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rør til el-varmepumpe (vand-vand) 20 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 48.0
+  },
+  {
+    "Navn": "Hørfiberdug",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 33.8218633667606,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Hørfiberdug|A1–A3",
+    "Kg_pr_enhed_for_Affald": 38.0
+  },
+  {
+    "Navn": "Træ, egetræ (12% fugt / 10,7% H2O)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -1008.75834622427,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Træ, egetræ (12% fugt / 10,7% H2O)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 716.8
+  },
+  {
+    "Navn": "Støbeasfalt",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.125066409625202,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Støbeasfalt|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2400.0
+  },
+  {
+    "Navn": "Betontrappe, etagehøj",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 265.025463511954,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Betontrappe, etagehøj|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1965.0
+  },
+  {
+    "Navn": "ECB-plast tagmembran, ifølge DIN 16729 (med PES-filt)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 7.46364496391699,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "ECB-plast tagmembran, ifølge DIN 16729 (med PES-filt)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2.32
+  },
+  {
+    "Navn": "Solvarmekollektor, vakuumrør",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 89.7297752030676,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Solvarmekollektor, vakuumrør|A1–A3",
+    "Kg_pr_enhed_for_Affald": 29.5
+  },
+  {
+    "Navn": "Rør til el-varmepumpe (vand-vand) 10 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 133.270717149251,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rør til el-varmepumpe (vand-vand) 10 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 33.0
+  },
+  {
+    "Navn": "Varmepumpe, vand-vand, 70 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 542.86885111254,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Varmepumpe, vand-vand, 70 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 199.2
+  },
+  {
+    "Navn": "Bitumenemulsion (40% bitumen, 60% vand)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.356293685579846,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Bitumenemulsion (40% bitumen, 60% vand)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Curtain wall profiler, stål",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 36.147057248384,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Curtain wall profiler, stål|A1–A3",
+    "Kg_pr_enhed_for_Affald": 9.48
+  },
+  {
+    "Navn": "Kuldioxid (R744)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.04086804842698,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kuldioxid (R744)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Slaggebeton, sten",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 356.852714976635,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Slaggebeton, sten|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1400.0
+  },
+  {
+    "Navn": "Stenmel 0/2",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.00784068997280792,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Stenmel 0/2|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1320.0
+  },
+  {
+    "Navn": "Aluminiumsplade",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 10.53435336004,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Aluminiumsplade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2700.0
+  },
+  {
+    "Navn": "Rulletrappe (komponenter, som er afhængige af højden)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 2602.91021600122,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rulletrappe (komponenter, som er afhængige af højden)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 800.0
+  },
+  {
+    "Navn": "Stål, Smedestål",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.78061780102751,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Stål, Smedestål|A1–A3",
+    "Kg_pr_enhed_for_Affald": 7850.0
+  },
+  {
+    "Navn": "Cementbundet spånplade",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 1721.44981998355,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Cementbundet spånplade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1200.0
+  },
+  {
+    "Navn": "Elevator (komponenter pr. etage)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 988.76092829453,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Elevator (komponenter pr. etage)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 333.0
+  },
+  {
+    "Navn": "Glasfiber-forstærket plast, polyester (30% fiberandel)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 3.32287400811909,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Glasfiber-forstærket plast, polyester (30% fiberandel)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1400.0
+  },
+  {
+    "Navn": "Cirkulationspumpe 250-1000 W",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 124.432163825428,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Cirkulationspumpe 250-1000 W|A1–A3",
+    "Kg_pr_enhed_for_Affald": 24.7
+  },
+  {
+    "Navn": "Rør, Afløbsrør, ABS",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 4.35146355952024,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rør, Afløbsrør, ABS|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1050.0
+  },
+  {
+    "Navn": "Gulvvarmesystem inkl. isolering, kobber (100 mm afstand)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 21.7310372096551,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gulvvarmesystem inkl. isolering, kobber (100 mm afstand)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 5.7
+  },
+  {
+    "Navn": "Kølemiddel (R410a)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 11.029799404982,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kølemiddel (R410a)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Ammoniak (R717)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.52992774228251,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Ammoniak (R717)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Overflade, Opløsningsmiddelbaseret lak, hvid",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 3.08216641961989,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Opløsningsmiddelbaseret lak, hvid|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Fiberdug, PE / PP",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 1.21733972018943,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fiberdug, PE / PP|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.5
+  },
+  {
+    "Navn": "Overflade, Facademaling, grunder, silikat",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.820659218276163,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Facademaling, grunder, silikat|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Rør, polypropylen (PP)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.49711556229703,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rør, polypropylen (PP)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Stålplade (20 mikrometer galvaniseret)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.78247228505783,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Stålplade (20 mikrometer galvaniseret)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 7850.0
+  },
+  {
+    "Navn": "Overflade, Metalcoating (vandbaseret)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 1.97676905813406,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Metalcoating (vandbaseret)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.29
+  },
+  {
+    "Navn": "Skorsten stål (enkelt væg)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 4.19322672202942,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Skorsten stål (enkelt væg)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Vinduesramme, plast",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 9.07303903680295,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Vinduesramme, plast|A1–A3",
+    "Kg_pr_enhed_for_Affald": 3.1
+  },
+  {
+    "Navn": "Folie, PE-HD med PP-fiberdug",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 3.13731226461652,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Folie, PE-HD med PP-fiberdug|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.3
+  },
+  {
+    "Navn": "Pimpsten, grus",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.00970947327766317,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Pimpsten, grus|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Curtain wall facade med 3-lags ruder, aluminium",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 119.982477276482,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Curtain wall facade med 3-lags ruder, aluminium|A1–A3",
+    "Kg_pr_enhed_for_Affald": 16.5
+  },
+  {
+    "Navn": "HPL- plade",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -239.968853671688,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "HPL- plade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1400.0
+  },
+  {
+    "Navn": "Træ, gran (12% fugt / 10,7% H2O)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -693.201310686437,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Træ, gran (12% fugt / 10,7% H2O)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 481.6
+  },
+  {
+    "Navn": "Lerpuds",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 98.1973578737025,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Lerpuds|A1–A3",
+    "Kg_pr_enhed_for_Affald": 900.0
+  },
+  {
+    "Navn": "Vinduesprofil, karm, alu. pulverlak.",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 12.9537116067852,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Vinduesprofil, karm, alu. pulverlak.|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.02
+  },
+  {
+    "Navn": "Kondenserende gaskedel <20 kW (væg enhed)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 470.172113359517,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kondenserende gaskedel <20 kW (væg enhed)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 85.0
+  },
+  {
+    "Navn": "Stålplade, rustfri",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 3.62288877909332,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Stålplade, rustfri|A1–A3",
+    "Kg_pr_enhed_for_Affald": 7900.0
+  },
+  {
+    "Navn": "Plast profil CR (chloropren gummi)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 5.864381311715,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Plast profil CR (chloropren gummi)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Stålrør, gevindrør",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.52573267790857,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Stålrør, gevindrør|A1–A3",
+    "Kg_pr_enhed_for_Affald": 7850.0
+  },
+  {
+    "Navn": "Asfalt, bærelag",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.0733163311990116,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Asfalt, bærelag|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2350.0
+  },
+  {
+    "Navn": "Grunder, silikat dispersion",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.58689950324472,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Grunder, silikat dispersion|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Overflade, Parket lak (primer til træ; fortyndet med vand)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 3.37882123084204,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Parket lak (primer til træ; fortyndet med vand)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "LPG tank 4850 l / 2,1 t (underjordisk)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 3103.27150360181,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "LPG tank 4850 l / 2,1 t (underjordisk)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1117.0
+  },
+  {
+    "Navn": "Polybutadiene rør (PB)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 4.00159003138322,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Polybutadiene rør (PB)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Perlite 0-1 mm",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.0413336069915899,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Perlite 0-1 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Pimpsten 0-4 mm",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.00968656867425702,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Pimpsten 0-4 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 800.0
+  },
+  {
+    "Navn": "Overflade, Facademaling, silikoneharpiks",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.37406011806389,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Facademaling, silikoneharpiks|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Træ, ceder",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -840.674347745696,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Træ, ceder|A1–A3",
+    "Kg_pr_enhed_for_Affald": 571.0
+  },
+  {
+    "Navn": "Gummigulve med skumbagside EN 1816",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 11.5316838697784,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gummigulve med skumbagside EN 1816|A1–A3",
+    "Kg_pr_enhed_for_Affald": 3.82
+  },
+  {
+    "Navn": "Varmepumpe, vand-vand, 10 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 284.42150577356,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Varmepumpe, vand-vand, 10 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 104.2
+  },
+  {
+    "Navn": "Varmepumpe (luft-vand) 10 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 456.232232099576,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Varmepumpe (luft-vand) 10 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 134.0
+  },
+  {
+    "Navn": "Overflade, Kalkmaling",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.930250528729286,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Kalkmaling|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.2
+  },
+  {
+    "Navn": "Gummitætning",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 3.64710793989441,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gummitætning|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Rør, Kloakrør PP",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.49711556229703,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rør, Kloakrør PP|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Plastplade, transparent, PMMA støbte",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 5953.29652911042,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Plastplade, transparent, PMMA støbte|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1190.0
+  },
+  {
+    "Navn": "Naturstenplade, blød, facade",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 15.6468799763303,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Naturstenplade, blød, facade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 104.0
+  },
+  {
+    "Navn": "Rør til el-varmepumpe (lodret jordvarme, saltvand), probe, 70 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 5843.45813709034,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rør til el-varmepumpe (lodret jordvarme, saltvand), probe, 70 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1843.4
+  },
+  {
+    "Navn": "Aluminiumsfolie (d=0,1 mm)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 3.11698065277646,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Aluminiumsfolie (d=0,1 mm)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.28
+  },
+  {
+    "Navn": "Plastprofil, silikone",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 7.69449765819341,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Plastprofil, silikone|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Polyurethanskum (rørisolering)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 152.994597699785,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Polyurethanskum (rørisolering)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 30.0
+  },
+  {
+    "Navn": "Nylonstøbning (PA 6.6)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 10.3701243162944,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Nylonstøbning (PA 6.6)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1070.0
+  },
+  {
+    "Navn": "Grus, 2-15 mm, tørret",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.0273184277721275,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Grus, 2-15 mm, tørret|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Beslag til lodrette skydevinduer",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 11.880486549039,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Beslag til lodrette skydevinduer|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.932
+  },
+  {
+    "Navn": "Puds, kalk-gips, inde",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 196.915878180451,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Puds, kalk-gips, inde|A1–A3",
+    "Kg_pr_enhed_for_Affald": 900.0
+  },
+  {
+    "Navn": "Melamin-skum",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 6.47006354569153,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Melamin-skum|A1–A3",
+    "Kg_pr_enhed_for_Affald": 10.0
+  },
+  {
+    "Navn": "Polystyren granulat (cementbundet)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 162.112796651314,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Polystyren granulat (cementbundet)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 350.0
+  },
+  {
+    "Navn": "Polycarbonatplade",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 5.49820370581592,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Polycarbonatplade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1200.0
+  },
+  {
+    "Navn": "Gulvvarmesystem inkl. isolering PP (100 mm)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 5.96629522611626,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gulvvarmesystem inkl. isolering PP (100 mm)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.9
+  },
+  {
+    "Navn": "LPG tank 2700 l / 1,2 t (underjordisk)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 2149.11563118951,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "LPG tank 2700 l / 1,2 t (underjordisk)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 773.0
+  },
+  {
+    "Navn": "Bindelag",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.0812041695807947,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Bindelag|A1–A3",
+    "Kg_pr_enhed_for_Affald": 210.0
+  },
+  {
+    "Navn": "Vinduesramme, pulverlakeret aluminium",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 12.4457229163231,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Vinduesramme, pulverlakeret aluminium|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.98
+  },
+  {
+    "Navn": "EPDM-tætning til aluminiumsprofil",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 0.557228871272038,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "EPDM-tætning til aluminiumsprofil|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.18
+  },
+  {
+    "Navn": "Skortsten polypropylen (PP)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.40238829429419,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Skortsten polypropylen (PP)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Polyethylen-skum",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.92117847345365,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Polyethylen-skum|A1–A3",
+    "Kg_pr_enhed_for_Affald": 30.0
+  },
+  {
+    "Navn": "Regnvandsrør, støbejern",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.641231440874325,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Regnvandsrør, støbejern|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Kalciumsilikatplade",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 564.895474394919,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kalciumsilikatplade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 225.0
+  },
+  {
+    "Navn": "Sand 0-2 mm",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.0026195453178976,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Sand 0-2 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1350.0
+  },
+  {
+    "Navn": "Spånplade",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -852.1,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Spånplade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 700.0
+  },
+  {
+    "Navn": "Solvarmekollektor, plan",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 93.4519656302271,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Solvarmekollektor, plan|A1–A3",
+    "Kg_pr_enhed_for_Affald": 18.27
+  },
+  {
+    "Navn": "Lersten",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 91.759423925921,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Lersten|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1200.0
+  },
+  {
+    "Navn": "Hampfiberdug",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 14.1699760966687,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Hampfiberdug|A1–A3",
+    "Kg_pr_enhed_for_Affald": 38.0
+  },
+  {
+    "Navn": "Vindueskarm, plast",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 8.13083234596715,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Vindueskarm, plast|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2.8
+  },
+  {
+    "Navn": "Gulvvarmesystem inkl. isolering, kobber (200 mm afstand)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 12.6474949941588,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gulvvarmesystem inkl. isolering, kobber (200 mm afstand)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 3.3
+  },
+  {
+    "Navn": "Gipspulver, Alpha-halvhydrat",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.259096066903988,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gipspulver, Alpha-halvhydrat|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Asfalt",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.102300162295712,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Asfalt|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2400.0
+  },
+  {
+    "Navn": "Bitumenklæber",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.667781254566912,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Bitumenklæber|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Plastplade, transparent, PVC",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 3660.37168201656,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Plastplade, transparent, PVC|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1220.0
+  },
+  {
+    "Navn": "Betonrør, armeret",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.132607914121717,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Betonrør, armeret|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2400.0
+  },
+  {
+    "Navn": "Ler, stampet ler",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 9.62367569799761,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Ler, stampet ler|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2000.0
+  },
+  {
+    "Navn": "Porebeton granulat",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 5.55782268715528,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Porebeton granulat|A1–A3",
+    "Kg_pr_enhed_for_Affald": 400.0
+  },
+  {
+    "Navn": "Solafskærmning, polyethylenterephthalat (PET)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 2.49017437003498,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Solafskærmning, polyethylenterephthalat (PET)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.4
+  },
+  {
+    "Navn": "Stål, varmvalset plade, 2-20 mm",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.78247228505783,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Stål, varmvalset plade, 2-20 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 7850.0
+  },
+  {
+    "Navn": "Stål, Varmgalvaniseret stålplade",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 16.7893731613322,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Stål, Varmgalvaniseret stålplade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 5.72
+  },
+  {
+    "Navn": "Oliekedel, lav temperatur, kondenserende, 120-400 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 2856.35899509175,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Oliekedel, lav temperatur, kondenserende, 120-400 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 992.0
+  },
+  {
+    "Navn": "Oliekedel, lav temperatur, 120-400 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 2856.35899509175,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Oliekedel, lav temperatur, 120-400 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 992.0
+  },
+  {
+    "Navn": "Brugsvandsrør, rustfast stål",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 3.7030060887859,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Brugsvandsrør, rustfast stål|A1–A3",
+    "Kg_pr_enhed_for_Affald": 7850.0
+  },
+  {
+    "Navn": "Vandvarmer, el, gennemstrøm, 21 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 13.9774702052878,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Vandvarmer, el, gennemstrøm, 21 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 3.95
+  },
+  {
+    "Navn": "Brugsvandsrør, Alu-PEX",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 7.58380131420344,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Brugsvandsrør, Alu-PEX|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Vinduesbeslag, aluminium",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 9.21872150167305,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Vinduesbeslag, aluminium|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.014
+  },
+  {
+    "Navn": "Dampspærre PA",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 0.571214835410466,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Dampspærre PA|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.08
+  },
+  {
+    "Navn": "Puds, syntetisk harpiks",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 1159.59176355544,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Puds, syntetisk harpiks|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1700.0
+  },
+  {
+    "Navn": "Varmepumpe (luft-vand) 14kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 638.725124939406,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Varmepumpe (luft-vand) 14kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 187.6
+  },
+  {
+    "Navn": "Pillefyr, 20-120 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 2320.64806607802,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Pillefyr, 20-120 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 833.0
+  },
+  {
+    "Navn": "Rulletrappe (grundkomponenter pr. trappe)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 12873.63303844,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rulletrappe (grundkomponenter pr. trappe)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 4076.0
+  },
+  {
+    "Navn": "Brugsvandsrør, PEX-Alu-PEX",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 7.74772219622186,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Brugsvandsrør, PEX-Alu-PEX|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Brugsvandsrør, PB",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 3.894531366923,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Brugsvandsrør, PB|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Perlite 0-3 mm",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.565071465503026,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Perlite 0-3 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Lithiumbromid",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 10.9935647817952,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Lithiumbromid|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "LPG tank 6400 l / 2,9 t (underjordisk)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 3862.86672876187,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "LPG tank 6400 l / 2,9 t (underjordisk)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1390.0
+  },
+  {
+    "Navn": "Lim til gipsplader",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.100682742334716,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Lim til gipsplader|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1000.0
+  },
+  {
+    "Navn": "Plastplade, transparent, PMMA ekstruderet",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 5491.99514912548,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Plastplade, transparent, PMMA ekstruderet|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1190.0
+  },
+  {
+    "Navn": "Vindueskarm, træ",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": -0.369555604793129,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Vindueskarm, træ|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2.11
+  },
+  {
+    "Navn": "Ler pulver",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.347658712778315,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Ler pulver|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Skorsten opmuret (2 rør)",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 49.226712886136,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Skorsten opmuret (2 rør)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 195.6
+  },
+  {
+    "Navn": "Rør til el-varmepumpe (lodret jordvarme, saltvand), collector, 20 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 719.570549913438,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rør til el-varmepumpe (lodret jordvarme, saltvand), collector, 20 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 282.0
+  },
+  {
+    "Navn": "Grus 2-32 mm",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.032837115249705603,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Grus 2-32 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1850.0
+  },
+  {
+    "Navn": "Rulleskodder, PVC",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 22.4498873932846,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rulleskodder, PVC|A1–A3",
+    "Kg_pr_enhed_for_Affald": 6.24
+  },
+  {
+    "Navn": "El-varmepumpe (lodret jordvarme, saltvand) 10 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 336.731464166724,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "El-varmepumpe (lodret jordvarme, saltvand) 10 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 139.0
+  },
+  {
+    "Navn": "Grunder til silikonespuds",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.711521169286882,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Grunder til silikonespuds|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1550.0
+  },
+  {
+    "Navn": "PVC gulvbelægning",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 7.60524277381231,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "PVC gulvbelægning|A1–A3",
+    "Kg_pr_enhed_for_Affald": 3.3
+  },
+  {
+    "Navn": "Læsket kalk, pulver",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.11463035583663,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Læsket kalk, pulver|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Træfiberisoleringsplade (våd proces)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -170.406093339498,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Træfiberisoleringsplade (våd proces)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 160.0
+  },
+  {
+    "Navn": "Vindueshåndtag",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 0.770104153217608,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Vindueshåndtag|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.1
+  },
+  {
+    "Navn": "Gaskedel, kondenserende, 20-120 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 1025.2592609941,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gaskedel, kondenserende, 20-120 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 292.0
+  },
+  {
+    "Navn": "Kondenserende gaskedel 120-400 kW (standalone enhed)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 3456.86015986841,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kondenserende gaskedel 120-400 kW (standalone enhed)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 974.0
+  },
+  {
+    "Navn": "Overflade, Indendørsmaling, emulsions maling, slidstærk",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.52954608675486,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Indendørsmaling, emulsions maling, slidstærk|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Kalciumsulfat",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.105941391234558,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kalciumsulfat|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1500.0
+  },
+  {
+    "Navn": "Varmepumpe, vand-vand, 20 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 283.821114953466,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Varmepumpe, vand-vand, 20 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 104.0
+  },
+  {
+    "Navn": "Lerrør, glaseret, DN 250",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 25.349972943727,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Lerrør, glaseret, DN 250|A1–A3",
+    "Kg_pr_enhed_for_Affald": 51.0
+  },
+  {
+    "Navn": "Vinduesramme, træ",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": -0.0899037063261081,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Vinduesramme, træ|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2.11
+  },
+  {
+    "Navn": "Træ, fyrretræ (12% fugt / 10,7% H2O)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -781.688005827335,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Træ, fyrretræ (12% fugt / 10,7% H2O)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 548.8
+  },
+  {
+    "Navn": "Cirkulationspumpe <50 W",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 12.4432163825428,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Cirkulationspumpe <50 W|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2.47
+  },
+  {
+    "Navn": "Overflade, Vinduesmaling, hvid",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.89303595015902,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Vinduesmaling, hvid|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "LPG tank 2700 l / t 1,2 (overjordiske)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 1737.16997792916,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "LPG tank 2700 l / t 1,2 (overjordiske)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 648.0
+  },
+  {
+    "Navn": "LPG tank 4850 l / 2,1t (overjordiske)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 2790.20351667387,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "LPG tank 4850 l / 2,1t (overjordiske)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1040.0
+  },
+  {
+    "Navn": "PIR-skum, høj densitet (250 kg/m3)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 99.1514217348248,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "PIR-skum, høj densitet (250 kg/m3)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 250.0
+  },
+  {
+    "Navn": "El-varmepumpe (lodret jordvarme, saltvand) 20 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 1942.54848880215,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "El-varmepumpe (lodret jordvarme, saltvand) 20 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1498.0
+  },
+  {
+    "Navn": "Oliekedel, lav temperatur, <20 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 754.056456072158,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Oliekedel, lav temperatur, <20 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 221.0
+  },
+  {
+    "Navn": "Oliekedel, lav temperatur, kondenserende, <20 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 754.056456072158,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Oliekedel, lav temperatur, kondenserende, <20 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 221.0
+  },
+  {
+    "Navn": "Gulvvarmesystem inkl. isolering, PEX (200 mm afstand)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 4.8485360188164,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gulvvarmesystem inkl. isolering, PEX (200 mm afstand)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.4
+  },
+  {
+    "Navn": "Singels 2-15 mm",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.00784068997280792,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Singels 2-15 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Gulvvarmesystem inkl. isolering, PP (200 mm afstand)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 4.76512400238936,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gulvvarmesystem inkl. isolering, PP (200 mm afstand)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.4
+  },
+  {
+    "Navn": "Kølemiddel (R407c)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 11.029799404982,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kølemiddel (R407c)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Sand, knust, tørret",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.0273184277721275,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Sand, knust, tørret|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1350.0
+  },
+  {
+    "Navn": "Plastplade, transparent, PC",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 5647.72437539652,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Plastplade, transparent, PC|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1200.0
+  },
+  {
+    "Navn": "CR-profil til forsejling (chloropren gummi)",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 1.0555886361087,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "CR-profil til forsejling (chloropren gummi)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.18
+  },
+  {
+    "Navn": "Bomuld",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": -0.628422427781865,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Bomuld|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Glasbyggesten",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 3893.02457929489,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Glasbyggesten|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2500.0
+  },
+  {
+    "Navn": "Aluminium, støbegods",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 11.0094223229984,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Aluminium, støbegods|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2700.0
+  },
+  {
+    "Navn": "Storkerfyr 120-400 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 7167.19163307336,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Storkerfyr 120-400 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 3399.0
+  },
+  {
+    "Navn": "Curtain wall profiler, aluminium",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 54.663009741187,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Curtain wall profiler, aluminium|A1–A3",
+    "Kg_pr_enhed_for_Affald": 5.7
+  },
+  {
+    "Navn": "Plast profil SBR",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 4.12902297349254,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Plast profil SBR|A1–A3",
+    "Kg_pr_enhed_for_Affald": 400.0
+  },
+  {
+    "Navn": "Overflade, træfacade, semi-pigmenteret lasursystem",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.52962844204563,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, træfacade, semi-pigmenteret lasursystem|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Porebeton 472 kg/m³",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 224.830330325614,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Porebeton 472 kg/m³|A1–A3",
+    "Kg_pr_enhed_for_Affald": 472.0
+  },
+  {
+    "Navn": "Rør til el-varmepumpe (lodret jordvarme, saltvand), collector, 10 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 359.785274956719,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rør til el-varmepumpe (lodret jordvarme, saltvand), collector, 10 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 141.0
+  },
+  {
+    "Navn": "Skærvemastisk asfalt (SMA)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.0774414234275363,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Skærvemastisk asfalt (SMA)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Glas 4 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 13.3460990504978,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Glas 4 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 10.0
+  },
+  {
+    "Navn": "Kondenserende gaskedel <20 kW (standalone enhed)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 735.68107149195,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kondenserende gaskedel <20 kW (standalone enhed)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 133.0
+  },
+  {
+    "Navn": "Overflade, Metal maling (opløsningsmiddelbaseret)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 2.22278902267293,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Metal maling (opløsningsmiddelbaseret)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.21
+  },
+  {
+    "Navn": "Lithium jernfosfat (LiFePO4) batteri (1 kWh lagring)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 272.546798420453,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Lithium jernfosfat (LiFePO4) batteri (1 kWh lagring)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 23.3
+  },
+  {
+    "Navn": "Kondenserende gaskedel 20-120 kW (standalone enhed)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 1256.71191085843,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kondenserende gaskedel 20-120 kW (standalone enhed)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 283.0
+  },
+  {
+    "Navn": "Overflade, Vandbaseret lak, hvid",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.90833143213772,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Vandbaseret lak, hvid|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Betonrør, u-armeret",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.124475309355665,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Betonrør, u-armeret|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2400.0
+  },
+  {
+    "Navn": "PVC plastisol",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.32547482999538,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "PVC plastisol|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Pellet-kedel, <20 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 1146.88814096062,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Pellet-kedel, <20 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 335.0
+  },
+  {
+    "Navn": "Rørgods",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.63250637591879,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rørgods|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Overflade, Facademaling,  silikat",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.45092127457102,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Facademaling,  silikat|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Puds, gips",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 129.135570866285,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Puds, gips|A1–A3",
+    "Kg_pr_enhed_for_Affald": 900.0
+  },
+  {
+    "Navn": "Varmepumpe, jordvarmesonde, 10 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 837.130500116423,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Varmepumpe, jordvarmesonde, 10 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 563.0
+  },
+  {
+    "Navn": "Urea formaldehyd skum isolering",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.6011446675494,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Urea formaldehyd skum isolering|A1–A3",
+    "Kg_pr_enhed_for_Affald": 10.0
+  },
+  {
+    "Navn": "Træbrædder, bøg (12% fugtighed / 10,7% H2O)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -1031.94850453001,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Træbrædder, bøg (12% fugtighed / 10,7% H2O)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 739.2
+  },
+  {
+    "Navn": "Overflade, Vinduesmaling, mellemlag dækkende hvid",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.95715468833447,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Vinduesmaling, mellemlag dækkende hvid|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Kalkpuds, tørstof",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 192.989753658192,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kalkpuds, tørstof|A1–A3",
+    "Kg_pr_enhed_for_Affald": 900.0
+  },
+  {
+    "Navn": "Varmepumpe, jordvarmeslange, 20 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 389.041422559888,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Varmepumpe, jordvarmeslange, 20 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 184.2
+  },
+  {
+    "Navn": "Varmepumpe, jordvarmeslange, 70 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 909.038559864686,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Varmepumpe, jordvarmeslange, 70 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 488.9
+  },
+  {
+    "Navn": "Bomuld, økologisk",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": -0.212240886588556,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Bomuld, økologisk|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Propan (R290)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.637962333543926,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Propan (R290)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Aircondition (direkte fordamper) (per 1 kW)",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 45.5040580747077,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Aircondition (direkte fordamper) (per 1 kW)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 13.4
+  },
+  {
+    "Navn": "Overflade, Facademaling, akryl maling",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 2.08057521856102,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Overflade, Facademaling, akryl maling|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Skorsten opmuret (1 rør)",
+    "Modul": "A1–A3",
+    "Enhed": "m",
+    "Faktor_kgCO2e_pr_enhed": 24.7095385737111,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Skorsten opmuret (1 rør)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 98.3
+  },
+  {
+    "Navn": "Storkerfyr <20 kW",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 1622.07806696109,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Storkerfyr <20 kW|A1–A3",
+    "Kg_pr_enhed_for_Affald": 631.0
+  },
+  {
+    "Navn": "Kølemiddel (R404a)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 11.029799404982,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kølemiddel (R404a)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Beslag til vandrette skydevinduer",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 6.1409319444835,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Beslag til vandrette skydevinduer|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.696
+  },
+  {
+    "Navn": "Rude, 3-lags",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 57.1440399498256,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Rude, 3-lags|A1–A3",
+    "Kg_pr_enhed_for_Affald": 30.0
+  },
+  {
+    "Navn": "Gummigulve profileret EN 12199",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 12.7677587902479,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gummigulve profileret EN 12199|A1–A3",
+    "Kg_pr_enhed_for_Affald": 4.82
+  },
+  {
+    "Navn": "Naturstenplade, blød, gulv",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 14.293573688608,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Naturstenplade, blød, gulv|A1–A3",
+    "Kg_pr_enhed_for_Affald": 52.0
+  },
+  {
+    "Navn": "Marmorplade (tykkelse 0,02 m)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 15.588357422155,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Marmorplade (tykkelse 0,02 m)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 52.0
+  },
+  {
+    "Navn": "Naturstenplade, hård, gulv",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 30.2954268704146,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Naturstenplade, hård, gulv|A1–A3",
+    "Kg_pr_enhed_for_Affald": 52.0
+  },
+  {
+    "Navn": "Kork linoleumsgulv (tykkelse 0,0025 m)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 4.12369657383416,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Kork linoleumsgulv (tykkelse 0,0025 m)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 3.1
+  },
+  {
+    "Navn": "Loftspanel med mineraluld",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 3.53798347864346,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Loftspanel med mineraluld|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2.4
+  },
+  {
+    "Navn": "Undertag, PP-membran",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 0.404900233050487,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Undertag, PP-membran|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.15
+  },
+  {
+    "Navn": "Naturstensplade, udendørsbrug",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 5.90404232333761,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Naturstensplade, udendørsbrug|A1–A3",
+    "Kg_pr_enhed_for_Affald": 208.0
+  },
+  {
+    "Navn": "Tagpap, bitumen toplag, skiferbestrøet",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 4.98463688379488,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Tagpap, bitumen toplag, skiferbestrøet|A1–A3",
+    "Kg_pr_enhed_for_Affald": 6.2
+  },
+  {
+    "Navn": "Naturstenplade, hård, facade",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 30.9713339280302,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Naturstenplade, hård, facade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 78.0
+  },
+  {
+    "Navn": "Net-forstærket dampspærre PET",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 0.488563757088292,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Net-forstærket dampspærre PET|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.12
+  },
+  {
+    "Navn": "Keramikfliser, glaseret",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 6.04386505676288,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Keramikfliser, glaseret|A1–A3",
+    "Kg_pr_enhed_for_Affald": 20.0
+  },
+  {
+    "Navn": "Gips, tørstof (gipskartonplade) (tykkelse 0,025 m)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 3.18370726020715,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gips, tørstof (gipskartonplade) (tykkelse 0,025 m)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 20.07
+  },
+  {
+    "Navn": "Gips, tørstof (gipsfiberplade) (tykkelse 0,025 m)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 7.34395223631505,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Gips, tørstof (gipsfiberplade) (tykkelse 0,025 m)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 24.07
+  },
+  {
+    "Navn": "PUR-underlag på PET-flis (tykkelse 0,0005 m)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 0.772415032477318,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "PUR-underlag på PET-flis (tykkelse 0,0005 m)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.2
+  },
+  {
+    "Navn": "Dampspærre PE (tykkelse 0,0002 m)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 0.395081746076085,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Dampspærre PE (tykkelse 0,0002 m)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.2
+  },
+  {
+    "Navn": "Skifer",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 15.3887493282022,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Skifer|A1–A3",
+    "Kg_pr_enhed_for_Affald": 30.0
+  },
+  {
+    "Navn": "Folie til grønt tag",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 3.43783622863178,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Folie til grønt tag|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.13
+  },
+  {
+    "Navn": "Trægulv, stavparket, 22 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": -13.8227017810638,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Trægulv, stavparket, 22 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 11.5
+  },
+  {
+    "Navn": "Dampspærre, bitumen",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 2.23154557757222,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Dampspærre, bitumen|A1–A3",
+    "Kg_pr_enhed_for_Affald": 5.0
+  },
+  {
+    "Navn": "Lerplade (tykkelse 0,02 m)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 0.467447463000719,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Lerplade (tykkelse 0,02 m)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 14.0
+  },
+  {
+    "Navn": "Undertag, fiberarmeret PE-membran",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 0.413348342039385,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Undertag, fiberarmeret PE-membran|A1–A3",
+    "Kg_pr_enhed_for_Affald": 0.14
+  },
+  {
+    "Navn": "Linoleum gulvbelægning (tykkelse 0,0025 m)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 4.07855804288417,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Linoleum gulvbelægning (tykkelse 0,0025 m)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 3.0
+  },
+  {
+    "Navn": "Tagmembran, PVC",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 5.82879731467769,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Tagmembran, PVC|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.5
+  },
+  {
+    "Navn": "Korkfliser 8 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": -3.36147717605522,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Korkfliser 8 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 3.6
+  },
+  {
+    "Navn": "Fugtisolering, grundmursplade, PE",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 4.11740615764123,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Fugtisolering, grundmursplade, PE|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.2
+  },
+  {
+    "Navn": "Parket, flerlag (tykkelse 0,01 m)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": -3.86,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Parket, flerlag (tykkelse 0,01 m)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 6.5
+  },
+  {
+    "Navn": "Korkfliser 6 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": -2.52110788204141,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Korkfliser 6 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2.7
+  },
+  {
+    "Navn": "Korkfliser 4 mm",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": -1.68073858802761,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Korkfliser 4 mm|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.8
+  },
+  {
+    "Navn": "Tagfolie EPDM",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 8.34977506519671,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Tagfolie EPDM|A1–A3",
+    "Kg_pr_enhed_for_Affald": 2.0
+  },
+  {
+    "Navn": "Ovenlyskuppel, plast (komplet ovenlys)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 123.71,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Ovenlyskuppel, plast (komplet ovenlys)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 44.2
+  },
+  {
+    "Navn": "Glastag, aluminium (komplet vindue med 2-lags rude)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 181.79,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Glastag, aluminium (komplet vindue med 2-lags rude)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 57.8
+  },
+  {
+    "Navn": "Dør, stål, indv/udv/brand/røg mv",
+    "Modul": "A1–A3",
+    "Enhed": "stk",
+    "Faktor_kgCO2e_pr_enhed": 255.7,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Dør, stål, indv/udv/brand/røg mv|A1–A3",
+    "Kg_pr_enhed_for_Affald": 73.046
+  },
+  {
+    "Navn": "ETICS limning og mineralsk puds (Kratzputz)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 10.1084884616685,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "ETICS limning og mineralsk puds (Kratzputz)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 35.18
+  },
+  {
+    "Navn": "Smeltekammergranulat",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Smeltekammergranulat|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "ETICS-limning og belægning af silikatdispersionspuds",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 5.55288613540022,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "ETICS-limning og belægning af silikatdispersionspuds|A1–A3",
+    "Kg_pr_enhed_for_Affald": 12.48
+  },
+  {
+    "Navn": "Pimpsten (SFK-4)",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": 81.4033531618117,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Pimpsten (SFK-4)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 900.0
+  },
+  {
+    "Navn": "ETICS-limning og belægning af syntetisk harpikspuds",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 6.54064598494689,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "ETICS-limning og belægning af syntetisk harpikspuds|A1–A3",
+    "Kg_pr_enhed_for_Affald": 12.48
+  },
+  {
+    "Navn": "ETICS limning og mineralsk letpuds",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 4.8491399790851,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "ETICS limning og mineralsk letpuds|A1–A3",
+    "Kg_pr_enhed_for_Affald": 11.4
+  },
+  {
+    "Navn": "ETICS limning og mineralsk puds (Dekorputz)",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 7.58492223197601,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "ETICS limning og mineralsk puds (Dekorputz)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 17.4
+  },
+  {
+    "Navn": "ETICS limning og silikonepuds",
+    "Modul": "A1–A3",
+    "Enhed": "m²",
+    "Faktor_kgCO2e_pr_enhed": 5.55288613540022,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "ETICS limning og silikonepuds|A1–A3",
+    "Kg_pr_enhed_for_Affald": 12.3
+  },
+  {
+    "Navn": "OSB-plade",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -639.3,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "OSB-plade|A1–A3",
+    "Kg_pr_enhed_for_Affald": 600.0
+  },
+  {
+    "Navn": "Spånplade, melaminbelagt",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -775.0,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Spånplade, melaminbelagt|A1–A3",
+    "Kg_pr_enhed_for_Affald": 633.29
+  },
+  {
+    "Navn": "Træfiberplade, høj densitet, HDF",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -887.3,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Træfiberplade, høj densitet, HDF|A1–A3",
+    "Kg_pr_enhed_for_Affald": 849.92
+  },
+  {
+    "Navn": "Træfiberplade, medium densitet, MDF",
+    "Modul": "A1–A3",
+    "Enhed": "m³",
+    "Faktor_kgCO2e_pr_enhed": -764.4,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Træfiberplade, medium densitet, MDF|A1–A3",
+    "Kg_pr_enhed_for_Affald": 737.5
+  },
+  {
+    "Navn": "Silikatmaling (indendørs)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 0.58689950324472,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Silikatmaling (indendørs)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  },
+  {
+    "Navn": "Silikatmaling (udendørs)",
+    "Modul": "A1–A3",
+    "Enhed": "kg",
+    "Faktor_kgCO2e_pr_enhed": 1.45092127457102,
+    "Kilde": "BR2025 Tabel 7",
+    "Key": "Silikatmaling (udendørs)|A1–A3",
+    "Kg_pr_enhed_for_Affald": 1.0
+  }
+]
