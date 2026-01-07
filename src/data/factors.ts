@@ -1,3 +1,5 @@
+import standardFormatFactors from './faktorer_standard_format.json';
+
 export type Factor = {
   key: string;
   name: string;
@@ -7,7 +9,37 @@ export type Factor = {
   source: string;
 };
 
-export const FACTORS: Factor[] = [
+export const A1A3_MODULE = 'A1–A3';
+
+export function isA1A3Module(moduleValue: string): boolean {
+  const normalized = moduleValue.replace(/[–—]/g, '-').toUpperCase();
+  return normalized.includes('A1') && normalized.includes('A3');
+}
+
+function buildDefaultA1A3Factors(): Factor[] {
+  const factorsMap = new Map<string, Factor>();
+  standardFormatFactors.forEach((raw) => {
+    const name = String(raw.Navn ?? '').trim();
+    const module = String(raw.Modul ?? '').trim();
+    const unit = String(raw.Enhed ?? '').trim();
+    const factorValue = Number(raw.Faktor_kgCO2e_pr_enhed);
+    const key = String(raw.Key ?? '').trim();
+    if (!name || !module || !unit || !key || Number.isNaN(factorValue)) {
+      return;
+    }
+    factorsMap.set(key, {
+      key,
+      name,
+      module,
+      unit,
+      factorKgCo2PerUnit: factorValue,
+      source: String(raw.Kilde ?? 'BR2025 Tabel 7'),
+    });
+  });
+  return Array.from(factorsMap.values());
+}
+
+const RAW_FACTORS: Factor[] = [
   {
     "key": "el_dk_elmix",
     "name": "El (DK elmix)",
@@ -3745,3 +3777,7 @@ export const FACTORS: Factor[] = [
     "source": "Placeholder"
   }
 ];
+
+export const DEFAULT_A4A5_FACTORS = RAW_FACTORS.filter((factor) => !isA1A3Module(factor.module));
+export const DEFAULT_A1A3_FACTORS = buildDefaultA1A3Factors();
+export const DEFAULT_FACTORS = [...DEFAULT_A4A5_FACTORS, ...DEFAULT_A1A3_FACTORS];
